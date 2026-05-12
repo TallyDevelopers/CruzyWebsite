@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ship__c</fullName>
+    <label>Ship</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carnival Celebration</fullName>
+                <default>false</default>
+                <label>Carnival Celebration</label>
+            </value>
+            <value>
+                <fullName>Carnival Dream</fullName>
+                <default>false</default>
+                <label>Carnival Dream</label>
+            </value>
+            <value>
+                <fullName>Carnival Elation</fullName>
+                <default>false</default>
+                <label>Carnival Elation</label>
+            </value>
+            <value>
+                <fullName>Carnival Freedom</fullName>
+                <default>false</default>
+                <label>Carnival Freedom</label>
+            </value>
+            <value>
+                <fullName>Carnival Glory</fullName>
+                <default>false</default>
+                <label>Carnival Glory</label>
+            </value>
+            <value>
+                <fullName>Carnival Horizon</fullName>
+                <default>false</default>
+                <label>Carnival Horizon</label>
+            </value>
+            <value>
+                <fullName>Carnival Jubilee</fullName>
+                <default>false</default>
+                <label>Carnival Jubilee</label>
+            </value>
+            <value>
+                <fullName>Carnival Legend</fullName>
+                <default>false</default>
+                <label>Carnival Legend</label>
+            </value>
+            <value>
+                <fullName>Carnival Liberty</fullName>
+                <default>false</default>
+                <label>Carnival Liberty</label>
+            </value>
+            <value>
+                <fullName>Carnival Magic</fullName>
+                <default>false</default>
+                <label>Carnival Magic</label>
+            </value>
+            <value>
+                <fullName>Carnival Miracle</fullName>
+                <default>false</default>
+                <label>Carnival Miracle</label>
+            </value>
+            <value>
+                <fullName>Carnival Panorama</fullName>
+                <default>false</default>
+                <label>Carnival Panorama</label>
+            </value>
+            <value>
+                <fullName>Carnival Paradise</fullName>
+                <default>false</default>
+                <label>Carnival Paradise</label>
+            </value>
+            <value>
+                <fullName>Carnival Pride</fullName>
+                <default>false</default>
+                <label>Carnival Pride</label>
+            </value>
+            <value>
+                <fullName>Carnival Radiance</fullName>
+                <default>false</default>
+                <label>Carnival Radiance</label>
+            </value>
+            <value>
+                <fullName>Carnival Spirit</fullName>
+                <default>false</default>
+                <label>Carnival Spirit</label>
+            </value>
+            <value>
+                <fullName>Carnival Splendor</fullName>
+                <default>false</default>
+                <label>Carnival Splendor</label>
+            </value>
+            <value>
+                <fullName>Carnival Sunrise</fullName>
+                <default>false</default>
+                <label>Carnival Sunrise</label>
+            </value>
+            <value>
+                <fullName>Carnival Sunshine</fullName>
+                <default>false</default>
+                <label>Carnival Sunshine</label>
+            </value>
+            <value>
+                <fullName>Carnival Venezia</fullName>
+                <default>false</default>
+                <label>Carnival Venezia</label>
+            </value>
+            <value>
+                <fullName>Carnival Vista</fullName>
+                <default>false</default>
+                <label>Carnival Vista</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

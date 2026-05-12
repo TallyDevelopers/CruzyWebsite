@@ -1,0 +1,478 @@
+<Transaction>
+	<TimeStamp>08-11-2019 07:57:52</TimeStamp>
+	<Action>RecordBooking</Action>
+	<Booking TransactionID="152833" ModifyUserID="" SiteItemID="231483" ReferrerID1="135555" SiteItemName="Swift" ExternalIP="::1">
+		<Affiliate ID="231483" ExternalReference1="" ExternalReference2="" sid1="135555" sid2="" sid3=""/>
+		<Customer ID="59007" Title="MR" FirstName="Rignesh" MiddleName="" LastName="Dave" Sex="Male" DateOfBirth="26-03-1970"/>
+		<AgencyConfirmation>CF-RZJSQHU</AgencyConfirmation>
+		<Passengers NoOfAdult="2">
+			<Passenger ID="59007" Title="MR" FirstName="Rignesh" MiddleName="" LastName="Dave" Sex="Male" DateOfBirth="26-03-1970" Email="parth_bhatt@odysseussolutions.com" Phone="+19874563210">
+			 <Document PassportNumber="856321478" IssueDate="12-01-2017" ExpirationDate="11-01-2027" />
+				<Prices Type="Cruise">
+					<Price Display="false" ID="1" Amount="2116.00" Code="49">
+						<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="2" Amount="350.00" Code="60">
+						<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="45" Amount="2116.00">
+						<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="46" Amount="2114.50">
+						<Name>amp;lt;![CDATA[Cabin Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="114" Amount="1764.50">
+						<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="3" Amount="150.14" Code="18">
+						<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="17" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="112" Amount="2088.14">
+						<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="23" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="47" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="50" Amount="2266.14" Code="8">
+						<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="24" Amount="200.00" Code="6">
+						<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="63" Amount="2266.14" Code="3">
+						<Name>amp;lt;![CDATA[Balance Due Check]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="98" Amount="25.00">
+						<Name>amp;lt;![CDATA[Supplier Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="32" Amount="176.60" Code="80">
+						<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="66" Amount="2089.54" Code="42">
+						<Name>amp;lt;![CDATA[Balance Due to Supplier (NET)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="65" Amount="2241.14">
+						<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="61" Amount="176.50">
+						<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+					</Price>
+				</Prices>
+			</Passenger>
+			<Passenger ID="316500" Title="MRS" FirstName="Jayna" MiddleName="" LastName="Dave" Sex="Female" DateOfBirth="12-07-1975">
+				<Prices Type="Cruise">
+					<Price Display="false" ID="1" Amount="2116.00" Code="49">
+						<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="2" Amount="350.00" Code="60">
+						<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="45" Amount="2116.00">
+						<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="46" Amount="2114.50">
+						<Name>amp;lt;![CDATA[Cabin Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="114" Amount="1764.50">
+						<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="3" Amount="150.14" Code="18">
+						<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="17" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="112" Amount="2088.14">
+						<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="23" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="47" Amount="2264.64">
+						<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="50" Amount="2266.14" Code="8">
+						<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="24" Amount="200.00" Code="6">
+						<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="63" Amount="2266.14" Code="3">
+						<Name>amp;lt;![CDATA[Balance Due Check]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="98" Amount="25.00">
+						<Name>amp;lt;![CDATA[Supplier Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="32" Amount="176.60" Code="80">
+						<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="66" Amount="2089.54" Code="42">
+						<Name>amp;lt;![CDATA[Balance Due to Supplier (NET)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="65" Amount="2241.14">
+						<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="61" Amount="176.50">
+						<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+					</Price>
+				</Prices>
+			</Passenger>
+		</Passengers>
+		<Currency ID="AUD"/>
+		<Agent AgentContactId="PB" AgentName="Parth bhatt" AgentEmail="parth_bhatt@odysseussolutions.com" CreateUserID="135555"/>
+		<BookingCreatedFor ID="172078" FirstName="Agent Vishruti" LastName="User" UserName="AgentVIshruti" Email="vishruti_vala@odysseussolutions.com" SupplierContactNumber="4567891230" SupplierContactID="AR"/>
+		<CreateDateTime>2019-11-08T07:29:55</CreateDateTime>
+		<ModifiedDateTime>2019-11-08T07:29:53</ModifiedDateTime>
+		<Packages>
+			<Package Type="Cruise" PackageID="861392" PNR="19619" FromCurrencyId="AUD" ExchangeRate="1.0000" ExchageRateDateTime="08-11-2019 07:29:55" Currency="AUD" PackageCode="EQ07E240" PackageStartDate="" PackageEndDate="" Duration="7" OfficeID="245269" ApiID="RCCL" DepartureDate="29-02-2020 00:00:00" ArrivalDate="07-03-2020 00:00:00" CruiseType="CruiseOnly">
+				<SelectedRules>
+					<Rule ID="47897" Type="Discount" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Discount 3$]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="773954" Type="OnBoardCredit" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[$300 Per Couple Shipboard Credit]]amp;gt;</Name>
+						<AgencyDetails>amp;lt;![CDATA[&lt;p&gt;&lt;strong&gt;Amenity Redemption:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No form required.&lt;/li&gt;
+&lt;li&gt;You &lt;strong&gt;MUST&lt;/strong&gt; ask for &lt;span style="color: #ff0033;"&gt;&lt;strong&gt;THE SIGNATURE EXCLUSIVE AMENITY PROGRAM&lt;/strong&gt;&lt;/span&gt;. The Amenity will be applied by AmaWaterways after deposit has has been made to the booking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Confirmation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clients will receive a voucher with their cruise documents for the shipboard credit to be redeemed on board.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Combinability:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amenities combine with early booking discounts.&lt;/li&gt;
+&lt;li&gt;AmenitiesÂ combine with agency groups and most promotions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Terms and Conditions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shipboard credit may be used for gratuities (except in Vietnam, Myanmar and the DouroÂ where gratuities must be paid in cash), optional shore excursions, spa and salon, onboard gift shop purchases or alcoholic beverages.&lt;/li&gt;
+&lt;li&gt;Shipboard credit is per couple. Singles receive one-half the amount.&lt;/li&gt;
+&lt;/ul&gt;]]amp;gt;</AgencyDetails>
+						<CustomerDetails>amp;lt;![CDATA[&lt;p&gt;&lt;b&gt;$300 per Couple Shipboard Credit*&lt;/p&gt;
+&lt;p&gt;*For new cruise bookings made May 1, 2018 and beyond.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Confirmation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clients will receive a voucher with their cruise documents for the shipboard credit to be redeemed on board.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Combinability:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amenities combine with early booking discounts.&lt;/li&gt;
+&lt;li&gt;AmenitiesÂ combine with agency groups and most promotions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Terms and Conditions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shipboard credit may be used for gratuities (except in Vietnam, Myanmar and the DouroÂ where gratuities must be paid in cash), optional shore excursions, spa and salon, onboard gift shop purchases or alcoholic beverages.&lt;/li&gt;
+&lt;li&gt;Shipboard credit is per couple. Singles receive one-half the amount.&lt;/li&gt;
+&lt;/ul&gt;]]amp;gt;</CustomerDetails>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="624514" Type="RewardPoints" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Cruise Rewards]]amp;gt;</Name>
+						<CustomerDetails>amp;lt;![CDATA[Cruise rewards]]amp;gt;</CustomerDetails>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="79520" Type="AddOnOptions" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Princess Cruises Price Drop - Reduced Fares]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="79676" Type="AddOnOptions" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Uniworld - Free Air to Get You There]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="624516" Type="AddOnOptions" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Cruise Addon Option]]amp;gt;</Name>
+						<CustomerDetails>amp;lt;![CDATA[Cruise Addon Option]]amp;gt;</CustomerDetails>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="79725" Type="AgentCommission" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Cruise Agent Commission]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="624517" Type="AgentCommission" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Cruise Agent comm]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="773951" Type="AgentCommission" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[CRUISE 10% AGT COMM(excl.wwcc)]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="624519" Type="SupplierCommission" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[Cruise Supp Commission]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+					<Rule ID="772505" Type="MasterPromotion" Exclusive="" IsPrivate="YES">
+						<Name>amp;lt;![CDATA[MP 7-17NT IN]]amp;gt;</Name>
+						<Amount></Amount>
+					</Rule>
+				</SelectedRules>
+				<Dining Name="Celebrity Select" Code="O" DiningTableSize="0" Status="Available"/>
+				<Status>
+					<ID>6</ID>
+					<Name>Held</Name>
+				</Status>
+				<DepartureCity ID="FLL">
+					<Name>Ft Lauderdale</Name>
+				</DepartureCity>
+				<ArrivalCity ID="FLL">
+					<Name>Ft Lauderdale</Name>
+				</ArrivalCity>
+				<Destination ID="9"/>
+				<CruiseLine ID="2">
+					<Name>Celebrity</Name>
+					<ImageSmall>https://localhost/content/images/Cruise/2/logo_150.jpg</ImageSmall>
+					<ImageLarge>https://localhost/content/images/Cruise/2/logo_190.png</ImageLarge>
+				</CruiseLine>
+				<Ship ID="1176">
+					<Name>Equinox</Name>
+					<ImageSmall>https://localhost/content/images/Cruise/2/1176/ship_150.jpg</ImageSmall>
+					<ImageLarge>https://localhost/content/images/Cruise/2/1176/ship_375.jpg</ImageLarge>
+				</Ship>
+				<Deck Code="0" Name="PANORAMA DECK"/>
+				<Category Code="10" Type="1" PriceCategoryCode="10">amp;lt;![CDATA[&lt;span class="contentHeader"&gt;Inside Stateroom
+&lt;/span&gt;]]amp;gt;</Category>
+				<Cabin Code="9152">
+					<CategoryDescriptionLong>amp;lt;![CDATA[&lt;div&gt;&lt;span class="contentDescription"&gt;Size approx. 183-200 sq.ft. &lt;br&gt;&amp;#8226; Two beds convertible to queen-size &amp;#8226; Vanity &amp;#8226; 32" LCD TV &amp;#8226; Wireless internet access* &amp;#8226; Sitting area with sofa &amp;#8226; Some cabins may have a trundle bed &lt;br&gt;Note: &lt;/span&gt;&lt;span class="contentDescription"&gt;Some staterooms in categories 9 &amp; 10 are wheelchair-accessible. Accessible staterooms with a sofa bed accommodate a maximum of three guests.&lt;/span&gt;&lt;br&gt;&lt;span class="contentDescription"&gt;* For a nominal fee &lt;/span&gt;&lt;/div&gt;]]amp;gt;</CategoryDescriptionLong>
+					<ImageSmall>https://localhost/content/images/Cruise/new/Celebrity/Eclipse/cat/Inside_Stateroom_sm.jpg</ImageSmall>
+					<ImageLarge>https://localhost/content/images/Cruise/new/Celebrity/Eclipse/cat/Inside_Stateroom_lg.jpg</ImageLarge>
+					<FloorPlan>https://localhost/content/images/Cruise/new/Celebrity/Eclipse/cat/Inside_Stateroom_Flrplan.jpg</FloorPlan>
+				</Cabin>
+				<Itinerary>
+					<Node>
+						<Description>Fort Lauderdale -  Florida</Description>
+						<DepartureCity>
+							<ID>FLL</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>FLL</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-02-29T15:30:00</DepartureTime>
+						<ArrivalTime>2020-02-29T00:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>At Sea</Description>
+						<DepartureCity>
+							<ID>ASE</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>ASE</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-01T00:00:00</DepartureTime>
+						<ArrivalTime>2020-03-01T00:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>San Juan -  Puerto Rico</Description>
+						<DepartureCity>
+							<ID>SJU</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>SJU</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-02T23:00:00</DepartureTime>
+						<ArrivalTime>2020-03-02T15:30:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>Charlotte Amalie -  St. Thomas</Description>
+						<DepartureCity>
+							<ID>STT</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>STT</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-03T17:00:00</DepartureTime>
+						<ArrivalTime>2020-03-03T08:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>Samana -  Dominican Republic</Description>
+						<DepartureCity>
+							<ID>PUJ</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>PUJ</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-04T17:00:00</DepartureTime>
+						<ArrivalTime>2020-03-04T08:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>At Sea</Description>
+						<DepartureCity>
+							<ID>ASE</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>ASE</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-05T00:00:00</DepartureTime>
+						<ArrivalTime>2020-03-05T00:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>Nassau -  Bahamas</Description>
+						<DepartureCity>
+							<ID>NAS</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>NAS</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-06T18:00:00</DepartureTime>
+						<ArrivalTime>2020-03-06T09:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+					<Node>
+						<Description>Fort Lauderdale -  Florida</Description>
+						<DepartureCity>
+							<ID>FLL</ID>
+						</DepartureCity>
+						<ArrivalCity>
+							<ID>FLL</ID>
+						</ArrivalCity>
+						<DepartureTime>2020-03-07T00:00:00</DepartureTime>
+						<ArrivalTime>2020-03-07T07:00:00</ArrivalTime>
+						<BoardTime>0001-01-01T00:00:00</BoardTime>
+					</Node>
+				</Itinerary>
+				<FareCode ID="F7330672">
+					<Description>STANDARD</Description>
+				</FareCode>
+				<Prices Type="Cruise">
+					<Price Display="false" ID="1" Amount="4232.00" Code="49">
+						<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="2" Amount="700.00" Code="60">
+						<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="45" Amount="4232.00">
+						<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="46" Amount="4229.00">
+						<Name>amp;lt;![CDATA[Cabin Fare (includes NCCF)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="114" Amount="3529.00">
+						<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="3" Amount="300.28" Code="18">
+						<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="17" Amount="4529.28">
+						<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="112" Amount="4176.28">
+						<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+					</Price>
+					<Price Display="true" ID="23" Amount="4529.28">
+						<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="47" Amount="4529.28">
+						<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="50" Amount="4532.28" Code="8">
+						<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="24" Amount="400.00" Code="6">
+						<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="63" Amount="4532.28" Code="3">
+						<Name>amp;lt;![CDATA[Balance Due Check]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="98" Amount="50.00">
+						<Name>amp;lt;![CDATA[Supplier Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="32" Amount="353.20" Code="80">
+						<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="66" Amount="4179.08" Code="42">
+						<Name>amp;lt;![CDATA[Balance Due to Supplier (NET)]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="65" Amount="4482.28">
+						<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+					</Price>
+					<Price Display="false" ID="61" Amount="353.00">
+						<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+					</Price>
+				</Prices>
+				<CancellationPolicies>amp;lt;![CDATA[
+              {{CruiselineCancellationPolicy_2}}
+            ]]amp;gt;</CancellationPolicies>
+				<SupplierPaymentSchedules>
+					<PaymentSchedule>
+						<ID>336103</ID>
+						<Amount>400.00</Amount>
+						<SupplierDate>13-11-2019</SupplierDate>
+						<DueDate>13-11-2019</DueDate>
+						<Type>Deposit</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Supplier</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+					<PaymentSchedule>
+						<ID>336104</ID>
+						<Amount>4082.28</Amount>
+						<SupplierDate>20-12-2019</SupplierDate>
+						<DueDate>20-12-2019</DueDate>
+						<Type>Final</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Supplier</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+				</SupplierPaymentSchedules>
+				<AffiliatePaymentSchedules>
+					<PaymentSchedule>
+						<ID>336105</ID>
+						<Amount>400.00</Amount>
+						<SupplierDate>13-11-2019</SupplierDate>
+						<DueDate>11-11-2019</DueDate>
+						<Type>Deposit</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Agent</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+					<PaymentSchedule>
+						<ID>336106</ID>
+						<Amount>3776.28</Amount>
+						<SupplierDate>20-12-2019</SupplierDate>
+						<DueDate>29-11-2019</DueDate>
+						<Type>Final</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Agent</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+				</AffiliatePaymentSchedules>
+				<CustomerPaymentSchedules>
+					<PaymentSchedule>
+						<ID>336107</ID>
+						<Amount>400.00</Amount>
+						<SupplierDate>13-11-2019</SupplierDate>
+						<DueDate>11-11-2019</DueDate>
+						<Type>Deposit</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Customer</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+					<PaymentSchedule>
+						<ID>336108</ID>
+						<Amount>4129.28</Amount>
+						<SupplierDate>20-12-2019</SupplierDate>
+						<DueDate>29-11-2019</DueDate>
+						<Type>Final</Type>
+						<TransactionPackageDataID>116966</TransactionPackageDataID>
+						<UserType>Customer</UserType>
+						<InvoiceDate></InvoiceDate>
+					</PaymentSchedule>
+				</CustomerPaymentSchedules>
+				<Passengers/>
+			</Package>
+		</Packages>
+	</Booking>
+</Transaction>

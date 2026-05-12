@@ -1,0 +1,481 @@
+<Booking TransactionID="204735" ModifyUserID="" SiteItemID="231483" ReferrerID1="244902" ReferrerID2="" SiteItemName="Swift" BookingMode="B" Online="true" ExternalIP="127.0.0.1" Application="B2B">
+	<Affiliate ID="231483" ExternalReference1="" ExternalReference2="" sid1="244902" sid2="" sid3=""/>
+	<Customer ID="381450" Title="MR" FirstName="Monish" MiddleName="" LastName="Luthra" ExternalReference1="" ExternalReference2="" Sex="Male" DateOfBirth="02-04-1958"/>
+	<AgencyConfirmation>CF-DH98BMI</AgencyConfirmation>
+	<Passengers NoOfAdult="2">
+		<Passenger ID="381450" Title="MR" FirstName="Monish" MiddleName="" LastName="Luthra" ExternalReference1="" ExternalReference2="" Sex="Male" DateOfBirth="02-04-1958" Nationality="US">
+			<Prices Type="Cruise">
+				<Price ID="5" Amount="-1065.29" IsCommission="false" Display="true" Code="34">
+					<Name>amp;lt;![CDATA[Cruise Line Discount]]amp;gt;</Name>
+				</Price>
+				<Price ID="1" Amount="2578.81" IsCommission="false" Display="true" Code="5">
+					<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="2" Amount="473.68" IsCommission="false" Display="true" Code="POC">
+					<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+				</Price>
+				<Price ID="45" Amount="1513.52" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="48" Amount="50.00" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Markup]]amp;gt;</Name>
+				</Price>
+				<Price ID="46" Amount="1513.52" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="114" Amount="1039.84" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="3" Amount="394.97" IsCommission="false" Display="false" Code="18">
+					<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+				</Price>
+				<Price ID="17" Amount="1913.49" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="86" Amount="5.00" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise Service Fee]]amp;gt;</Name>
+				</Price>
+				<Price ID="23" Amount="1913.49" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="47" Amount="1913.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+				</Price>
+				<Price ID="50" Amount="1858.49" IsCommission="false" Display="true" Code="8">
+					<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="24" Amount="164.00" IsCommission="false" Display="true" Code="6">
+					<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+				</Price>
+				<Price ID="62" Amount="1858.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Balance Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="32" Amount="98.98" IsCommission="true" Display="true" Code="66">
+					<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="65" Amount="1759.51" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+				</Price>
+				<Price ID="61" Amount="25.00" IsCommission="true" Display="true">
+					<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="112" Amount="1888.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+				</Price>
+				<Price ID="83" Amount="128.98" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agency - Profit / (Loss)]]amp;gt;</Name>
+				</Price>
+			</Prices>
+		</Passenger>
+		<Passenger ID="381451" Title="MRS" FirstName="Anna" MiddleName="" LastName="Luthra" ExternalReference1="" ExternalReference2="" Sex="Female" DateOfBirth="03-09-1960" Nationality="US">
+			<Prices Type="Cruise">
+				<Price ID="5" Amount="-1065.29" IsCommission="false" Display="true" Code="34">
+					<Name>amp;lt;![CDATA[Cruise Line Discount]]amp;gt;</Name>
+				</Price>
+				<Price ID="1" Amount="2578.81" IsCommission="false" Display="true" Code="5">
+					<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="2" Amount="473.68" IsCommission="false" Display="true" Code="POC">
+					<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+				</Price>
+				<Price ID="45" Amount="1513.52" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="48" Amount="50.00" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Markup]]amp;gt;</Name>
+				</Price>
+				<Price ID="46" Amount="1513.52" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="114" Amount="1039.84" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="3" Amount="394.97" IsCommission="false" Display="false" Code="18">
+					<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+				</Price>
+				<Price ID="17" Amount="1913.49" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="86" Amount="5.00" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise Service Fee]]amp;gt;</Name>
+				</Price>
+				<Price ID="23" Amount="1913.49" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="47" Amount="1913.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+				</Price>
+				<Price ID="50" Amount="1858.49" IsCommission="false" Display="true" Code="8">
+					<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="24" Amount="164.00" IsCommission="false" Display="true" Code="6">
+					<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+				</Price>
+				<Price ID="62" Amount="1858.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Balance Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="32" Amount="98.98" IsCommission="true" Display="true" Code="66">
+					<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="65" Amount="1759.51" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+				</Price>
+				<Price ID="61" Amount="25.00" IsCommission="true" Display="true">
+					<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="112" Amount="1888.49" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+				</Price>
+				<Price ID="83" Amount="128.98" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agency - Profit / (Loss)]]amp;gt;</Name>
+				</Price>
+			</Prices>
+		</Passenger>
+	</Passengers>
+	<Currency ID="AUD"/>
+	<Agent AgentContactId="VA" AgentName="vandana Asthana" AgentEmail="Vandana_Asthana@odysseussolutions.com" CreateUserID="244902"/>
+	<BookingCreatedFor ID="237105" FirstName="Akash" LastName="Gandhi" UserName="affakash" Email="bhargav_patel@odysseussolutions.com" SupplierContactNumber="" SupplierContactID="AA"/>
+	<CreateDateTime>2021-11-09T04:18:22</CreateDateTime>
+	<ModifiedDateTime>2021-11-09T04:19:25.7262123-05:00</ModifiedDateTime>
+	<Packages>
+		<Package Type="Cruise" PackageID="1025100" PNR="" ConfirmationNumber="47274811" FromCurrencyId="AUD" ExchangeRate="1.0000" ExchageRateDateTime="09-11-2021 04:18:27" Currency="AUD" PackageCode="16583656" PackageStartDate="" PackageEndDate="" Duration="7" OfficeID="" ApiID="NCL" DepartureDate="08-05-2022 00:00:00" ArrivalDate="15-05-2022 00:00:00" CruiseType="CruiseOnly" BookingMode="B" Online="true">
+			<SelectedRules>
+				<Rule ID="856027" Type="ValueAddOfferConsolidator" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[VAO Consolidator 1 (&lt;&lt;PromotionAmount&gt;&gt; Value)]]amp;gt;</Name>
+					<AgencyDetails>amp;lt;![CDATA[Agency&lt;img alt="Premium Bev" src="https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1" style="width: 100%;" /&gt;&lt;br /&gt;]]amp;gt;</AgencyDetails>
+					<CustomerDetails>amp;lt;![CDATA[Customer&lt;img alt="Premium Bev" src="https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1" style="width: 100%;" /&gt;&lt;br /&gt;]]amp;gt;</CustomerDetails>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="859239" Type="Markup" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[Markup_Rule]]amp;gt;</Name>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="47862" Type="ValueAddOffer" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[test VAO]]amp;gt;</Name>
+					<AgencyDetails>amp;lt;![CDATA[Value added offer]]amp;gt;</AgencyDetails>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="859015" Type="ValueAddOffer" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[Test Cruise Package Identifier]]amp;gt;</Name>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="859421" Type="OnBoardCredit" Exclusive="" IsPrivate="YES">
+					<Name></Name>
+					<AgencyDetails>amp;lt;![CDATA[Agency Details]]amp;gt;</AgencyDetails>
+					<CustomerDetails>amp;lt;![CDATA[Customer Details]]amp;gt;</CustomerDetails>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="859581" Type="RewardPoints" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[testing_for_RewardPointsRules]]amp;gt;</Name>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="859250" Type="AgentCommission" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[Agent commission]]amp;gt;</Name>
+					<Amount></Amount>
+				</Rule>
+				<Rule ID="857859" Type="ServiceFee" Exclusive="" IsPrivate="YES">
+					<Name>amp;lt;![CDATA[Cruise Service Fee]]amp;gt;</Name>
+					<Amount></Amount>
+				</Rule>
+			</SelectedRules>
+			<Dining Name="Freestyle" Code="FREESTYLE" DiningTableSize="0" Status=""/>
+			<Status>
+				<ID>6</ID>
+				<Name>Held</Name>
+			</Status>
+			<DepartureCity ID="SEA">
+				<Name>Seattle</Name>
+			</DepartureCity>
+			<ArrivalCity ID="SEA">
+				<Name>Seattle</Name>
+			</ArrivalCity>
+			<Destination ID="1"/>
+			<CruiseLine ID="6">
+				<Name>Norwegian Sky</Name>
+				<ImageSmall>https://localhost/content/images/Cruise/6/logo_150.jpg</ImageSmall>
+				<ImageLarge>https://localhost/content/images/Cruise/6/logo_190.png</ImageLarge>
+			</CruiseLine>
+			<Ship ID="16974">
+				<Name>ENCORE</Name>
+				<ImageSmall>https://localhost/content/images/</ImageSmall>
+				<ImageLarge>https://localhost/content/images/</ImageLarge>
+			</Ship>
+			<Deck Code="0" Name="DECK 10"/>
+			<Category Code="IC" Type="1" PriceCategoryCode="IC"></Category>
+			<Cabin Code="10445">
+				<Location>Middle</Location>
+			</Cabin>
+			<Itinerary ItineraryID="275321">
+				<Node Day="1">
+					<Description>Seattle, Wa</Description>
+					<DepartureCity>
+						<ID>SEA</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>SEA</ID>
+					</ArrivalCity>
+					<DepartureTime>08-05-2022 17:00</DepartureTime>
+				</Node>
+				<Node Day="2">
+					<Description>At Sea</Description>
+					<DepartureCity>
+						<ID>SEAD</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>SEAD</ID>
+					</ArrivalCity>
+					<DepartureTime>09-05-2022 00:00</DepartureTime>
+					<ArrivalTime>09-05-2022 00:00</ArrivalTime>
+				</Node>
+				<Node Day="3">
+					<Description>Juneau, Ak</Description>
+					<DepartureCity>
+						<ID>JNU</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>JNU</ID>
+					</ArrivalCity>
+					<DepartureTime>10-05-2022 23:00</DepartureTime>
+					<ArrivalTime>10-05-2022 14:30</ArrivalTime>
+				</Node>
+				<Node Day="4">
+					<Description>Skagway, Ak</Description>
+					<DepartureCity>
+						<ID>SGY</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>SGY</ID>
+					</ArrivalCity>
+					<DepartureTime>11-05-2022 20:15</DepartureTime>
+					<ArrivalTime>11-05-2022 07:00</ArrivalTime>
+				</Node>
+				<Node Day="5">
+					<Description>Cruise Glacier Bay, Ak</Description>
+					<DepartureTime>12-05-2022 00:00</DepartureTime>
+					<ArrivalTime>12-05-2022 00:00</ArrivalTime>
+				</Node>
+				<Node Day="6">
+					<Description>Ketchikan, Ak</Description>
+					<DepartureCity>
+						<ID>KTN</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>KTN</ID>
+					</ArrivalCity>
+					<DepartureTime>13-05-2022 13:15</DepartureTime>
+					<ArrivalTime>13-05-2022 07:00</ArrivalTime>
+				</Node>
+				<Node Day="7">
+					<Description>Victoria, Bc, Canada</Description>
+					<DepartureCity>
+						<ID>VIC</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>VIC</ID>
+					</ArrivalCity>
+					<DepartureTime>14-05-2022 23:59</DepartureTime>
+					<ArrivalTime>14-05-2022 19:00</ArrivalTime>
+				</Node>
+				<Node Day="8">
+					<Description>Seattle, Wa</Description>
+					<DepartureCity>
+						<ID>SEA</ID>
+					</DepartureCity>
+					<ArrivalCity>
+						<ID>SEA</ID>
+					</ArrivalCity>
+					<DepartureTime>15-05-2022 00:00</DepartureTime>
+					<ArrivalTime>15-05-2022 06:00</ArrivalTime>
+				</Node>
+			</Itinerary>
+			<AddOnOptions>
+				<AddOnOption>
+					<Code>ALL4CHO</Code>
+					<Type>Dining,BEV,WiFi,SHOREX</Type>
+					<Description>Beverage, Dining, Internet, Shorex</Description>
+					<PerPaxAmount>0</PerPaxAmount>
+					<TotalAmount>0</TotalAmount>
+					<Quantity>0</Quantity>
+					<BeginDate></BeginDate>
+					<EndDate></EndDate>
+				</AddOnOption>
+				<AddOnOption>
+					<Code>AUNZDISC</Code>
+					<Type>Discount</Type>
+					<Description>100% off of invoice</Description>
+					<PerPaxAmount>0</PerPaxAmount>
+					<TotalAmount>0</TotalAmount>
+					<Quantity>0</Quantity>
+					<BeginDate></BeginDate>
+					<EndDate></EndDate>
+				</AddOnOption>
+				<AddOnOption>
+					<Code>DISC35</Code>
+					<Type>Discount</Type>
+					<Description>NCL Reduce Rate Percentage Off</Description>
+					<PerPaxAmount>0</PerPaxAmount>
+					<TotalAmount>0</TotalAmount>
+					<Quantity>0</Quantity>
+					<BeginDate></BeginDate>
+					<EndDate></EndDate>
+				</AddOnOption>
+				<AddOnOption>
+					<Code>EASYFARE</Code>
+					<Type>default</Type>
+					<Description>Early Booking Fare</Description>
+					<PerPaxAmount>0</PerPaxAmount>
+					<TotalAmount>0</TotalAmount>
+					<Quantity>0</Quantity>
+					<BeginDate></BeginDate>
+					<EndDate></EndDate>
+				</AddOnOption>
+				<AddOnOption>
+					<Code>SHX50</Code>
+					<Type>SHOREX</Type>
+					<Description>SHX50</Description>
+					<PerPaxAmount>0</PerPaxAmount>
+					<TotalAmount>0</TotalAmount>
+					<Quantity>0</Quantity>
+					<BeginDate></BeginDate>
+					<EndDate></EndDate>
+				</AddOnOption>
+			</AddOnOptions>
+			<FareCode ID="ALL4CHO">
+				<RefundableType>1</RefundableType>
+				<Description>Beverage, Dining, Internet, Shorex</Description>
+			</FareCode>
+			<Prices Type="Cruise">
+				<Price ID="5" Amount="-2130.58" IsCommission="false" Display="true" Code="34">
+					<Name>amp;lt;![CDATA[Cruise Line Discount]]amp;gt;</Name>
+				</Price>
+				<Price ID="1" Amount="5157.62" IsCommission="false" Display="true" Code="5">
+					<Name>amp;lt;![CDATA[Cruise Fare (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="2" Amount="947.36" IsCommission="false" Display="true" Code="POC">
+					<Name>amp;lt;![CDATA[Port Charges]]amp;gt;</Name>
+				</Price>
+				<Price ID="45" Amount="3027.04" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Cruise Line Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="46" Amount="3027.04" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise (includes NCCF)]]amp;gt;</Name>
+				</Price>
+				<Price ID="48" Amount="100.00" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Markup]]amp;gt;</Name>
+				</Price>
+				<Price ID="114" Amount="2079.68" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Commissionable Fare]]amp;gt;</Name>
+				</Price>
+				<Price ID="3" Amount="789.94" IsCommission="false" Display="false" Code="18">
+					<Name>amp;lt;![CDATA[Taxes and Fees]]amp;gt;</Name>
+				</Price>
+				<Price ID="86" Amount="10.00" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Cruise Service Fee]]amp;gt;</Name>
+				</Price>
+				<Price ID="17" Amount="3826.98" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="23" Amount="3826.98" IsCommission="false" Display="false">
+					<Name>amp;lt;![CDATA[Total Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="47" Amount="3826.98" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Total without travel insurance]]amp;gt;</Name>
+				</Price>
+				<Price ID="50" Amount="3716.98" IsCommission="false" Display="true" Code="8">
+					<Name>amp;lt;![CDATA[Supplier Gross Total]]amp;gt;</Name>
+				</Price>
+				<Price ID="24" Amount="318.00" IsCommission="false" Display="true" Code="6">
+					<Name>amp;lt;![CDATA[Deposit Amount]]amp;gt;</Name>
+				</Price>
+				<Price ID="62" Amount="3716.98" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Balance Due]]amp;gt;</Name>
+				</Price>
+				<Price ID="32" Amount="197.96" IsCommission="true" Display="true" Code="66">
+					<Name>amp;lt;![CDATA[Total Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="65" Amount="3519.02" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Supplier Total - NET]]amp;gt;</Name>
+				</Price>
+				<Price ID="61" Amount="50.00" IsCommission="true" Display="true">
+					<Name>amp;lt;![CDATA[Agent Commission]]amp;gt;</Name>
+				</Price>
+				<Price ID="112" Amount="3776.98" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agent Net]]amp;gt;</Name>
+				</Price>
+				<Price ID="83" Amount="257.96" IsCommission="false" Display="true">
+					<Name>amp;lt;![CDATA[Agency - Profit / (Loss)]]amp;gt;</Name>
+				</Price>
+			</Prices>
+			<CancellationPolicies>amp;lt;![CDATA[
+              {{CruiselineCancellationPolicy_6}}
+            ]]amp;gt;</CancellationPolicies>
+			<SupplierPaymentSchedules>
+				<PaymentSchedule>
+					<ID>604558</ID>
+					<Amount>308.00</Amount>
+					<SupplierDate>12-11-2021</SupplierDate>
+					<DueDate>12-11-2021</DueDate>
+					<Type>Deposit</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Supplier</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+				<PaymentSchedule>
+					<ID>604559</ID>
+					<Amount>3211.02</Amount>
+					<SupplierDate>10-01-2022</SupplierDate>
+					<DueDate>10-01-2022</DueDate>
+					<Type>Final</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Supplier</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+			</SupplierPaymentSchedules>
+			<AffiliatePaymentSchedules>
+				<PaymentSchedule>
+					<ID>604562</ID>
+					<Amount>308.00</Amount>
+					<SupplierDate>12-11-2021</SupplierDate>
+					<DueDate>10-11-2021</DueDate>
+					<Type>Deposit</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Agent</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+				<PaymentSchedule>
+					<ID>604563</ID>
+					<Amount>3468.98</Amount>
+					<SupplierDate>10-01-2022</SupplierDate>
+					<DueDate>20-12-2021</DueDate>
+					<Type>Final</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Agent</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+			</AffiliatePaymentSchedules>
+			<CustomerPaymentSchedules>
+				<PaymentSchedule>
+					<ID>604560</ID>
+					<Amount>308.00</Amount>
+					<SupplierDate>12-11-2021</SupplierDate>
+					<DueDate>09-11-2021</DueDate>
+					<Type>Deposit</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Customer</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+				<PaymentSchedule>
+					<ID>604561</ID>
+					<Amount>3518.98</Amount>
+					<SupplierDate>10-01-2022</SupplierDate>
+					<DueDate>15-12-2021</DueDate>
+					<Type>Final</Type>
+					<TransactionPackageDataID>180291</TransactionPackageDataID>
+					<UserType>Customer</UserType>
+					<InvoiceDate></InvoiceDate>
+				</PaymentSchedule>
+			</CustomerPaymentSchedules>
+			<Passengers/>
+		</Package>
+	</Packages>
+</Booking>

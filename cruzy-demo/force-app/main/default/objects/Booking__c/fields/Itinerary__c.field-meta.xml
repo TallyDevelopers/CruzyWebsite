@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Itinerary__c</fullName>
+    <label>Itinerary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alaska</fullName>
+                <default>false</default>
+                <label>Alaska</label>
+            </value>
+            <value>
+                <fullName>Bahamas</fullName>
+                <default>false</default>
+                <label>Bahamas</label>
+            </value>
+            <value>
+                <fullName>Bermuda</fullName>
+                <default>false</default>
+                <label>Bermuda</label>
+            </value>
+            <value>
+                <fullName>Canada/New England</fullName>
+                <default>false</default>
+                <label>Canada/New England</label>
+            </value>
+            <value>
+                <fullName>Caribbean - Eastern</fullName>
+                <default>false</default>
+                <label>Caribbean - Eastern</label>
+            </value>
+            <value>
+                <fullName>Caribbean - Southern</fullName>
+                <default>false</default>
+                <label>Caribbean - Southern</label>
+            </value>
+            <value>
+                <fullName>Caribbean - Western</fullName>
+                <default>false</default>
+                <label>Caribbean - Western</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>Mexico</fullName>
+                <default>false</default>
+                <label>Mexico</label>
+            </value>
+            <value>
+                <fullName>Pacific Coast</fullName>
+                <default>false</default>
+                <label>Pacific Coast</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

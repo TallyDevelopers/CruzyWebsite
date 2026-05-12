@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Reset your Cruzy+ password</title>
+</head>
+<body style="margin:0;padding:0;background:#f5f7fa;font-family:Poppins,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fa;padding:40px 0;">
+  <tr><td align="center">
+    <table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+      <!-- Header -->
+      <tr>
+        <td style="background:linear-gradient(135deg,#10559a 0%,#1a2b4a 100%);padding:36px 40px;text-align:center;">
+          <h1 style="margin:0;font-family:Montserrat,Arial,sans-serif;font-size:32px;font-weight:800;color:#fff;letter-spacing:-0.5px;">Cruzy+</h1>
+          <p style="margin:4px 0 0;color:#7bb3e8;font-size:13px;letter-spacing:1px;">POWERED BY CARNIVAL</p>
+        </td>
+      </tr>
+
+      <!-- Body -->
+      <tr>
+        <td style="padding:48px 40px 32px;">
+          <h2 style="margin:0 0 16px;font-family:Montserrat,Arial,sans-serif;font-size:24px;color:#1a2b4a;">Password Reset Request</h2>
+          <p style="margin:0 0 16px;color:#555;font-size:15px;line-height:1.6;">
+            Hi {{{Recipient.FirstName}}}, we received a request to reset the password for your Cruzy+ account.
+          </p>
+          <p style="margin:0 0 32px;color:#555;font-size:15px;line-height:1.6;">
+            Click the button below to create a new password. This link expires in <strong>1 hour</strong>.
+          </p>
+
+          <!-- CTA Button -->
+          <table cellpadding="0" cellspacing="0" style="margin:0 auto 32px;">
+            <tr>
+              <td style="background:#bd1f34;border-radius:8px;text-align:center;">
+                <a href="{{{reset_url}}}" style="display:inline-block;padding:16px 40px;color:#fff;font-family:Poppins,Arial,sans-serif;font-size:16px;font-weight:700;text-decoration:none;border-radius:8px;">
+                  Reset My Password
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <p style="margin:0 0 8px;color:#999;font-size:13px;text-align:center;">Didn't request this? You can safely ignore this email.</p>
+          <p style="margin:0 0 32px;color:#999;font-size:12px;text-align:center;word-break:break-all;">
+            Or copy this link: {{{reset_url}}}
+          </p>
+
+          <hr style="border:none;border-top:1px solid #eee;margin:0 0 24px;"/>
+
+          <p style="margin:0;color:#999;font-size:13px;line-height:1.6;">
+            Questions? Call us at <a href="tel:8554147823" style="color:#10559a;">855-414-7823</a>
+          </p>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td style="background:#f8fafc;padding:24px 40px;border-top:1px solid #eee;text-align:center;">
+          <p style="margin:0;color:#aaa;font-size:12px;">© 2026 Cruzy+ · Powered by Carnival · <a href="https://cruzy.com" style="color:#10559a;">cruzy.com</a></p>
+        </td>
+      </tr>
+
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>

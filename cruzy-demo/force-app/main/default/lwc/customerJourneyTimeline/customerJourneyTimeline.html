@@ -1,0 +1,440 @@
+<template>
+    <div class="cjt-root">
+
+        <!-- Loading -->
+        <template if:true={isLoading}>
+            <div class="cjt-loading">
+                <lightning-spinner size="medium" variant="brand" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:false={isLoading}>
+            <template if:true={hasContact}>
+
+                <!-- ══ HERO IDENTITY BAR ══ -->
+                <div class="cjt-hero">
+                    <div class="cjt-hero-avatar">{contact.initials}</div>
+                    <div class="cjt-hero-info">
+                        <span class="cjt-hero-name">{contact.name}</span>
+                        <div class="cjt-hero-badges">
+                            <template if:true={contact.source}>
+                                <span class="cjt-badge badge-source">{contact.source}</span>
+                            </template>
+                            <template if:true={contact.hasVifp}>
+                                <span class={contact.vifpBadgeClass}>{contact.vifpLevel}</span>
+                            </template>
+                            <template if:true={contact.spanishSpeaking}>
+                                <span class="cjt-badge badge-lang">ES</span>
+                            </template>
+                            <template if:true={contact.cruzyPlusEnrolled}>
+                                <span class="cjt-badge badge-cruzy-plus">Cruzy+</span>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="cjt-hero-stats">
+                        <div class="cjt-hero-stat">
+                            <span class="cjt-hs-val">{contact.bookingCount}</span>
+                            <span class="cjt-hs-lbl">Bookings</span>
+                        </div>
+                        <div class="cjt-hs-div"></div>
+                        <div class="cjt-hero-stat">
+                            <span class="cjt-hs-val">{contact.rewardCount}</span>
+                            <span class="cjt-hs-lbl">Rewards</span>
+                        </div>
+                        <div class="cjt-hs-div"></div>
+                        <div class="cjt-hero-stat">
+                            <span class="cjt-hs-val cjt-hs-green">${contact.totalPaid}</span>
+                            <span class="cjt-hs-lbl">Paid</span>
+                        </div>
+                        <template if:true={contact.hasBalance}>
+                            <div class="cjt-hs-div"></div>
+                            <div class="cjt-hero-stat">
+                                <span class="cjt-hs-val cjt-hs-amber">${contact.totalBalance}</span>
+                                <span class="cjt-hs-lbl">Balance Due</span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Quick contact chips -->
+                <div class="cjt-contact-chips">
+                    <div class="cjt-chip-item">
+                        <lightning-icon icon-name="utility:phone_portrait" size="xx-small"></lightning-icon>
+                        <span>{contact.phone}</span>
+                    </div>
+                    <div class="cjt-chip-item">
+                        <lightning-icon icon-name="utility:email" size="xx-small"></lightning-icon>
+                        <span>{contact.email}</span>
+                    </div>
+                    <template if:true={contact.hasVifp}>
+                        <div class="cjt-chip-item">
+                            <lightning-icon icon-name="utility:identity" size="xx-small"></lightning-icon>
+                            <span>VIFP {contact.vifpNumber} · {contact.vifpLevel}</span>
+                        </div>
+                    </template>
+                    <template if:true={contact.timezone}>
+                        <div class="cjt-chip-item">
+                            <lightning-icon icon-name="utility:clock" size="xx-small"></lightning-icon>
+                            <span>{contact.timezone}</span>
+                        </div>
+                    </template>
+                    <template if:true={contact.cruzyPlusMbrNum}>
+                        <div class="cjt-chip-item">
+                            <lightning-icon icon-name="utility:key" size="xx-small"></lightning-icon>
+                            <span>Cruzy+ #{contact.cruzyPlusMbrNum}</span>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Notes Banner -->
+                <template if:true={contact.notes}>
+                    <div class="cjt-notes-bar">
+                        <lightning-icon icon-name="utility:note" size="xx-small"></lightning-icon>
+                        <span>{contact.notes}</span>
+                    </div>
+                </template>
+
+                <div class="cjt-tabset-wrap">
+                    <lightning-tabset variant="scoped" class="cjt-tabset">
+                        <lightning-tab label="Overview">
+                            <div class="cjt-tab-body">
+                                <template if:true={contact.hasMembership}>
+                                    <div class="cjt-section cjt-section--in-tab">
+                                        <div class="cjt-section-title-row">
+                                            <div class="cjt-sec-icon cjt-sec-icon-mbr">
+                                                <lightning-icon icon-name="utility:shield" size="x-small"></lightning-icon>
+                                            </div>
+                                            <span class="cjt-section-label">Membership</span>
+                                            <span class={contact.membership.statusBadgeClass}>{contact.membership.status}</span>
+                                        </div>
+
+                                        <div class="cjt-mbr-grid">
+                                            <div class="cjt-mbr-cell">
+                                                <span class="cjt-cell-lbl">Member Since</span>
+                                                <span class="cjt-cell-val">{contact.membership.enrollDate}</span>
+                                            </div>
+                                            <div class="cjt-mbr-cell">
+                                                <span class="cjt-cell-lbl">Expires</span>
+                                                <span class={contact.membership.expiryValueClass}>{contact.membership.expDate}</span>
+                                            </div>
+                                            <div class="cjt-mbr-cell">
+                                                <span class="cjt-cell-lbl">Partner</span>
+                                                <span class="cjt-cell-val">{contact.membership.partner}</span>
+                                            </div>
+                                            <div class="cjt-mbr-cell">
+                                                <span class="cjt-cell-lbl">Plan</span>
+                                                <span class="cjt-cell-val">{contact.membership.plan}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="cjt-renew-row">
+                                            <div class="cjt-renew-left">
+                                                <div class={contact.membership.renewIconClass}>
+                                                    <lightning-icon icon-name={contact.membership.renewIcon} size="xx-small"></lightning-icon>
+                                                </div>
+                                                <div class="cjt-renew-text">
+                                                    <span class="cjt-renew-label">{contact.membership.renewLabel}</span>
+                                                    <span class="cjt-renew-detail">{contact.membership.renewDetail}</span>
+                                                </div>
+                                            </div>
+                                            <div class={contact.membership.renewToggleClass}>
+                                                <span class="cjt-toggle-dot"></span>
+                                            </div>
+                                        </div>
+
+                                        <template if:true={contact.membership.showCountdown}>
+                                            <div class={contact.membership.countdownClass}>
+                                                <lightning-icon icon-name="utility:clock" size="xx-small"></lightning-icon>
+                                                <span>{contact.membership.countdownText}</span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+
+                                <template if:false={contact.hasMembership}>
+                                    <div class="cjt-no-mbr cjt-no-mbr--in-tab">
+                                        <lightning-icon icon-name="utility:shield" size="small"></lightning-icon>
+                                        <span>No membership on file</span>
+                                    </div>
+                                </template>
+                            </div>
+                        </lightning-tab>
+
+                        <lightning-tab label={bookingsTabLabel}>
+                            <div class="cjt-tab-body">
+                                <template if:true={contact.bookingCount}>
+                                    <div class="cjt-section cjt-section--in-tab">
+                                        <template for:each={contact.bookings} for:item="booking">
+                                            <div key={booking.id} class="cjt-booking-wrap">
+                                                <div class={booking.headerClass} onclick={toggleBooking} data-id={booking.id}>
+                                                    <div class="cjt-bk-left">
+                                                        <lightning-icon icon-name={booking.expandIcon} size="xx-small" class="cjt-chevron"></lightning-icon>
+                                                        <div class="cjt-bk-info">
+                                                            <span class="cjt-bk-name">{booking.name}</span>
+                                                            <span class="cjt-bk-meta">{booking.ship} · {booking.itinerary}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cjt-bk-right">
+                                                        <span class={booking.statusPillClass}>{booking.status}</span>
+                                                        <span class="cjt-bk-date">{booking.departDate}</span>
+                                                        <span class="cjt-bk-total">{booking.total}</span>
+                                                        <template if:true={booking.hasBalance}>
+                                                            <span class="cjt-balance-pill">${booking.balanceRaw} due</span>
+                                                            <button class="cjt-charge-btn"
+                                                                    onclick={openChargeModal}
+                                                                    data-booking-id={booking.id}
+                                                                    data-booking-name={booking.name}
+                                                                    data-balance={booking.balanceRaw}>
+                                                                ⚡ Charge
+                                                            </button>
+                                                        </template>
+                                                    </div>
+                                                </div>
+
+                                                <template if:true={booking.isExpanded}>
+                                                    <div class="cjt-bk-detail">
+
+                                                        <div class="cjt-bk-grid">
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Departure Port</span>
+                                                                <span class="cjt-cell-val">{booking.port}</span>
+                                                            </div>
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Cabin</span>
+                                                                <span class="cjt-cell-val">{booking.cabin}</span>
+                                                            </div>
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Guests (PAX)</span>
+                                                                <span class="cjt-cell-val">{booking.pax}</span>
+                                                            </div>
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Type</span>
+                                                                <span class="cjt-cell-val">{booking.quoteType}</span>
+                                                            </div>
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Cruise Total</span>
+                                                                <span class="cjt-cell-val cjt-money">{booking.total}</span>
+                                                            </div>
+                                                            <div class="cjt-bk-cell">
+                                                                <span class="cjt-cell-lbl">Balance Due</span>
+                                                                <span class="cjt-cell-val cjt-balance">{booking.balance}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <template if:true={booking.hasReward}>
+                                                            <div class="cjt-reward-used-row">
+                                                                <lightning-icon icon-name="utility:gift" size="xx-small"></lightning-icon>
+                                                                <span class="cjt-reward-used-label">Reward Applied:</span>
+                                                                <span class="cjt-reward-used-name">{booking.rewardName} · {booking.rewardPartner}</span>
+                                                                <span class="cjt-reward-used-status">{booking.rewardStatus}</span>
+                                                            </div>
+                                                        </template>
+
+                                                        <template if:true={booking.hasAddOns}>
+                                                            <div class="cjt-subsection">
+                                                                <div class="cjt-subsec-hdr">
+                                                                    <lightning-icon icon-name="utility:add" size="xx-small"></lightning-icon>
+                                                                    <span>Add-Ons ({booking.addOnCount})</span>
+                                                                    <span class="cjt-subsec-total">{booking.addOnTotal} total</span>
+                                                                </div>
+                                                                <template for:each={booking.addOns} for:item="addon">
+                                                                    <div key={addon.id} class="cjt-addon-row">
+                                                                        <span class="cjt-addon-type">{addon.type}</span>
+                                                                        <span class="cjt-addon-name">{addon.name}</span>
+                                                                        <span class="cjt-addon-amt">{addon.amount}</span>
+                                                                    </div>
+                                                                </template>
+                                                            </div>
+                                                        </template>
+
+                                                        <template if:true={booking.hasPayments}>
+                                                            <div class="cjt-subsection">
+                                                                <div class="cjt-subsec-hdr">
+                                                                    <lightning-icon icon-name="utility:currency" size="xx-small"></lightning-icon>
+                                                                    <span>Payments ({booking.paymentCount})</span>
+                                                                </div>
+                                                                <template for:each={booking.payments} for:item="payment">
+                                                                    <div key={payment.id} class="cjt-payment-row">
+                                                                        <span class="cjt-pmt-date">{payment.date}</span>
+                                                                        <span class="cjt-pmt-note">{payment.note}</span>
+                                                                        <span class="cjt-pmt-amt">{payment.amount}</span>
+                                                                    </div>
+                                                                </template>
+                                                            </div>
+                                                        </template>
+
+                                                    </div>
+                                                </template>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template if:false={contact.bookingCount}>
+                                    <div class="cjt-tab-empty">No bookings or quotes yet.</div>
+                                </template>
+                            </div>
+                        </lightning-tab>
+
+                        <lightning-tab label={rewardsTabLabel}>
+                            <div class="cjt-tab-body">
+                                <template if:true={contact.hasStandaloneRewards}>
+                                    <div class="cjt-section cjt-section--in-tab">
+                                        <template for:each={contact.standaloneRewards} for:item="reward">
+                                            <div key={reward.id} class="cjt-reward-row">
+                                                <div class="cjt-rw-left">
+                                                    <span class="cjt-rw-num">{reward.number}</span>
+                                                    <span class="cjt-rw-partner">{reward.partner}</span>
+                                                </div>
+                                                <div class="cjt-rw-right">
+                                                    <span class={reward.pillClass}>{reward.status}</span>
+                                                    <span class="cjt-rw-exp">Exp {reward.expDate}</span>
+                                                    <template if:true={reward.bookBy}>
+                                                        <span class="cjt-rw-bookby">Book by {reward.bookBy}</span>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </template>
+                                <template if:false={contact.hasStandaloneRewards}>
+                                    <div class="cjt-tab-empty">No unbooked rewards.</div>
+                                </template>
+                            </div>
+                        </lightning-tab>
+
+                        <lightning-tab label="Payments">
+                            <div class="cjt-tab-body cjt-tab-body--payments">
+                                <c-authnet-payment-panel record-id={recordId}></c-authnet-payment-panel>
+                            </div>
+                        </lightning-tab>
+                    </lightning-tabset>
+                </div>
+
+            </template>
+
+            <template if:false={hasContact}>
+                <div class="cjt-empty">
+                    <lightning-icon icon-name="utility:user" size="large"></lightning-icon>
+                    <p class="cjt-empty-title">No journey data found</p>
+                    <p class="cjt-empty-sub">This contact has no bookings, memberships, or rewards on file.</p>
+                </div>
+            </template>
+        </template>
+
+        <!-- ══ CHARGE MODAL ══ -->
+        <template if:true={showChargeModal}>
+            <div class="cjt-backdrop" onclick={closeChargeModal}></div>
+            <div class="cjt-charge-modal">
+                <div class="cjt-cm-hdr">
+                    <span class="cjt-cm-title">Charge Booking</span>
+                    <button class="cjt-cm-x" onclick={closeChargeModal}>✕</button>
+                </div>
+
+                <div class="cjt-cm-body">
+
+                    <!-- Booking badge -->
+                    <div class="cjt-cm-booking-badge">
+                        <lightning-icon icon-name="utility:anchor" size="xx-small"></lightning-icon>
+                        <span>{chargeBookingName}</span>
+                        <span class="cjt-cm-balance-tag">${chargeBookingBalance} balance due</span>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="cjt-cm-field">
+                        <label class="cjt-cm-lbl">Charge Amount</label>
+                        <div class="cjt-cm-amt-row">
+                            <span class="cjt-cm-dollar">$</span>
+                            <input type="number" class="cjt-cm-inp" min="1"
+                                   value={chargeAmount} onchange={handleChargeAmountChange} />
+                            <button class="cjt-cm-full-btn" onclick={setFullAmount}>Full</button>
+                        </div>
+                    </div>
+
+                    <!-- Card selection -->
+                    <div class="cjt-cm-field">
+                        <label class="cjt-cm-lbl">Payment Method</label>
+                        <template if:true={hasSavedCards}>
+                            <div class="cjt-cm-card-list">
+                                <template for:each={savedCards} for:item="card">
+                                    <div key={card.id}
+                                         class={card.selectClass}
+                                         onclick={selectCard}
+                                         data-card-id={card.id}>
+                                        <span class={card.brandClass}>{card.brandShort}</span>
+                                        <span class="cjt-cm-card-num">•••• {card.lastFour}</span>
+                                        <span class="cjt-cm-card-exp">{card.expiry}</span>
+                                        <template if:true={card.isDefault}>
+                                            <span class="cjt-cm-default-tag">Default</span>
+                                        </template>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                        <template if:false={hasSavedCards}>
+                            <p class="cjt-cm-no-cards">No saved cards — use "New Card" below</p>
+                        </template>
+
+                        <!-- New card toggle -->
+                        <button class="cjt-cm-newcard-toggle" onclick={toggleNewCard}>
+                            <template if:false={showNewCardFields}>+ Enter a new card</template>
+                            <template if:true={showNewCardFields}>− Hide new card</template>
+                        </button>
+
+                        <template if:true={showNewCardFields}>
+                            <div class="cjt-cm-newcard-fields">
+                                <input type="text" class="cjt-cm-inp" placeholder="Cardholder Name"
+                                       value={newCardName} onchange={handleNewCardName} />
+                                <input type="text" class="cjt-cm-inp" placeholder="1234 5678 9012 3456"
+                                       maxlength="19" value={newCardNumber}
+                                       onkeyup={handleNewCardNumber} />
+                                <div class="cjt-cm-card-row2">
+                                    <input type="text" class="cjt-cm-inp" placeholder="MM / YY"
+                                           maxlength="7" value={newCardExpiry}
+                                           onkeyup={handleNewCardExpiry} />
+                                    <input type="text" class="cjt-cm-inp" placeholder="CVV"
+                                           maxlength="4" value={newCardCvv}
+                                           onchange={handleNewCardCvv} />
+                                </div>
+                                <label class="cjt-cm-save-chk">
+                                    <input type="checkbox" checked={saveNewCard} onchange={handleSaveNewCard} />
+                                    Save card for future charges
+                                </label>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Error -->
+                    <template if:true={chargeError}>
+                        <div class="cjt-cm-error">{chargeError}</div>
+                    </template>
+
+                    <!-- Success -->
+                    <template if:true={chargeSuccess}>
+                        <div class="cjt-cm-success">
+                            <lightning-icon icon-name="utility:success" size="small"></lightning-icon>
+                            <span>${chargeAmount} charged successfully · Ref: {lastChargeId}</span>
+                        </div>
+                    </template>
+
+                </div>
+
+                <div class="cjt-cm-footer">
+                    <button class="cjt-cm-cancel" onclick={closeChargeModal}>
+                        {chargeCancelLabel}
+                    </button>
+                    <template if:false={chargeSuccess}>
+                        <button class="cjt-cm-submit" onclick={processCharge} disabled={isCharging}>
+                            <template if:false={isCharging}>
+                                Charge ${chargeAmount}
+                            </template>
+                            <template if:true={isCharging}>
+                                <lightning-spinner size="x-small" variant="inverse" alternative-text="Processing"></lightning-spinner>
+                            </template>
+                        </button>
+                    </template>
+                </div>
+            </div>
+        </template>
+
+    </div>
+</template>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Cruzy</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Booking__c</members>
+        <members>Reward__c</members>
+        <members>Reward_Code__c</members>
+        <members>Membership__c</members>
+        <members>Membership_Payment__c</members>
+        <members>Booking_Payment__c</members>
+        <members>Add_On__c</members>
+        <members>Contact</members>
+        <members>Saved_Card__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Booking__c</members>
+        <members>Reward__c</members>
+        <members>Reward_Code__c</members>
+        <members>Membership__c</members>
+        <members>Add_On__c</members>
+        <members>Booking_Payment__c</members>
+        <members>Saved_Card__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Contact-Cruzy Contact Layout</members>
+        <members>Booking__c-Booking Layout</members>
+        <members>Reward__c-Reward Layout</members>
+        <members>Membership__c-Membership Layout</members>
+        <members>Reward_Code__c-Reward Code Layout</members>
+        <members>Booking_Payment__c-Booking Payment Layout</members>
+        <members>Membership_Payment__c-Membership Payment Layout</members>
+        <members>Add_On__c-Add-On Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Contact.All_Contacts</members>
+        <members>Contact.My_Contacts</members>
+        <members>Contact.Active_Members</members>
+        <members>Booking__c.All_Bookings</members>
+        <members>Booking__c.My_Bookings</members>
+        <members>Booking__c.Confirmed_Bookings</members>
+        <members>Booking__c.Open_Balances</members>
+        <members>Reward__c.All_Rewards</members>
+        <members>Reward__c.Active_Rewards</members>
+        <members>Membership__c.All_Memberships</members>
+        <members>Membership__c.Active_Memberships</members>
+        <members>Membership__c.Inactive_Need_Payment</members>
+        <name>ListView</name>
+    </types>
+
+    <types>
+        <members>ContactMergeController</members>
+        <members>CustomerJourneyController</members>
+        <members>StripePaymentController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>contactMergeIntelligence</members>
+        <members>customerJourneyTimeline</members>
+        <members>customerIntelligenceBanner</members>
+        <members>stripePaymentPanel</members>
+        <members>stripeChargeModal</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <types>
+        <members>Cruzy_Demo_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>59.0</version>
+</Package>

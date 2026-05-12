@@ -1,0 +1,807 @@
+/* ══════════════════════════════════════════════════════
+   CRUZY CUSTOMER 360 — Contact Record Page LWC
+══════════════════════════════════════════════════════ */
+
+.cjt-root {
+    font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f0f2f5;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* ── Loading ─────────────────────────────────────────── */
+.cjt-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+/* ══ HERO BAR ══════════════════════════════════════════ */
+.cjt-hero {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #032D60 0%, #0176D3 100%);
+    color: #fff;
+}
+.cjt-hero-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+}
+.cjt-hero-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.cjt-hero-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cjt-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.cjt-hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 6px 12px;
+    flex-shrink: 0;
+}
+.cjt-hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    gap: 2px;
+}
+.cjt-hs-val {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+.cjt-hs-lbl {
+    font-size: 9px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.cjt-hs-green { color: #86efac; }
+.cjt-hs-amber { color: #fcd34d; }
+.cjt-hs-div {
+    width: 1px;
+    height: 28px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* ── Badges ──────────────────────────────────────────── */
+.cjt-badge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 8px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+.badge-source      { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+.badge-lang        { background: #d97706; color: #fff; }
+.badge-cruzy-plus  { background: #7c3aed; color: #fff; }
+
+/* ── VIFP Badges ─────────────────────────────────────── */
+.cjt-vifp-badge {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.vifp-red         { background: #dc2626; color: #fff; }
+.vifp-gold        { background: linear-gradient(90deg, #d97706, #fbbf24); color: #fff; }
+.vifp-platinum    { background: linear-gradient(90deg, #64748b, #94a3b8); color: #fff; }
+.vifp-diamond     { background: linear-gradient(90deg, #0369a1, #38bdf8); color: #fff; }
+.vifp-diamondplus { background: linear-gradient(90deg, #6d28d9, #a78bfa); color: #fff; }
+
+/* ── Contact Chips ───────────────────────────────────── */
+.cjt-contact-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #fff;
+    border-bottom: 1px solid #e4e7ec;
+}
+.cjt-chip-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f8f9fa;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: #3e3e3c;
+}
+
+/* ── Notes Bar ───────────────────────────────────────── */
+.cjt-notes-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 8px 14px;
+    background: #fff8e1;
+    border-bottom: 1px solid #ffe082;
+    font-size: 11px;
+    color: #92400e;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+.cjt-section {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e4e7ec;
+    overflow: hidden;
+    margin: 10px;
+}
+.cjt-section-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 14px;
+    background: #fafafa;
+    border-bottom: 1px solid #f0f2f5;
+}
+.cjt-sec-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.cjt-sec-icon-mbr     { background: #ede9fe; color: #7c3aed; }
+.cjt-sec-icon-booking { background: #e0f2fe; color: #0369a1; }
+.cjt-sec-icon-reward  { background: #fef9c3; color: #ca8a04; }
+.cjt-section-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+    flex: 1;
+}
+.cjt-sec-count {
+    font-size: 11px;
+    color: #706e6b;
+    background: #f0f2f5;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ── Membership Grid ─────────────────────────────────── */
+.cjt-mbr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cjt-mbr-cell {
+    padding: 11px 14px;
+    border-right: 1px solid #f0f2f5;
+    border-bottom: 1px solid #f0f2f5;
+}
+.cjt-mbr-cell:nth-child(even) { border-right: none; }
+.cjt-mbr-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+.cjt-cell-lbl {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #706e6b;
+    display: block;
+    margin-bottom: 3px;
+}
+.cjt-cell-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a2e;
+    display: block;
+}
+.cjt-val-warn { color: #c2410c !important; }
+
+/* ── Membership Status Badges ────────────────────────── */
+.cjt-mbr-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.mbr-active   { background: #dcfce7; color: #15803d; }
+.mbr-inactive { background: #fff7ed; color: #c2410c; }
+.mbr-cancelled{ background: #fee2e2; color: #dc2626; }
+.mbr-hold     { background: #fef9c3; color: #92400e; }
+
+/* ── Auto-Renew Row ──────────────────────────────────── */
+.cjt-renew-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-top: 1px solid #f0f2f5;
+    background: #fafbfc;
+}
+.cjt-renew-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.cjt-renew-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.renew-on  { background: #dcfce7; color: #15803d; }
+.renew-off { background: #fee2e2; color: #dc2626; }
+.cjt-renew-text { display: flex; flex-direction: column; gap: 1px; }
+.cjt-renew-label  { font-size: 12px; font-weight: 700; color: #1a1a2e; }
+.cjt-renew-detail { font-size: 10px; color: #706e6b; }
+
+/* ── Toggle ──────────────────────────────────────────── */
+.cjt-toggle {
+    width: 38px;
+    height: 21px;
+    border-radius: 11px;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+.toggle-on  { background: #635bff; }
+.toggle-off { background: #d1d5db; }
+.cjt-toggle-dot {
+    position: absolute;
+    top: 3px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: left 0.2s;
+}
+.toggle-on  .cjt-toggle-dot { left: 20px; }
+.toggle-off .cjt-toggle-dot { left: 3px; }
+
+/* ── Countdown ───────────────────────────────────────── */
+.cjt-countdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    border-top: 1px solid #f0f2f5;
+}
+.cd-ok      { background: #f0fdf4; color: #15803d; }
+.cd-warn    { background: #fff7ed; color: #c2410c; }
+.cd-urgent  { background: #fef2f2; color: #dc2626; }
+.cd-expired { background: #fef2f2; color: #991b1b; }
+
+/* ── No Membership ───────────────────────────────────── */
+.cjt-no-mbr {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px dashed #d0d5dd;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ══ BOOKINGS ══════════════════════════════════════════ */
+.cjt-booking-wrap {
+    border-bottom: 1px solid #f0f2f5;
+}
+.cjt-booking-wrap:last-child { border-bottom: none; }
+
+.cjt-booking-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    cursor: pointer;
+    transition: background 0.1s;
+    gap: 10px;
+}
+.cjt-booking-row:hover { background: #f8f9fa; }
+.cjt-booking-row--expanded { background: #f0f4ff; }
+.cjt-booking-row--expanded:hover { background: #e8eeff; }
+
+.cjt-bk-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex: 1;
+    min-width: 0;
+}
+.cjt-chevron { color: #706e6b; flex-shrink: 0; }
+.cjt-bk-info { min-width: 0; }
+.cjt-bk-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cjt-bk-meta {
+    font-size: 11px;
+    color: #706e6b;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cjt-bk-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.cjt-bk-date  { font-size: 11px; color: #706e6b; }
+.cjt-bk-total { font-size: 13px; font-weight: 700; color: #0369a1; }
+
+/* Booking status pills */
+.cjt-status-pill {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.status-booking   { background: #dbeafe; color: #1d4ed8; }
+.status-quote     { background: #f0f2f5; color: #706e6b; }
+.status-completed { background: #dcfce7; color: #15803d; }
+.status-cancelled { background: #fee2e2; color: #dc2626; }
+
+/* ── Booking Detail Grid ─────────────────────────────── */
+.cjt-bk-detail {
+    padding: 0 14px 12px;
+    background: #f8f9fa;
+    border-top: 1px solid #e4e7ec;
+}
+.cjt-bk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 12px 0 8px;
+    background: #fff;
+}
+.cjt-bk-cell {
+    padding: 9px 12px;
+    border-right: 1px solid #f0f2f5;
+    border-bottom: 1px solid #f0f2f5;
+}
+.cjt-bk-cell:nth-child(3n) { border-right: none; }
+.cjt-bk-cell:nth-last-child(-n+3) { border-bottom: none; }
+.cjt-money  { color: #0369a1 !important; }
+.cjt-balance { color: #dc2626 !important; }
+
+/* ── Reward Used Row ─────────────────────────────────── */
+.cjt-reward-used-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fef9c3;
+    border: 1px solid #fde68a;
+    border-radius: 7px;
+    padding: 7px 10px;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+.cjt-reward-used-label  { font-weight: 700; color: #92400e; }
+.cjt-reward-used-name   { color: #92400e; flex: 1; }
+.cjt-reward-used-status {
+    font-size: 9px;
+    font-weight: 700;
+    background: #92400e;
+    color: #fff;
+    padding: 1px 7px;
+    border-radius: 6px;
+}
+
+/* ── Sub-Sections (Add-Ons / Payments) ───────────────── */
+.cjt-subsection {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.cjt-subsec-hdr {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 11px;
+    font-weight: 700;
+    color: #3e3e3c;
+}
+.cjt-subsec-total {
+    font-size: 11px;
+    color: #0369a1;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.cjt-addon-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 11px;
+}
+.cjt-addon-row:last-child { border-bottom: none; }
+.cjt-addon-type  { color: #706e6b; min-width: 80px; }
+.cjt-addon-name  { flex: 1; color: #1a1a2e; }
+.cjt-addon-amt   { font-weight: 700; color: #0369a1; }
+
+.cjt-payment-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 11px;
+}
+.cjt-payment-row:last-child { border-bottom: none; }
+.cjt-pmt-date { color: #706e6b; min-width: 80px; }
+.cjt-pmt-note { flex: 1; color: #3e3e3c; }
+.cjt-pmt-amt  { font-weight: 700; color: #15803d; }
+
+/* ══ STANDALONE REWARDS ════════════════════════════════ */
+.cjt-reward-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f2f5;
+    gap: 10px;
+}
+.cjt-reward-row:last-child { border-bottom: none; }
+.cjt-rw-left  { display: flex; flex-direction: column; gap: 2px; }
+.cjt-rw-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.cjt-rw-num     { font-size: 12px; font-weight: 700; color: #1a1a2e; }
+.cjt-rw-partner { font-size: 10px; color: #706e6b; }
+.cjt-rw-exp     { font-size: 10px; color: #706e6b; }
+.cjt-rw-bookby  { font-size: 10px; color: #c2410c; font-weight: 600; }
+
+.cjt-reward-pill {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+.reward-active  { background: #dcfce7; color: #15803d; }
+.reward-used    { background: #dbeafe; color: #1d4ed8; }
+.reward-expired { background: #fee2e2; color: #dc2626; }
+
+/* ── Empty State ─────────────────────────────────────── */
+.cjt-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    gap: 8px;
+    color: #9ca3af;
+    text-align: center;
+}
+.cjt-empty-title { font-size: 14px; font-weight: 600; margin: 0; color: #706e6b; }
+.cjt-empty-sub   { font-size: 12px; margin: 0; }
+
+/* ══ BALANCE PILL + CHARGE BUTTON (booking row) ══════════ */
+.cjt-balance-pill {
+    font-size: 10px;
+    font-weight: 700;
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 2px 7px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.cjt-charge-btn {
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #635bff 0%, #0176d3 100%);
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+}
+.cjt-charge-btn:hover { opacity: 0.88; }
+
+/* ══ CHARGE MODAL ════════════════════════════════════════ */
+.cjt-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 8000;
+}
+.cjt-charge-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8001;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    width: 420px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.cjt-cm-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid #f0f2f5;
+}
+.cjt-cm-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+.cjt-cm-x {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #706e6b;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.cjt-cm-x:hover { background: #f0f2f5; }
+.cjt-cm-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 14px; }
+
+/* Booking badge */
+.cjt-cm-booking-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #f0f7ff;
+    border: 1px solid #c9e5ff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0176d3;
+}
+.cjt-cm-balance-tag {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* Field */
+.cjt-cm-field   { display: flex; flex-direction: column; gap: 5px; }
+.cjt-cm-lbl     { font-size: 11px; font-weight: 700; color: #3e3e3c; text-transform: uppercase; letter-spacing: 0.4px; }
+.cjt-cm-inp     {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #1a1a2e;
+    outline: none;
+    transition: border-color 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+}
+.cjt-cm-inp:focus { border-color: #635bff; }
+.cjt-cm-amt-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.cjt-cm-dollar  { font-size: 15px; font-weight: 700; color: #3e3e3c; }
+.cjt-cm-full-btn {
+    background: #f0f2f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #3e3e3c;
+}
+.cjt-cm-full-btn:hover { background: #e8eaed; }
+
+/* Card list */
+.cjt-cm-card-list   { display: flex; flex-direction: column; gap: 5px; }
+.cjt-cm-card-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+.cjt-cm-card-item:hover { border-color: #635bff; background: #f8f7ff; }
+.cjt-cm-card-item--selected { border-color: #635bff; background: #f3f2ff; }
+.cjt-cm-card-num  { font-size: 12px; font-weight: 600; color: #1a1a2e; flex: 1; }
+.cjt-cm-card-exp  { font-size: 10px; color: #9ca3af; }
+.cjt-cm-default-tag {
+    font-size: 9px;
+    font-weight: 700;
+    color: #635bff;
+    background: #ede9fe;
+    padding: 1px 6px;
+    border-radius: 8px;
+}
+.cjt-cm-no-cards  { font-size: 12px; color: #9ca3af; margin: 0; }
+.cjt-cm-newcard-toggle {
+    background: none;
+    border: none;
+    color: #635bff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2px 0;
+    text-align: left;
+}
+.cjt-cm-newcard-fields { display: flex; flex-direction: column; gap: 7px; margin-top: 6px; }
+.cjt-cm-card-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.cjt-cm-save-chk  { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #3e3e3c; cursor: pointer; }
+
+/* Brand badges (reuse authnet panel names since they're scoped) */
+.sp-brand { font-size: 9px; font-weight: 800; padding: 2px 5px; border-radius: 3px; letter-spacing: 0.5px; }
+.visa-brand    { background: #1a1f71; color: #fff; }
+.mc-brand      { background: #eb001b; color: #fff; }
+.amex-brand    { background: #007bc1; color: #fff; }
+.disc-brand    { background: #e65c1b; color: #fff; }
+.generic-brand { background: #6b7280; color: #fff; }
+
+/* Error / success */
+.cjt-cm-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+    color: #dc2626;
+}
+.cjt-cm-success {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #15803d;
+}
+
+/* Footer */
+.cjt-cm-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 20px 16px;
+    border-top: 1px solid #f0f2f5;
+}
+.cjt-cm-cancel {
+    background: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3e3e3c;
+    cursor: pointer;
+}
+.cjt-cm-submit {
+    background: linear-gradient(135deg, #635bff 0%, #0176d3 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 9px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    min-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cjt-cm-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Tabbed layout (scoped tabset) ───────────────────────── */
+.cjt-no-mbr--in-tab {
+    margin: 0;
+}
+
+.cjt-tabset-wrap {
+    margin: 0 10px 10px;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cjt-tab-body {
+    padding: 8px 12px 14px;
+    min-height: 72px;
+}
+
+.cjt-tab-body--payments {
+    padding: 0;
+}
+
+.cjt-tab-empty {
+    padding: 24px 8px;
+    text-align: center;
+    font-size: 13px;
+    color: #706e6b;
+}
+
+.cjt-section--in-tab {
+    margin: 0;
+    border-radius: 8px;
+}

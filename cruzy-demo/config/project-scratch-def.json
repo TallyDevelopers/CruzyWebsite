@@ -1,0 +1,22 @@
+{
+  "orgName": "Cruzy Demo",
+  "edition": "Developer",
+  "language": "en_US",
+  "country": "US",
+  "features": ["EnableSetPasswordInApi"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": false,
+      "useLanguageFallback": true
+    },
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+    }
+  }
+}

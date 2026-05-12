@@ -1,0 +1,184 @@
+<template>
+    <div class="scm-container">
+
+        <!-- Balance Summary Bar -->
+        <div class="scm-balance-bar">
+            <div class="scm-balance-item">
+                <span class="scm-balance-label">Total</span>
+                <span class="scm-balance-val">${bookingTotal}</span>
+            </div>
+            <div class="scm-balance-divider"></div>
+            <div class="scm-balance-item">
+                <span class="scm-balance-label">Balance Due</span>
+                <span class="scm-balance-due">${balanceDue}</span>
+            </div>
+            <div class="scm-balance-divider"></div>
+            <div class="scm-balance-item">
+                <span class="scm-balance-label">Paid</span>
+                <span class="scm-balance-paid">${amountPaid}</span>
+            </div>
+            <template if:true={isPaidInFull}>
+                <div class="scm-paid-badge">
+                    <lightning-icon icon-name="utility:check" size="xx-small"></lightning-icon>
+                    Paid in Full
+                </div>
+            </template>
+        </div>
+
+        <!-- No cards warning -->
+        <template if:true={noCards}>
+            <div class="scm-no-cards">
+                <lightning-icon icon-name="utility:warning" size="small"></lightning-icon>
+                <div>
+                    <p class="scm-no-cards-title">No payment method on file</p>
+                    <p class="scm-no-cards-sub">Add a card to this contact before charging.</p>
+                </div>
+            </div>
+        </template>
+
+        <!-- Charge Button -->
+        <template if:false={noCards}>
+            <template if:false={isPaidInFull}>
+                <div class="scm-charge-row">
+                    <div class="scm-default-card-preview" if:true={defaultCard}>
+                        <div class={defaultCard.brandIconClass}>
+                            <span class="scm-brand-text">{defaultCard.brandShort}</span>
+                        </div>
+                        <span class="scm-card-preview-text">
+                            {defaultCard.Card_Brand__c} •••• {defaultCard.Last_Four__c}
+                        </span>
+                    </div>
+                    <button class="scm-charge-btn" onclick={openModal}>
+                        <lightning-icon icon-name="utility:currency" size="xx-small"></lightning-icon>
+                        Charge Card
+                    </button>
+                </div>
+            </template>
+        </template>
+
+        <!-- Charge Modal -->
+        <template if:true={showModal}>
+            <div class="scm-backdrop" onclick={closeModal}></div>
+            <div class="scm-modal">
+
+                <div class="scm-modal-header">
+                    <div class="scm-header-left">
+                        <div class="scm-authnet-logo"><span class="scm-authnet-s">A</span></div>
+                        <div>
+                            <span class="scm-modal-title">Charge Payment</span>
+                            <span class="scm-modal-sub">Booking {bookingName}</span>
+                        </div>
+                    </div>
+                    <button class="scm-close" onclick={closeModal}>✕</button>
+                </div>
+
+                <div class="scm-modal-body">
+
+                    <!-- Card Selector -->
+                    <div class="scm-section-label">Select Card</div>
+                    <div class="scm-cards-selector">
+                        <template for:each={cards} for:item="card">
+                            <div key={card.Id}
+                                 class={card.selectorClass}
+                                 onclick={selectCard}
+                                 data-id={card.Id}>
+                                <div class={card.brandIconClass}>
+                                    <span class="scm-brand-text">{card.brandShort}</span>
+                                </div>
+                                <div class="scm-selector-info">
+                                    <span class="scm-selector-num">•••• {card.Last_Four__c}</span>
+                                    <span class="scm-selector-exp">Exp {card.expiryDisplay}</span>
+                                </div>
+                                <template if:true={card.Is_Default__c}>
+                                    <span class="scm-default-tag">Default</span>
+                                </template>
+                                <template if:true={card.isSelected}>
+                                    <lightning-icon icon-name="utility:check_circle" size="x-small" class="scm-check-icon"></lightning-icon>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Amount Input -->
+                    <div class="scm-amount-section">
+                        <div class="scm-section-label">Charge Amount</div>
+                        <div class="scm-amount-row">
+                            <div class="scm-amount-input-wrapper">
+                                <span class="scm-dollar">$</span>
+                                <input type="number"
+                                       class="scm-amount-input"
+                                       min="0.01"
+                                       step="0.01"
+                                       value={chargeAmount}
+                                       onchange={handleAmountChange} />
+                            </div>
+                            <div class="scm-quick-btns">
+                                <button class="scm-quick-btn" onclick={chargeHalf}>
+                                    50% (${halfAmount})
+                                </button>
+                                <button class="scm-quick-btn scm-quick-btn-full" onclick={chargeFull}>
+                                    Full Balance (${balanceDue})
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Note -->
+                    <div class="scm-section-label">Note (optional)</div>
+                    <input type="text" class="scm-note-input"
+                           placeholder="e.g. Final payment, deposit, etc."
+                           value={chargeNote}
+                           onchange={handleNoteChange} />
+
+                    <template if:true={chargeError}>
+                        <div class="scm-error">
+                            <lightning-icon icon-name="utility:error" size="xx-small"></lightning-icon>
+                            {chargeError}
+                        </div>
+                    </template>
+
+                    <!-- Success State -->
+                    <template if:true={chargeSuccess}>
+                        <div class="scm-success-banner">
+                            <lightning-icon icon-name="utility:success" size="small"></lightning-icon>
+                            <div>
+                                <p class="scm-success-title">Payment Successful</p>
+                                <p class="scm-success-detail">
+                                    ${lastChargeAmount} charged to {lastCardDisplay}
+                                </p>
+                                <p class="scm-success-id">Authorize.net charge ID: {lastChargeId}</p>
+                            </div>
+                        </div>
+                    </template>
+
+                </div>
+
+                <div class="scm-modal-footer">
+                    <div class="scm-secure-note">
+                        <lightning-icon icon-name="utility:lock" size="xx-small"></lightning-icon>
+                        <span>Secured by Authorize.net · PCI DSS Level 1</span>
+                    </div>
+                    <div class="scm-footer-actions">
+                        <button class="scm-btn-cancel" onclick={closeModal}>
+                            {closeLabel}
+                        </button>
+                        <template if:false={chargeSuccess}>
+                            <button class="scm-btn-charge" onclick={processCharge} disabled={isProcessing}>
+                                <template if:false={isProcessing}>
+                                    <lightning-icon icon-name="utility:forward" size="xx-small"></lightning-icon>
+                                    Charge ${chargeAmount}
+                                </template>
+                                <template if:true={isProcessing}>
+                                    <div class="scm-processing-row">
+                                        <lightning-spinner size="x-small" variant="inverse" alternative-text="Processing"></lightning-spinner>
+                                        Processing...
+                                    </div>
+                                </template>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

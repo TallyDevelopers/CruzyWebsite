@@ -1,0 +1,326 @@
+/* ─── Balance Bar ────────────────────────────────────────────────────────────── */
+.scm-container { font-family: 'Salesforce Sans', -apple-system, sans-serif; }
+
+.scm-balance-bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: linear-gradient(135deg, #0a2540 0%, #635bff 100%);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+}
+.scm-balance-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 3px;
+}
+.scm-balance-label { font-size: 10px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.6px; }
+.scm-balance-val  { font-size: 18px; font-weight: 700; color: #fff; }
+.scm-balance-due  { font-size: 18px; font-weight: 700; color: #ffd700; }
+.scm-balance-paid { font-size: 18px; font-weight: 700; color: #4ade80; }
+.scm-balance-divider { width: 1px; background: rgba(255,255,255,0.2); height: 36px; }
+.scm-paid-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #4ade80;
+    color: #0a2540;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+
+/* ─── No Cards ───────────────────────────────────────────────────────────────── */
+.scm-no-cards {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #5d4037;
+}
+.scm-no-cards-title { font-size: 13px; font-weight: 600; margin: 0 0 2px; }
+.scm-no-cards-sub   { font-size: 12px; margin: 0; color: #706e6b; }
+
+/* ─── Charge Row ─────────────────────────────────────────────────────────────── */
+.scm-charge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    border: 1.5px solid #e4e7ec;
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+.scm-default-card-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.scm-card-preview-text { font-size: 13px; font-weight: 500; color: #3e3e3c; }
+.scm-charge-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #635bff, #0a2540);
+    border: none;
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: opacity 0.15s;
+    box-shadow: 0 2px 8px rgba(99,91,255,0.3);
+}
+.scm-charge-btn:hover { opacity: 0.9; }
+
+/* ─── Modal ──────────────────────────────────────────────────────────────────── */
+.scm-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,37,64,0.55);
+    z-index: 9000;
+}
+.scm-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    max-width: 95vw;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 24px 64px rgba(10,37,64,0.3);
+    z-index: 9001;
+    overflow: hidden;
+}
+.scm-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #0a2540 0%, #635bff 100%);
+}
+.scm-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.scm-authnet-logo {
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scm-authnet-s { font-size: 16px; font-weight: 900; color: #fff; font-style: italic; }
+.scm-modal-title { font-size: 15px; font-weight: 700; color: #fff; display: block; }
+.scm-modal-sub   { font-size: 11px; color: rgba(255,255,255,0.65); display: block; }
+.scm-close {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 18px;
+    cursor: pointer;
+}
+.scm-close:hover { color: #fff; }
+
+.scm-modal-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.scm-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #706e6b;
+    margin-bottom: -4px;
+}
+
+/* ─── Card Selector ──────────────────────────────────────────────────────────── */
+.scm-cards-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.scm-card-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1.5px solid #e4e7ec;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.12s, background 0.12s;
+    background: #f8f9fa;
+}
+.scm-card-option:hover { border-color: #c7d0dd; }
+.scm-card-option--selected {
+    border-color: #635bff;
+    background: #f5f4ff;
+    box-shadow: 0 0 0 2px rgba(99,91,255,0.15);
+}
+.scm-brand-icon {
+    width: 40px;
+    height: 26px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.scm-brand-text { font-size: 8px; font-weight: 800; letter-spacing: 0.3px; }
+.brand-visa  { background: #1434CB; color: #fff; }
+.brand-mc    { background: linear-gradient(135deg, #eb001b, #f79e1b); color: #fff; }
+.brand-amex  { background: #007BC1; color: #fff; }
+.brand-disc  { background: #e65c00; color: #fff; }
+.brand-generic { background: #546e7a; color: #fff; }
+
+.scm-selector-info { display: flex; flex-direction: column; gap: 1px; flex: 1; }
+.scm-selector-num  { font-size: 13px; font-weight: 600; color: #1a1a2e; font-family: monospace; letter-spacing: 1px; }
+.scm-selector-exp  { font-size: 11px; color: #706e6b; }
+.scm-default-tag   { font-size: 10px; font-weight: 700; color: #635bff; background: #f0efff; padding: 2px 7px; border-radius: 8px; }
+.scm-check-icon    { color: #635bff; }
+
+/* ─── Amount ─────────────────────────────────────────────────────────────────── */
+.scm-amount-section { display: flex; flex-direction: column; gap: 6px; }
+.scm-amount-row { display: flex; align-items: center; gap: 10px; }
+.scm-amount-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid #635bff;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    flex-shrink: 0;
+}
+.scm-dollar {
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #635bff;
+    background: #f5f4ff;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+.scm-amount-input {
+    border: none;
+    outline: none;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0a2540;
+    width: 110px;
+    padding: 0 10px;
+    height: 44px;
+}
+.scm-quick-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.scm-quick-btn {
+    background: #f0f0ff;
+    border: 1px solid #c7c3ff;
+    color: #635bff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.scm-quick-btn-full { background: #635bff; border-color: #635bff; color: #fff; }
+
+/* ─── Note Input ─────────────────────────────────────────────────────────────── */
+.scm-note-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3e3e3c;
+    outline: none;
+    box-sizing: border-box;
+}
+.scm-note-input:focus { border-color: #635bff; box-shadow: 0 0 0 3px rgba(99,91,255,0.12); }
+
+/* ─── Error / Success ────────────────────────────────────────────────────────── */
+.scm-error {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff0f0;
+    border: 1px solid #fcc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #c9252d;
+}
+.scm-success-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f0fff4;
+    border: 1.5px solid #86efac;
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: #166534;
+}
+.scm-success-title  { font-size: 14px; font-weight: 700; margin: 0 0 3px; }
+.scm-success-detail { font-size: 13px; margin: 0 0 3px; }
+.scm-success-id     { font-size: 10px; color: #706e6b; margin: 0; font-family: monospace; }
+
+/* ─── Footer ─────────────────────────────────────────────────────────────────── */
+.scm-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid #e4e7ec;
+    background: #f8f9fa;
+}
+.scm-secure-note {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #706e6b;
+}
+.scm-footer-actions { display: flex; gap: 8px; }
+.scm-btn-cancel {
+    background: #fff;
+    border: 1.5px solid #d0d5dd;
+    color: #3e3e3c;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.scm-btn-charge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #635bff, #0a2540);
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    min-width: 120px;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(99,91,255,0.3);
+    transition: opacity 0.15s;
+}
+.scm-btn-charge:hover { opacity: 0.9; }
+.scm-btn-charge:disabled { opacity: 0.6; cursor: not-allowed; }
+.scm-processing-row { display: flex; align-items: center; gap: 8px; }

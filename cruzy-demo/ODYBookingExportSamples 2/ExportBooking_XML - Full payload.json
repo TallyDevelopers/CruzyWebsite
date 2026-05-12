@@ -1,0 +1,2493 @@
+{
+  "Transaction": {
+    "TimeStamp": "04-06-2021 07:02:27",
+    "Action": "RecordBooking",
+    "Booking": {
+      "TransactionID": "194984",
+      "ModifyUserID": "",
+      "SiteItemID": "231414",
+      "ReferrerID1": "localhost",
+      "ReferrerID2": "IA1M3S",
+      "SiteItemName": "Seven Oceans Cruising",
+      "ExternalIP": "127.0.0.1",
+      "Application": "B2B",
+      "Affiliate": {
+        "ID": "231414",
+        "ExternalReference1": "",
+        "ExternalReference2": "",
+        "sid1": "localhost",
+        "sid2": "IA1M3S",
+        "sid3": ""
+      },
+      "Customer": {
+        "ID": "369328",
+        "Title": "MRS",
+        "FirstName": "CHARLOTTE",
+        "MiddleName": "LOUISE",
+        "LastName": "JOHNS",
+        "Sex": "Female",
+        "DateOfBirth": "05-05-1980"
+      },
+      "AgencyConfirmation": "7OC-1GTH2MA",
+      "Passengers": {
+        "NoOfAdult": "2",
+        "Passenger": [
+          {
+            "ID": "369328",
+            "Title": "MRS",
+            "FirstName": "CHARLOTTE",
+            "MiddleName": "LOUISE",
+            "LastName": "JOHNS",
+            "Sex": "Female",
+            "DateOfBirth": "05-05-1980",
+            "Email": "ROSSHE@TRAILFINDERS.COM",
+            "Phone": "+610208000011",
+            "Phone": {
+              "CountryCode": "61",
+              "Number": "0208000011"
+            },
+            "Document": {
+              "PassportNumber": "4444555566",
+              "IssueDate": "01-01-2014",
+              "ExpirationDate": "01-01-2024"
+            },
+            "Prices": [
+              {
+                "Type": "Cruise",
+                "Price": [
+                  {
+                    "Display": "false",
+                    "ID": "1",
+                    "Amount": "1861.30",
+                    "Code": "5",
+                    "Name": {
+                      "#cdata-section": "Cruise Fare (includes NCCF)"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "2",
+                    "Amount": "280.00",
+                    "Code": "POC",
+                    "Name": {
+                      "#cdata-section": "Port Charges"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "45",
+                    "Amount": "1861.30",
+                    "Name": {
+                      "#cdata-section": "Cruise Line Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "46",
+                    "Amount": "1561.30",
+                    "Name": {
+                      "#cdata-section": "Cruise (includes NCCF)"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "1281.30",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "3",
+                    "Amount": "241.54",
+                    "Code": "18",
+                    "Name": {
+                      "#cdata-section": "Taxes and Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "75",
+                    "Amount": "15.80",
+                    "Code": "191",
+                    "Name": {
+                      "#cdata-section": "Dining Service Charge"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "86",
+                    "Amount": "5.00",
+                    "Name": {
+                      "#cdata-section": "Cruise Service Fee"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "47",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "2118.64",
+                    "Code": "8",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "24",
+                    "Amount": "125.00",
+                    "Code": "6",
+                    "Name": {
+                      "#cdata-section": "Deposit Amount"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "62",
+                    "Amount": "2118.64",
+                    "Name": {
+                      "#cdata-section": "Balance Due"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "32",
+                    "Amount": "189.76",
+                    "Code": "66",
+                    "Name": {
+                      "#cdata-section": "Total Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "1928.88",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Air",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "7",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Airfare"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "55.20",
+                    "Code": "UB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "8",
+                    "Amount": "583.15",
+                    "Code": "TotalTax",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.60",
+                    "Code": "AY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "38.20",
+                    "Code": "US",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "3.96",
+                    "Code": "XA",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "4.50",
+                    "Code": "XF",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "7.00",
+                    "Code": "XY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.99",
+                    "Code": "YC",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "112.70",
+                    "Code": "GB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "350.00",
+                    "Code": "YR",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "61",
+                    "Amount": "25.00",
+                    "Name": {
+                      "#cdata-section": "Agent Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "762.15",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Activity",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "122",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Other Add-on"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ID": "369400",
+            "Title": "MR",
+            "FirstName": "ROSS",
+            "MiddleName": "ELTON",
+            "LastName": "JOHNS",
+            "Sex": "Male",
+            "DateOfBirth": "01-07-1980",
+            "Email": "ROSSHE@TRAILFINDERS.COM",
+            "Phone": "+449512364780",
+            "Phone": {
+              "CountryCode": "44",
+              "Number": "9512364780"
+            },
+            "Document": {
+              "PassportNumber": "515502433",
+              "IssueDate": "01-04-2017",
+              "ExpirationDate": "01-04-2027"
+            },
+            "Prices": [
+              {
+                "Type": "Cruise",
+                "Price": [
+                  {
+                    "Display": "false",
+                    "ID": "1",
+                    "Amount": "1861.30",
+                    "Code": "5",
+                    "Name": {
+                      "#cdata-section": "Cruise Fare (includes NCCF)"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "2",
+                    "Amount": "280.00",
+                    "Code": "POC",
+                    "Name": {
+                      "#cdata-section": "Port Charges"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "45",
+                    "Amount": "1861.30",
+                    "Name": {
+                      "#cdata-section": "Cruise Line Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "46",
+                    "Amount": "1561.30",
+                    "Name": {
+                      "#cdata-section": "Cruise (includes NCCF)"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "1281.30",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "3",
+                    "Amount": "241.54",
+                    "Code": "18",
+                    "Name": {
+                      "#cdata-section": "Taxes and Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "75",
+                    "Amount": "15.80",
+                    "Code": "191",
+                    "Name": {
+                      "#cdata-section": "Dining Service Charge"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "86",
+                    "Amount": "5.00",
+                    "Name": {
+                      "#cdata-section": "Cruise Service Fee"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "47",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "2118.64",
+                    "Code": "8",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "24",
+                    "Amount": "125.00",
+                    "Code": "6",
+                    "Name": {
+                      "#cdata-section": "Deposit Amount"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "62",
+                    "Amount": "2118.64",
+                    "Name": {
+                      "#cdata-section": "Balance Due"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "32",
+                    "Amount": "189.76",
+                    "Code": "66",
+                    "Name": {
+                      "#cdata-section": "Total Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "1928.88",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "1823.64",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Air",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "7",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Airfare"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "55.20",
+                    "Code": "UB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "8",
+                    "Amount": "583.15",
+                    "Code": "TotalTax",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.60",
+                    "Code": "AY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "38.20",
+                    "Code": "US",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "3.96",
+                    "Code": "XA",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "4.50",
+                    "Code": "XF",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "7.00",
+                    "Code": "XY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.99",
+                    "Code": "YC",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "112.70",
+                    "Code": "GB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "350.00",
+                    "Code": "YR",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "61",
+                    "Amount": "25.00",
+                    "Name": {
+                      "#cdata-section": "Agent Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "762.15",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Activity",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "122",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Other Add-on"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "500.00",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "500.00",
+                    "CurrencyID": "AUD",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "Currency": {
+        "ID": "AUD"
+      },
+      "Agent": {
+        "AgentContactId": "ODYSOL_BP",
+        "AgentName": "Bhargav Patel",
+        "AgentEmail": "bhargav_patel@odysseussolutions.com",
+        "CreateUserID": "234032"
+      },
+      "BookingCreatedFor": {
+        "ID": "234129",
+        "FirstName": "Bhaggu",
+        "LastName": "Pandya",
+        "UserName": "bpatel",
+        "Email": "bhaggupandya@gmail.com",
+        "SupplierContactNumber": "8866662611",
+        "SupplierContactID": "BP242"
+      },
+      "CreateDateTime": "2021-06-03T09:34:43",
+      "ModifiedDateTime": "2021-06-04T07:01:30",
+      "Packages": {
+        "Package": [
+          {
+            "Type": "Cruise",
+            "PackageID": "1024852",
+            "PNR": "",
+            "ConfirmationNumber": "46175111",
+            "FromCurrencyId": "USD",
+            "ExchangeRate": "1.4186",
+            "ExchageRateDateTime": "04-06-2021 07:01:34",
+            "Currency": "AUD",
+            "PackageCode": "16583625",
+            "PackageStartDate": "",
+            "PackageEndDate": "",
+            "Duration": "7",
+            "OfficeID": "",
+            "ApiID": "NCL",
+            "DepartureDate": "26-12-2021 00:00:00",
+            "ArrivalDate": "02-01-2022 00:00:00",
+            "CruiseType": "CruiseOnly",
+            "SelectedRules": {
+              "Rule": [
+                {
+                  "ID": "856027",
+                  "Type": "ValueAddOfferConsolidator",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "VAO Consolidator 1 (<<PromotionAmount&>&> Value)"
+                  },
+                  "AgencyDetails": {
+                    "#cdata-section": "Agency\r\n<img alt=\"Premium Bev\" src=\"https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1\" style=\"width: 100%;\" /&><br /&>"
+                  },
+                  "CustomerDetails": {
+                    "#cdata-section": "Customer\r\n<img alt=\"Premium Bev\" src=\"https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1\" style=\"width: 100%;\" /&><br /&>"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "857429",
+                  "Type": "Discount",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "More Discount"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "859012",
+                  "Type": "Discount",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "testRue2405 CLONE"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "859013",
+                  "Type": "Discount",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "testRue2405 CLONE"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "857992",
+                  "Type": "Markup",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "Domestic Cruise $2.50 Markup A"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "859015",
+                  "Type": "ValueAddOffer",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "Test Cruise Package Identifier"
+                  },
+                  "Amount": null
+                },
+                {
+                  "ID": "857859",
+                  "Type": "ServiceFee",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "Cruise Service Fee"
+                  },
+                  "Amount": null
+                }
+              ]
+            },
+            "Dining": {
+              "Name": "Freestyle",
+              "Code": "FREESTYLE",
+              "DiningTableSize": "0",
+              "Status": ""
+            },
+            "Status": {
+              "ID": "7",
+              "Name": "Confirmed"
+            },
+            "DepartureCity": {
+              "ID": "MIA",
+              "Name": "Miami"
+            },
+            "ArrivalCity": {
+              "ID": "MIA",
+              "Name": "Miami"
+            },
+            "Destination": {
+              "ID": "10"
+            },
+            "CruiseLine": {
+              "ID": "6",
+              "Name": "Norwegian",
+              "ImageSmall": "https://localhost/content/images/Cruise/6/logo_150.jpg",
+              "ImageLarge": "https://localhost/content/images/Cruise/6/logo_190.png"
+            },
+            "Ship": {
+              "ID": "16974",
+              "Name": "ENCORE",
+              "ImageSmall": "https://localhost/content/images/",
+              "ImageLarge": "https://localhost/content/images/"
+            },
+            "Deck": {
+              "Code": "0",
+              "Name": "DECK 5"
+            },
+            "Category": {
+              "Code": "IF",
+              "Type": "1",
+              "PriceCategoryCode": "IF"
+            },
+            "Cabin": {
+              "Code": "5409",
+              "Location": "Middle"
+            },
+            "Itinerary": {
+              "ItineraryID": "213520",
+              "Node": [
+                {
+                  "Day": "1",
+                  "Description": "Miami, Fl",
+                  "DepartureCity": {
+                    "ID": "MIA"
+                  },
+                  "ArrivalCity": {
+                    "ID": "MIA"
+                  },
+                  "DepartureTime": "26-12-2021 16:00"
+                },
+                {
+                  "Day": "2",
+                  "Description": "Day at Sea",
+                  "DepartureTime": "27-12-2021 00:00",
+                  "ArrivalTime": "27-12-2021 00:00"
+                },
+                {
+                  "Day": "3",
+                  "Description": "Puerto Plata, Dominican Republic",
+                  "DepartureCity": {
+                    "ID": "POP"
+                  },
+                  "ArrivalCity": {
+                    "ID": "POP"
+                  },
+                  "DepartureTime": "28-12-2021 16:00",
+                  "ArrivalTime": "28-12-2021 07:00"
+                },
+                {
+                  "Day": "4",
+                  "Description": "St.Thomas, Vi",
+                  "DepartureCity": {
+                    "ID": "STT"
+                  },
+                  "ArrivalCity": {
+                    "ID": "STT"
+                  },
+                  "DepartureTime": "29-12-2021 19:00",
+                  "ArrivalTime": "29-12-2021 11:00"
+                },
+                {
+                  "Day": "5",
+                  "Description": "Tortola, British Virgin Islands",
+                  "DepartureCity": {
+                    "ID": "TOV"
+                  },
+                  "ArrivalCity": {
+                    "ID": "TOV"
+                  },
+                  "DepartureTime": "30-12-2021 13:00",
+                  "ArrivalTime": "30-12-2021 08:00"
+                },
+                {
+                  "Day": "6",
+                  "Description": "Day at Sea",
+                  "DepartureTime": "31-12-2021 00:00",
+                  "ArrivalTime": "31-12-2021 00:00"
+                },
+                {
+                  "Day": "7",
+                  "Description": "Great Stirrup Cay, Bahamas",
+                  "DepartureTime": "01-01-2022 18:00",
+                  "ArrivalTime": "01-01-2022 09:00"
+                },
+                {
+                  "Day": "8",
+                  "Description": "Miami, Fl",
+                  "DepartureCity": {
+                    "ID": "MIA"
+                  },
+                  "ArrivalCity": {
+                    "ID": "MIA"
+                  },
+                  "DepartureTime": "01-02-2022 00:00",
+                  "ArrivalTime": "02-01-2022 07:00"
+                }
+              ]
+            },
+            "FareCode": {
+              "ID": "DISXIN",
+              "Description": "Dining, Internet, $50 Shore Ex credit"
+            },
+            "Prices": {
+              "Type": "Cruise",
+              "Price": [
+                {
+                  "Display": "false",
+                  "ID": "1",
+                  "Amount": "3722.60",
+                  "Code": "5",
+                  "Name": {
+                    "#cdata-section": "Cruise Fare (includes NCCF)"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "2",
+                  "Amount": "560.00",
+                  "Code": "POC",
+                  "Name": {
+                    "#cdata-section": "Port Charges"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "45",
+                  "Amount": "3722.60",
+                  "Name": {
+                    "#cdata-section": "Cruise Line Fare"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "46",
+                  "Amount": "3122.60",
+                  "Name": {
+                    "#cdata-section": "Cruise (includes NCCF)"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "114",
+                  "Amount": "2562.60",
+                  "Name": {
+                    "#cdata-section": "Commissionable Fare"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "3",
+                  "Amount": "483.08",
+                  "Code": "18",
+                  "Name": {
+                    "#cdata-section": "Taxes and Fees"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "75",
+                  "Amount": "31.60",
+                  "Code": "191",
+                  "Name": {
+                    "#cdata-section": "Dining Service Charge"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "86",
+                  "Amount": "10.00",
+                  "Name": {
+                    "#cdata-section": "Cruise Service Fee"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "17",
+                  "Amount": "3647.28",
+                  "Name": {
+                    "#cdata-section": "Total"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "23",
+                  "Amount": "3647.28",
+                  "Name": {
+                    "#cdata-section": "Total Due"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "47",
+                  "Amount": "3647.28",
+                  "Name": {
+                    "#cdata-section": "Total without travel insurance"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "50",
+                  "Amount": "4237.28",
+                  "Code": "8",
+                  "Name": {
+                    "#cdata-section": "Supplier Gross Total"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "24",
+                  "Amount": "250.00",
+                  "Code": "6",
+                  "Name": {
+                    "#cdata-section": "Deposit Amount"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "62",
+                  "Amount": "4237.28",
+                  "Name": {
+                    "#cdata-section": "Balance Due"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "32",
+                  "Amount": "379.52",
+                  "Code": "66",
+                  "Name": {
+                    "#cdata-section": "Total Commission"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "65",
+                  "Amount": "3857.76",
+                  "Name": {
+                    "#cdata-section": "Supplier Total - NET"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "112",
+                  "Amount": "3647.28",
+                  "Name": {
+                    "#cdata-section": "Agent Net"
+                  }
+                }
+              ]
+            },
+            "CancellationPolicies": {
+              "#cdata-section": "\r\n              <div class=\"contentHeader\">Cancellation Policies:</div><div class=\"contentDescription\"><br><p><span class=\"contentDescription\">Cancellation fees for cruise, air, land and other charges will follow the schedule below and apply to all guests on the reservation. Cancellation fees for air, land and other add-on charges will apply even if the reservation is not canceled in full. Gateway changes for air and name changes for cruise, air, land and other add-ons are considered cancellations. Cancellations must be telephoned to our Reservations Department by your travel agent. Depending on when the cruise is canceled, cancellation charges will be assessed as stated on the Cancellation Fee Schedule. Cabin category downgrade / changes may result in fees being assessed.&nbsp;</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">No refunds will be made in the event of interruption or cancellation by any passenger after commencement of the cruise. Requests for refunds must be in writing to NCL. Cruise tickets, air tickets, transfer coupons and/or vacation package vouchers must be returned before a refund can be made. Refund processing time is about 3-4 weeks. Air tickets issued by our Air/Sea Department for passengers on our Air/Sea programs are refundable only to Norwegian Cruise Line. Group passenger policies may differ. NCL&#39;s Payment and Cancellation Policy is subject to change without notice.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Reservations that are not paid in full by the final payment due date are subject to cancellation and in the event a reservation is canceled, a cancellation fee will apply</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">No refunds will be given on any cruise for no-shows</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">No refunds will be made in the event of interruption or cancellation by any passenger after commencement of the cruise.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Name changes and departure date changes are considered reservation cancellations and are subject to the above cancellation fees.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Requests for refunds must be in writing to NCL. Cruise tickets, air tickets, transfer coupons and/or vacation package vouchers must be returned before a refund can be made. Refund processing time is about 3 to 4 weeks. Air tickets issued by our Air/Sea Department for passengers on our Air/Sea programs are refundable only to Norwegian Cruise Line. Group passenger policies may differ. NCL&#39;s Payment and Cancellation Policy is subject to change without notice.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">No refunds will be given for any missed days of a Land Package.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Cancellation fees for air, land and other add-on charges will apply even if the reservation is not cancelled in full.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Gateway changes, flight date changes and name substitutions are considered cancellations, and air cancellation fees will apply. Additionally, spelling corrections may be considered cancellations.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Name substitutions and departure date changes for cruise, land and other add-ons are considered cancellations and are subject to cancellation fees.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Cancellation fees will begin immediately once money has been applied to the reservation.</span></p><p class=\"contentDescription\"><span class=\"contentDescription\">Once payment is applied, the reservation is subject to cancellation fees according to the below schedule.</span></p><br><table border=\"1\" cellpadding=\"3\" cellspacing=\"3\"><tbody><tr class=\"contentHeader\"><td colspan=\"6\">Cancellation Fee Schedule</td></tr><tr class=\"contentDescriptionBold\"><td>Cruise Length<br>(days)</td><td>Days Prior to<br>Departure Date</td><td>Cruise Cancellation<br>Fee</td><td>Air Cancellation<br>Fee</td><td>Land Cancellation<br>Fee</td><td>Air Add-on Cancellation<br>Fee *</td></tr><tr class=\"contentDescription\"><td rowspan=\"5\" valign=\"top\">1-5 days<br></td><td>75-61 days<br>(Holiday only)</td><td>Deposit</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>60 to 45</td><td>Deposit</td><td>$100</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>44&nbsp;to 30</td><td>50%*</td><td>50%</td><td>50%</td><td>50%</td></tr><tr class=\"contentDescription\"><td>29 to 15</td><td>75%</td><td>75%</td><td>75%</td><td>75%</td></tr><tr><td style=\"font-size: 8pt;\">14 days or less</td><td style=\"font-size: 8pt;\">100%</td><td style=\"font-size: 8pt;\">100%</td><td style=\"font-size: 8pt;\">100%</td><td style=\"font-size: 8pt;\">100%</td></tr><tr class=\"contentDescription\"><td rowspan=\"5\" valign=\"top\">6 days or more<br></td><td>90-76 days<br>(Holiday only)</td><td>Deposit</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>75 to 56</td><td>Deposit</td><td>$100</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>55 to 30&nbsp;</td><td>50%*</td><td>50%</td><td>50%</td><td>50%</td></tr><tr class=\"contentDescription\"><td>29 to 15</td><td>75%</td><td>75%</td><td>75%</td><td>75%</td></tr><tr class=\"contentDescription\"><td>14 days or less</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr><tr class=\"contentDescription\"><td rowspan=\"4\" valign=\"top\">All cruise lengths:<br>Garden Villas Category,<br>Courtyard villas and<br>Specialty Suites: Categories (S1, S2, S3, S4, S5, S6 and S9)</td><td>120 or more days</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>119 - 90 days</td><td>25%*</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class=\"contentDescription\"><td>89 to 56</td><td>50%*</td><td>$100</td><td>$0</td><td>10%</td></tr><tr class=\"contentDescription\"><td>55&nbsp;days or less</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table><br>     <h4 style=\"font-size: 8pt;\">*or deposit, whichever is higher</h4></div>\r\n            "
+            },
+            "SupplierPaymentSchedules": {
+              "PaymentSchedule": [
+                {
+                  "ID": "556569",
+                  "Amount": "260.00",
+                  "SupplierDate": "06-06-2021",
+                  "DueDate": "06-06-2021",
+                  "Type": "Deposit",
+                  "TransactionPackageDataID": "169512",
+                  "UserType": "Supplier",
+                  "InvoiceDate": null
+                },
+                {
+                  "ID": "556570",
+                  "Amount": "3597.76",
+                  "SupplierDate": "27-10-2021",
+                  "DueDate": "27-10-2021",
+                  "Type": "Final",
+                  "TransactionPackageDataID": "169512",
+                  "UserType": "Supplier",
+                  "InvoiceDate": null
+                }
+              ]
+            },
+            "AffiliatePaymentSchedules": {
+              "PaymentSchedule": [
+                {
+                  "ID": "556571",
+                  "Amount": "260.00",
+                  "SupplierDate": "06-06-2021",
+                  "DueDate": "03-06-2021",
+                  "Type": "Deposit",
+                  "TransactionPackageDataID": "169512",
+                  "Payments": {
+                    "PaymentInfo": {
+                      "GuestReferences": null,
+                      "PaymentStatus": "PaymentSuccessful",
+                      "CustomerPaymentIP": "127.0.0.1",
+                      "Amount": "273.00",
+                      "ProcessingFeeAmount": "13.00",
+                      "CurrencyID": "USD",
+                      "BillingAddress": {
+                        "AddressLineOne": "Sector",
+                        "City": {
+                          "Name": "London",
+                          "StateID": "LO",
+                          "CountryID": "GB",
+                          "CountryISOCode": "GBR"
+                        },
+                        "ZipCode": "52048"
+                      },
+                      "PaymentForm": {
+                        "ID": "CARD"
+                      },
+                      "PhoneNumber": "+19998877788",
+                      "AuthorizationData": {
+                        "PaymentAuthorizationInfo": {
+                          "AuthCode": "28825789",
+                          "TransactionID": "28825789,28825797",
+                          "Date": null,
+                          "Success": "true",
+                          "Mode": "Supplier"
+                        }
+                      },
+                      "PaymentAPI": "EWay",
+                      "PaymentSuccessful": "true",
+                      "PaidFrom": "Affiliate",
+                      "PaidTo": "Supplier",
+                      "ToCurrencyID": "AUD",
+                      "CurrencyExchangeRate": "1.4186",
+                      "PaidDate": "03-06-2021 09:35:37"
+                    }
+                  },
+                  "UserType": "Agent",
+                  "InvoiceDate": null
+                },
+                {
+                  "ID": "556572",
+                  "Amount": "3387.28",
+                  "SupplierDate": "27-10-2021",
+                  "DueDate": "06-10-2021",
+                  "Type": "Final",
+                  "TransactionPackageDataID": "169512",
+                  "UserType": "Agent",
+                  "InvoiceDate": null
+                }
+              ]
+            },
+            "CustomerPaymentSchedules": {
+              "PaymentSchedule": [
+                {
+                  "ID": "556573",
+                  "Amount": "260.00",
+                  "SupplierDate": "06-06-2021",
+                  "DueDate": "03-06-2021",
+                  "Type": "Deposit",
+                  "TransactionPackageDataID": "169512",
+                  "Payments": {
+                    "PaymentInfo": {
+                      "GuestReferences": null,
+                      "PaymentStatus": "PaymentSuccessful",
+                      "CustomerPaymentIP": "127.0.0.1",
+                      "Amount": "273.00",
+                      "ProcessingFeeAmount": "13.00",
+                      "CurrencyID": "USD",
+                      "BillingAddress": {
+                        "AddressLineOne": "Sector",
+                        "City": {
+                          "Name": "London",
+                          "StateID": "LO",
+                          "CountryID": "GB",
+                          "CountryISOCode": "GBR"
+                        },
+                        "ZipCode": "52048"
+                      },
+                      "PaymentForm": {
+                        "ID": "CARD"
+                      },
+                      "PhoneNumber": "+19998877788",
+                      "AuthorizationData": {
+                        "PaymentAuthorizationInfo": {
+                          "AuthCode": "28825789",
+                          "TransactionID": "28825789,28825797",
+                          "Date": null,
+                          "Success": "true",
+                          "Mode": "Supplier"
+                        }
+                      },
+                      "PaymentAPI": "EWay",
+                      "PaymentSuccessful": "true",
+                      "PaidFrom": "Customer",
+                      "PaidTo": "Supplier",
+                      "ToCurrencyID": "AUD",
+                      "CurrencyExchangeRate": "1.4186",
+                      "PaidDate": "03-06-2021 09:35:37"
+                    }
+                  },
+                  "UserType": "Customer",
+                  "InvoiceDate": null
+                },
+                {
+                  "ID": "556574",
+                  "Amount": "3387.28",
+                  "SupplierDate": "27-10-2021",
+                  "DueDate": "01-10-2021",
+                  "Type": "Final",
+                  "TransactionPackageDataID": "169512",
+                  "UserType": "Customer",
+                  "InvoiceDate": null
+                }
+              ]
+            },
+            "Passengers": null
+          },
+          {
+            "Type": "Air",
+            "PNR": "N/A",
+            "Currency": "USD",
+            "ApiID": "TravelPort",
+            "FareType": "Published",
+            "JourneyType": "Circle",
+            "PricingSource": "Published",
+            "OfficeID": "",
+            "ValidatingCarrier": "AY",
+            "FeesContainer": "taxes",
+            "QuotedAmount": "1574.30",
+            "AdultCode": "ADT",
+            "FromCity": "MIA",
+            "ToCity": "LHR",
+            "FromCountry": "USPaymentInfo",
+            "ToCountry": "GB",
+            "SelectedRules": {
+              "Rule": [
+                {
+                  "ID": "855897",
+                  "Type": "OnBoardCredit",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "Air OBC"
+                  },
+                  "AgencyDetails": {
+                    "#cdata-section": "OBC Agency Details"
+                  },
+                  "CustomerDetails": {
+                    "#cdata-section": "OBC Customer Details"
+                  },
+                  "Amount": "100.0"
+                },
+                {
+                  "ID": "856003",
+                  "Type": "AgentCommission",
+                  "Exclusive": "",
+                  "IsPrivate": "YES",
+                  "Name": {
+                    "#cdata-section": "<<PromotionAmount&>&> Agent Comm One"
+                  },
+                  "Amount": "50.0"
+                }
+              ]
+            },
+            "Status": {
+              "ID": "12",
+              "Name": "Pending Confirmation"
+            },
+            "AirJourneyType": {
+              "Code": "Circle"
+            },
+            "Ticket": {
+              "TicketType": "eTicket",
+              "IsRefundable": "false"
+            },
+            "Prices": [
+              {
+                "Type": "Air",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "7",
+                    "Amount": "408.00",
+                    "Name": {
+                      "#cdata-section": "Airfare"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "110.40",
+                    "Code": "UB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "8",
+                    "Amount": "1166.30",
+                    "Code": "TotalTax",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "11.20",
+                    "Code": "AY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "76.40",
+                    "Code": "US",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "7.92",
+                    "Code": "XA",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "9.00",
+                    "Code": "XF",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "14.00",
+                    "Code": "XY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "11.98",
+                    "Code": "YC",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "225.40",
+                    "Code": "GB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "700.00",
+                    "Code": "YR",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "408.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "1574.30",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "1574.30",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "1574.30",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "1574.30",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "1574.30",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "61",
+                    "Amount": "50.00",
+                    "Name": {
+                      "#cdata-section": "Agent Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "1524.30",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Adult",
+                "Price": [
+                  {
+                    "Display": "true",
+                    "ID": "7",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Airfare"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "55.20",
+                    "Code": "UB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "8",
+                    "Amount": "583.15",
+                    "Code": "TotalTax",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.60",
+                    "Code": "AY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "38.20",
+                    "Code": "US",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "3.96",
+                    "Code": "XA",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "4.50",
+                    "Code": "XF",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "7.00",
+                    "Code": "XY",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "5.99",
+                    "Code": "YC",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "112.70",
+                    "Code": "GB",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "8",
+                    "Amount": "350.00",
+                    "Code": "YR",
+                    "Name": {
+                      "#cdata-section": "Taxes &amp; Airline Fees"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "114",
+                    "Amount": "204.00",
+                    "Name": {
+                      "#cdata-section": "Commissionable Fare"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "17",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "23",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total Due"
+                    }
+                  },
+                  {
+                    "Display": "true",
+                    "ID": "47",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Total without travel insurance"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "50",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Gross Total"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "65",
+                    "Amount": "787.15",
+                    "Name": {
+                      "#cdata-section": "Supplier Total - NET"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "61",
+                    "Amount": "25.00",
+                    "Name": {
+                      "#cdata-section": "Agent Commission"
+                    }
+                  },
+                  {
+                    "Display": "false",
+                    "ID": "112",
+                    "Amount": "762.15",
+                    "Name": {
+                      "#cdata-section": "Agent Net"
+                    }
+                  }
+                ]
+              }
+            ],
+            "Flights": {
+              "Flight": [
+                {
+                  "Stops": "0",
+                  "Direction": "UD",
+                  "FlightSegments": {
+                    "FlightSegment": {
+                      "Stops": "0",
+                      "FlightSegmentNumber": "5506",
+                      "ETicketAvailable": "true",
+                      "DepartureDateTime": "25-12-2021 17:15:00",
+                      "ArrivalDateTime": "26-12-2021 06:35:00",
+                      "DepartureTerminal": "",
+                      "FareTypeCode": "",
+                      "FareTypeName": "",
+                      "SelectedBookingClass": {
+                        "ID": "O",
+                        "ClassType": "Economy",
+                        "PriceTypeCode": "",
+                        "AdultRateCode": {
+                          "ID": "OLW8F7M5",
+                          "PriceCode": "ADT"
+                        }
+                      },
+                      "ArrivalAirport": {
+                        "ID": "LHR",
+                        "Name": "London"
+                      },
+                      "DepartureAirport": {
+                        "ID": "MIA",
+                        "Name": "Miami"
+                      },
+                      "Baggages": {
+                        "Baggage": {
+                          "PaxType": "Adult",
+                          "Quantity": "1",
+                          "Weight": "0",
+                          "Type": "Number"
+                        }
+                      },
+                      "MarketingAirline": {
+                        "PseudoCode": "AY",
+                        "Name": "Finnair"
+                      },
+                      "DisplayAirline": {
+                        "PseudoCode": "AY",
+                        "Name": "Finnair"
+                      },
+                      "Airplane": {
+                        "PseudoCode": "777",
+                        "Name": "BOEING 777-200/300 JET"
+                      }
+                    }
+                  },
+                  "TotalDuration": {
+                    "Days": "0",
+                    "Hours": "8",
+                    "Minutes": "20",
+                    "Seconds": "0",
+                    "PO": "POs"
+                  }
+                },
+                {
+                  "Stops": "0",
+                  "Direction": "UD",
+                  "FlightSegments": {
+                    "FlightSegment": {
+                      "Stops": "0",
+                      "FlightSegmentNumber": "4029",
+                      "ETicketAvailable": "true",
+                      "DepartureDateTime": "04-01-2022 10:35:00",
+                      "ArrivalDateTime": "04-01-2022 15:35:00",
+                      "DepartureTerminal": "",
+                      "FareTypeCode": "",
+                      "FareTypeName": "",
+                      "SelectedBookingClass": {
+                        "ID": "O",
+                        "ClassType": "Economy",
+                        "PriceTypeCode": "",
+                        "AdultRateCode": {
+                          "ID": "OKX8F7M5",
+                          "PriceCode": "ADT"
+                        }
+                      },
+                      "ArrivalAirport": {
+                        "ID": "MIA",
+                        "Name": "Miami"
+                      },
+                      "DepartureAirport": {
+                        "ID": "LHR",
+                        "Name": "London"
+                      },
+                      "Baggages": {
+                        "Baggage": {
+                          "PaxType": "Adult",
+                          "Quantity": "1",
+                          "Weight": "0",
+                          "Type": "Number"
+                        }
+                      },
+                      "MarketingAirline": {
+                        "PseudoCode": "AY",
+                        "Name": "Finnair"
+                      },
+                      "DisplayAirline": {
+                        "PseudoCode": "AY",
+                        "Name": "Finnair"
+                      },
+                      "Airplane": {
+                        "PseudoCode": "772",
+                        "Name": "BOEING 777-200 JET"
+                      }
+                    }
+                  },
+                  "TotalDuration": {
+                    "Days": "0",
+                    "Hours": "10",
+                    "Minutes": "0",
+                    "Seconds": "0",
+                    "PO": "POs"
+                  }
+                }
+              ]
+            },
+            "SupplierPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556965",
+                "Amount": "1574.30",
+                "SupplierDate": "07-06-2021",
+                "DueDate": "07-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169586",
+                "UserType": "Supplier",
+                "InvoiceDate": null
+              }
+            },
+            "AffiliatePaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556966",
+                "Amount": "1524.30",
+                "SupplierDate": "07-06-2021",
+                "DueDate": "07-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169586",
+                "Payments": {
+                  "PaymentInfo": {
+                    "GuestReferences": null,
+                    "PaymentStatus": "PaymentSuccessful",
+                    "CustomerPaymentIP": "127.0.0.1",
+                    "Amount": "1653.01",
+                    "ProcessingFeeAmount": "78.71",
+                    "CurrencyID": "USD",
+                    "BillingAddress": {
+                      "AddressLineOne": "17 APSLEY HOUSE",
+                      "City": {
+                        "Name": "LONDON",
+                        "StateID": "LO",
+                        "CountryID": "GB",
+                        "CountryISOCode": "GBR"
+                      },
+                      "ZipCode": "SW15 5EY"
+                    },
+                    "PaymentForm": {
+                      "ID": "CARD"
+                    },
+                    "PhoneNumber": "+610208000011",
+                    "AuthorizationData": {
+                      "PaymentAuthorizationInfo": {
+                        "AuthCode": "28834940",
+                        "TransactionID": "28834940,28834941",
+                        "Date": null,
+                        "Success": "true",
+                        "Mode": "Supplier"
+                      }
+                    },
+                    "PaymentAPI": "EWay",
+                    "PaymentSuccessful": "true",
+                    "PaidFrom": "Affiliate",
+                    "PaidTo": "Supplier",
+                    "ToCurrencyID": "AUD",
+                    "CurrencyExchangeRate": "1.4186",
+                    "PaidDate": "04-06-2021 06:57:59"
+                  }
+                },
+                "UserType": "Agent",
+                "InvoiceDate": null
+              }
+            },
+            "CustomerPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556967",
+                "Amount": "1574.30",
+                "SupplierDate": "07-06-2021",
+                "DueDate": "07-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169586",
+                "Payments": {
+                  "PaymentInfo": {
+                    "GuestReferences": null,
+                    "PaymentStatus": "PaymentSuccessful",
+                    "CustomerPaymentIP": "127.0.0.1",
+                    "Amount": "1653.01",
+                    "ProcessingFeeAmount": "78.71",
+                    "CurrencyID": "USD",
+                    "BillingAddress": {
+                      "AddressLineOne": "17 APSLEY HOUSE",
+                      "City": {
+                        "Name": "LONDON",
+                        "StateID": "LO",
+                        "CountryID": "GB",
+                        "CountryISOCode": "GBR"
+                      },
+                      "ZipCode": "SW15 5EY"
+                    },
+                    "PaymentForm": {
+                      "ID": "CARD"
+                    },
+                    "PhoneNumber": "+610208000011",
+                    "AuthorizationData": {
+                      "PaymentAuthorizationInfo": {
+                        "AuthCode": "28834940",
+                        "TransactionID": "28834940,28834941",
+                        "Date": null,
+                        "Success": "true",
+                        "Mode": "Supplier"
+                      }
+                    },
+                    "PaymentAPI": "EWay",
+                    "PaymentSuccessful": "true",
+                    "PaidFrom": "Customer",
+                    "PaidTo": "Supplier",
+                    "ToCurrencyID": "AUD",
+                    "CurrencyExchangeRate": "1.4186",
+                    "PaidDate": "04-06-2021 06:57:59"
+                  }
+                },
+                "UserType": "Customer",
+                "InvoiceDate": null
+              }
+            },
+            "Passengers": {
+              "PassengerID": [
+                "369328",
+                "369400"
+              ]
+            }
+          },
+          {
+            "Type": "ActivityAddOn",
+            "OfficeID": "",
+            "ApiID": "",
+            "PNR": "GHNBX",
+            "FromCurrency": "AUD",
+            "Rate": "1.0000",
+            "Markup": "0.00",
+            "Name": {
+              "#cdata-section": "MIami city tour"
+            },
+            "Status": {
+              "ID": "7",
+              "Name": "Confirmed"
+            },
+            "DepartureDateTime": "24-12-2021 09:15:00",
+            "ArrivalDateTime": "24-12-2021 18:45:00",
+            "DepartureCity": {
+              "ID": "MIA"
+            },
+            "ArrivalCity": {
+              "ID": "MIA"
+            },
+            "Seller": {
+              "SupplierID": "882"
+            },
+            "Prices": {
+              "Type": "ActivityAddOn",
+              "Price": [
+                {
+                  "Display": "true",
+                  "ID": "122",
+                  "Amount": "1000.00",
+                  "CurrencyID": "AUD",
+                  "Name": {
+                    "#cdata-section": "Other Add-on"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "17",
+                  "Amount": "1000.00",
+                  "CurrencyID": "AUD",
+                  "Name": {
+                    "#cdata-section": "Total"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "23",
+                  "Amount": "1000.00",
+                  "CurrencyID": "AUD",
+                  "Name": {
+                    "#cdata-section": "Total Due"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "65",
+                  "Amount": "1000.00",
+                  "CurrencyID": "AUD",
+                  "Name": {
+                    "#cdata-section": "Supplier Total - NET"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "112",
+                  "Amount": "1000.00",
+                  "CurrencyID": "AUD",
+                  "Name": {
+                    "#cdata-section": "Agent Net"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "47",
+                  "Amount": "1000.00",
+                  "Name": {
+                    "#cdata-section": "Total without travel insurance"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "114",
+                  "Amount": "1000.00",
+                  "Name": {
+                    "#cdata-section": "Commissionable Fare"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "50",
+                  "Amount": "1000.00",
+                  "Name": {
+                    "#cdata-section": "Supplier Gross Total"
+                  }
+                }
+              ]
+            },
+            "Supplier": {
+              "SupplierID": "882"
+            },
+            "DescriptionSmall": {
+              "#cdata-section": "MIami city tour"
+            },
+            "SupplierPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556977",
+                "Amount": "1000.00",
+                "SupplierDate": "04-06-2021",
+                "DueDate": "04-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169589",
+                "UserType": "Supplier",
+                "InvoiceDate": null
+              }
+            },
+            "AffiliatePaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556978",
+                "Amount": "1000.00",
+                "SupplierDate": "04-06-2021",
+                "DueDate": "04-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169589",
+                "UserType": "Agent",
+                "InvoiceDate": null
+              }
+            },
+            "CustomerPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556979",
+                "Amount": "1000.00",
+                "SupplierDate": "04-06-2021",
+                "DueDate": "04-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169589",
+                "UserType": "Customer",
+                "InvoiceDate": null
+              }
+            },
+            "Passengers": {
+              "PassengerID": [
+                "369328",
+                "369400"
+              ]
+            }
+          },
+          {
+            "Type": "Hotel",
+            "OfficeID": "HOTELBEDSODYSSEUS",
+            "ApiID": "HotelBeds",
+            "FromCurrency": "",
+            "Rate": "",
+            "Markup": "",
+            "CheckIn": "2022-01-02T11:30:00",
+            "CheckOut": "2022-01-03T23:55:00",
+            "HotelID": "54834",
+            "Currency": "USD",
+            "Duration": "1",
+            "SelectedRules": null,
+            "Status": {
+              "ID": "12",
+              "Name": "Pending Confirmation"
+            },
+            "CancellationPolicies": {
+              "CancelPenalty": [
+                {
+                  "Amount": "0.00",
+                  "NoOfNights": "0",
+                  "IsPercentSpecified": "false",
+                  "AmountPercentTypeBasisType": "Fixed",
+                  "DeadlineTypeOffsetDropTime": "BeforeArrival",
+                  "TimeUnitType": "Year",
+                  "Percent": "0",
+                  "StartDate": "03-06-2021",
+                  "EndDate": "24-12-2021",
+                  "IsNoShow": "false",
+                  "Description": {
+                    "#cdata-section": "Free Cancellation from 03-06-2021 to 24-12-2021"
+                  }
+                },
+                {
+                  "Amount": "55.56",
+                  "NoOfNights": "0",
+                  "IsPercentSpecified": "false",
+                  "AmountPercentTypeBasisType": "Fixed",
+                  "DeadlineTypeOffsetDropTime": "BeforeArrival",
+                  "TimeUnitType": "Year",
+                  "Percent": "55.56",
+                  "StartDate": "25-12-2021",
+                  "EndDate": "29-12-2021",
+                  "IsNoShow": "false",
+                  "Description": null
+                },
+                {
+                  "Amount": "111.11",
+                  "NoOfNights": "0",
+                  "IsPercentSpecified": "false",
+                  "AmountPercentTypeBasisType": "Fixed",
+                  "DeadlineTypeOffsetDropTime": "BeforeArrival",
+                  "TimeUnitType": "Year",
+                  "Percent": "111.11",
+                  "StartDate": "30-12-2021",
+                  "EndDate": "02-01-2022",
+                  "IsNoShow": "false",
+                  "Description": null
+                }
+              ]
+            },
+            "CheckInCheckOut": {
+              "Is24HourCheckOut": "false"
+            },
+            "Address": {
+              "AddressLineOne": "1109 Brickell Avenue",
+              "City": {
+                "Name": "Miami Area - FL"
+              },
+              "State": {
+                "ID": ""
+              },
+              "Country": {
+                "ID": "-"
+              }
+            },
+            "Prices": {
+              "Type": "Hotel",
+              "Price": [
+                {
+                  "Display": "true",
+                  "ID": "68",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Hotel Fare"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "114",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Commissionable Fare"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "23",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Total Due"
+                  }
+                },
+                {
+                  "Display": "true",
+                  "ID": "47",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Total without travel insurance"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "50",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Supplier Gross Total"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "65",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Supplier Total - NET"
+                  }
+                },
+                {
+                  "Display": "false",
+                  "ID": "112",
+                  "Amount": "111.11",
+                  "Name": {
+                    "#cdata-section": "Agent Net"
+                  }
+                }
+              ]
+            },
+            "SelectedCategories": {
+              "HotelCategory": {
+                "Code": "DBL.DX",
+                "Name": "DOUBLE DELUXE",
+                "AccomodationCount": "1",
+                "SmokingPreference": "NotAllowed",
+                "RateType": "PayNow",
+                "Accomodations": {
+                  "Accommodation": {
+                    "HandicapAccessible": "false",
+                    "GuestReferences": {
+                      "int": [
+                        "0",
+                        "1"
+                      ]
+                    },
+                    "Prices": {
+                      "PricingRate": {
+                        "DailyPrices": {
+                          "double": "111.11"
+                        },
+                        "RateCode": {
+                          "ID": "20220102#20220103#W#235#54834#DBL.DX#ID_B2B_19#RO#RATE11#1~2~0##N@06~~20b6f~-772750891~N~~~NOR~8860132EEFCB485162272587898100NWAU1080001000100030520b6f|0|2,1",
+                          "SupplierPromotions": null,
+                          "Description": {
+                            "#cdata-section": "ROOM ONLY"
+                          },
+                          "Status": {
+                            "ID": "1",
+                            "Name": "Available"
+                          }
+                        },
+                        "RepriceRequired": "false"
+                      }
+                    },
+                    "AdditionalServices": null
+                  }
+                }
+              }
+            },
+            "SupplierPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556581",
+                "Amount": "111.11",
+                "SupplierDate": "03-06-2021",
+                "DueDate": "03-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169514",
+                "UserType": "Supplier",
+                "InvoiceDate": null
+              }
+            },
+            "AffiliatePaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556582",
+                "Amount": "111.11",
+                "SupplierDate": "03-06-2021",
+                "DueDate": "03-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169514",
+                "Payments": {
+                  "PaymentInfo": {
+                    "GuestReferences": null,
+                    "PaymentStatus": "PaymentSuccessful",
+                    "CustomerPaymentIP": "127.0.0.1",
+                    "Amount": "116.66",
+                    "ProcessingFeeAmount": "5.55",
+                    "CurrencyID": "USD",
+                    "BillingAddress": {
+                      "AddressLineOne": "Sector",
+                      "City": {
+                        "Name": "London",
+                        "StateID": "LO",
+                        "CountryID": "GB",
+                        "CountryISOCode": "GBR"
+                      },
+                      "ZipCode": "52048"
+                    },
+                    "PaymentForm": {
+                      "ID": "CARD"
+                    },
+                    "PhoneNumber": "+19998877788",
+                    "AuthorizationData": {
+                      "PaymentAuthorizationInfo": {
+                        "AuthCode": "28825789",
+                        "TransactionID": "28825789,28825797",
+                        "Date": null,
+                        "Success": "true",
+                        "Mode": "Supplier"
+                      }
+                    },
+                    "PaymentAPI": "EWay",
+                    "PaymentSuccessful": "true",
+                    "PaidFrom": "Affiliate",
+                    "PaidTo": "Supplier",
+                    "ToCurrencyID": "AUD",
+                    "CurrencyExchangeRate": "1.4186",
+                    "PaidDate": "03-06-2021 09:35:37"
+                  }
+                },
+                "UserType": "Agent",
+                "InvoiceDate": null
+              }
+            },
+            "CustomerPaymentSchedules": {
+              "PaymentSchedule": {
+                "ID": "556583",
+                "Amount": "111.11",
+                "SupplierDate": "03-06-2021",
+                "DueDate": "03-06-2021",
+                "Type": "Full",
+                "TransactionPackageDataID": "169514",
+                "Payments": {
+                  "PaymentInfo": {
+                    "GuestReferences": null,
+                    "PaymentStatus": "PaymentSuccessful",
+                    "CustomerPaymentIP": "127.0.0.1",
+                    "Amount": "116.66",
+                    "ProcessingFeeAmount": "5.55",
+                    "CurrencyID": "USD",
+                    "BillingAddress": {
+                      "AddressLineOne": "Sector",
+                      "City": {
+                        "Name": "London",
+                        "StateID": "LO",
+                        "CountryID": "GB",
+                        "CountryISOCode": "GBR"
+                      },
+                      "ZipCode": "52048"
+                    },
+                    "PaymentForm": {
+                      "ID": "CARD"
+                    },
+                    "PhoneNumber": "+19998877788",
+                    "AuthorizationData": {
+                      "PaymentAuthorizationInfo": {
+                        "AuthCode": "28825789",
+                        "TransactionID": "28825789,28825797",
+                        "Date": null,
+                        "Success": "true",
+                        "Mode": "Supplier"
+                      }
+                    },
+                    "PaymentAPI": "EWay",
+                    "PaymentSuccessful": "true",
+                    "PaidFrom": "Customer",
+                    "PaidTo": "Supplier",
+                    "ToCurrencyID": "AUD",
+                    "CurrencyExchangeRate": "1.4186",
+                    "PaidDate": "03-06-2021 09:35:37"
+                  }
+                },
+                "UserType": "Customer",
+                "InvoiceDate": null
+              }
+            },
+            "Passengers": {
+              "PassengerID": [
+                "369328",
+                "369400"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

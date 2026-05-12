@@ -1,0 +1,236 @@
+<template>
+    <div class="portal-card">
+
+        <!-- Header -->
+        <div class="portal-header">
+            <div class="header-left">
+                <div class="portal-icon">
+                    <lightning-icon icon-name="utility:portal" size="small" alternative-text="Portal"></lightning-icon>
+                </div>
+                <div>
+                    <h2 class="header-title">Cruzy+ Portal Manager</h2>
+                    <p class="header-sub">Manage web portal access for this member</p>
+                </div>
+            </div>
+            <template if:true={portalData}>
+                <div class={statusBadgeClass}>{portalData.portalStatus}</div>
+            </template>
+        </div>
+
+        <!-- Loading -->
+        <template if:true={isLoading}>
+            <div class="loading-box">
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+                <span class="loading-text">Loading portal status…</span>
+            </div>
+        </template>
+
+        <!-- Error -->
+        <template if:true={errorMsg}>
+            <div class="alert alert-error">
+                <lightning-icon icon-name="utility:error" size="x-small"></lightning-icon>
+                <span>{errorMsg}</span>
+            </div>
+        </template>
+
+        <!-- Success -->
+        <template if:true={successMsg}>
+            <div class="alert alert-success">
+                <lightning-icon icon-name="utility:success" size="x-small"></lightning-icon>
+                <span>{successMsg}</span>
+            </div>
+        </template>
+
+        <!-- Portal info grid -->
+        <template if:true={portalData}>
+            <div class="info-grid">
+                <div class="info-tile">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">{portalData.email}</span>
+                </div>
+                <div class="info-tile">
+                    <span class="info-label">Member ID</span>
+                    <span class="info-value mono">{memberIdDisplay}</span>
+                </div>
+                <div class="info-tile">
+                    <span class="info-label">Password Set</span>
+                    <span class={passwordSetClass}>{passwordSetLabel}</span>
+                </div>
+                <div class="info-tile">
+                    <span class="info-label">Last Login</span>
+                    <span class="info-value">{lastLoginDisplay}</span>
+                </div>
+                <div class="info-tile">
+                    <span class="info-label">Total Logins</span>
+                    <span class="info-value">{loginCountDisplay}</span>
+                </div>
+                <div class="info-tile">
+                    <span class="info-label">Reset Link Expires</span>
+                    <span class="info-value">{resetExpiryDisplay}</span>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Actions -->
+            <div class="actions-section">
+                <p class="actions-label">ACTIONS</p>
+
+                <!-- Enroll (only if not enrolled) -->
+                <template if:false={portalData.enrolled}>
+                    <div class="action-row action-enroll">
+                        <div class="action-info">
+                            <lightning-icon icon-name="utility:add" size="x-small"></lightning-icon>
+                            <div>
+                                <p class="action-title">Enroll as Cruzy+ Member</p>
+                                <p class="action-desc">Creates membership, generates Member ID, sends welcome + set-password email</p>
+                            </div>
+                        </div>
+                        <lightning-button
+                            label="Enroll Now"
+                            variant="brand"
+                            onclick={handleEnroll}
+                            disabled={isBusy}
+                        ></lightning-button>
+                    </div>
+                </template>
+
+                <!-- Send Reset Link -->
+                <div class="action-row">
+                    <div class="action-info">
+                        <lightning-icon icon-name="utility:email" size="x-small"></lightning-icon>
+                        <div>
+                            <p class="action-title">Send Password Reset Link</p>
+                            <p class="action-desc">Generates a new 1-hour token and emails a branded reset link to {portalData.email}</p>
+                        </div>
+                    </div>
+                    <lightning-button
+                        label="Send Reset"
+                        variant="neutral"
+                        onclick={handleSendReset}
+                        disabled={isBusy}
+                    ></lightning-button>
+                </div>
+
+                <!-- Send Welcome / Set Password Link -->
+                <template if:true={portalData.enrolled}>
+                    <div class="action-row">
+                        <div class="action-info">
+                            <lightning-icon icon-name="utility:key" size="x-small"></lightning-icon>
+                            <div>
+                                <p class="action-title">Send Set-Password Link</p>
+                                <p class="action-desc">Sends a 24-hour welcome email with branded set-password link</p>
+                            </div>
+                        </div>
+                        <lightning-button
+                            label="Send Welcome Link"
+                            variant="neutral"
+                            onclick={handleSendWelcome}
+                            disabled={isBusy}
+                        ></lightning-button>
+                    </div>
+                </template>
+
+                <!-- Set Temporary Password -->
+                <div class="action-row action-temp-pw">
+                    <div class="action-info">
+                        <lightning-icon icon-name="utility:lock" size="x-small"></lightning-icon>
+                        <div>
+                            <p class="action-title">Set Temporary Password</p>
+                            <p class="action-desc">Override the member's password directly — they'll receive an email with the temp password</p>
+                        </div>
+                    </div>
+                    <lightning-button
+                        label="Set Password"
+                        variant="neutral"
+                        onclick={openTempPasswordModal}
+                        disabled={isBusy}
+                    ></lightning-button>
+                </div>
+
+                <!-- Status toggle -->
+                <div class="action-row">
+                    <div class="action-info">
+                        <lightning-icon icon-name={statusToggleIcon} size="x-small"></lightning-icon>
+                        <div>
+                            <p class="action-title">{statusToggleTitle}</p>
+                            <p class="action-desc">{statusToggleDesc}</p>
+                        </div>
+                    </div>
+                    <lightning-button
+                        label={statusToggleLabel}
+                        variant={statusToggleVariant}
+                        onclick={handleStatusToggle}
+                        disabled={isBusy}
+                    ></lightning-button>
+                </div>
+            </div>
+
+            <!-- Generated link display -->
+            <template if:true={generatedLink}>
+                <div class="link-box">
+                    <div class="link-box-header">
+                        <lightning-icon icon-name="utility:link" size="x-small"></lightning-icon>
+                        <span>Generated Link (copy and share if email not available)</span>
+                    </div>
+                    <div class="link-url" onclick={copyLink} title="Click to copy">
+                        {generatedLink}
+                    </div>
+                    <p class="link-hint">Click link above to copy to clipboard</p>
+                </div>
+            </template>
+        </template>
+    </div>
+
+    <!-- Set Temporary Password Modal -->
+    <template if:true={showTempPasswordModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <div class="modal-header-custom">
+                    <h2 class="modal-title-custom">Set Temporary Password</h2>
+                    <p class="modal-subtitle-custom">This will override the member's current password, activate their account, and send them the temporary password via email.</p>
+                    <button class="modal-close-btn" onclick={closeTempPasswordModal} title="Close">
+                        <lightning-icon icon-name="utility:close" size="small" alternative-text="Close"></lightning-icon>
+                    </button>
+                </div>
+                <div class="modal-body-custom">
+                    <div class="pw-input-group">
+                        <label class="pw-label">New Temporary Password</label>
+                        <div class="pw-input-row">
+                            <input
+                                type={tempPasswordInputType}
+                                class="pw-input"
+                                value={tempPassword}
+                                onchange={handleTempPasswordChange}
+                                onkeyup={handleTempPasswordChange}
+                                placeholder="Enter at least 8 characters"
+                                minlength="8"
+                            />
+                            <button class="pw-toggle-btn" onclick={toggleTempPasswordVisibility} title={tempPasswordToggleLabel}>
+                                <lightning-icon icon-name={tempPasswordToggleIcon} size="x-small" alternative-text={tempPasswordToggleLabel}></lightning-icon>
+                            </button>
+                        </div>
+                        <template if:true={tempPasswordError}>
+                            <p class="pw-error">{tempPasswordError}</p>
+                        </template>
+                    </div>
+                    <button class="pw-generate-btn" onclick={generateRandomPassword}>
+                        <lightning-icon icon-name="utility:refresh" size="x-small"></lightning-icon>
+                        <span>Generate Random Password</span>
+                    </button>
+                </div>
+                <div class="modal-footer-custom">
+                    <lightning-button label="Cancel" variant="neutral" onclick={closeTempPasswordModal}></lightning-button>
+                    <lightning-button
+                        label="Set Password & Notify"
+                        variant="brand"
+                        onclick={handleSetTempPassword}
+                        disabled={isSetPasswordDisabled}
+                    ></lightning-button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

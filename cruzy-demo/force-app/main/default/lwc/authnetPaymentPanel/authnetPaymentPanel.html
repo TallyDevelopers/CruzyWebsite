@@ -1,0 +1,366 @@
+<template>
+    <div class="sp-wrap">
+
+        <template if:true={isLoading}>
+            <div class="sp-loading">
+                <lightning-spinner size="small" variant="brand" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:false={isLoading}>
+
+            <!-- ── Header row ── -->
+            <div class="sp-header">
+                <div class="sp-header-left">
+                    <span class="sp-authnet-s">A</span>
+                    <span class="sp-title">Authorize.net Payments</span>
+                </div>
+                <!-- Balance due badge — only shows when overdue -->
+                <template if:true={hasBalance}>
+                    <div class="sp-balance-badge">
+                        <span class="sp-balance-label">Balance Due</span>
+                        <span class="sp-balance-amount">${totalBalanceDisplay}</span>
+                    </div>
+                </template>
+            </div>
+
+            <!-- ── Saved Cards ── -->
+            <div class="sp-cards">
+                <template for:each={cards} for:item="card">
+                    <div key={card.Id} class={card.rowClass}>
+                        <div class={card.brandClass}>{card.brandShort}</div>
+                        <div class="sp-card-info">
+                            <span class="sp-card-num">•••• {card.Last_Four__c}</span>
+                            <span class="sp-card-exp">{card.expiryDisplay}</span>
+                        </div>
+                        <template if:true={card.Is_Default__c}>
+                            <span class="sp-default-tag">Default</span>
+                        </template>
+                        <!-- Charge this card button -->
+                        <button class="sp-charge-btn" onclick={openChargeModal} data-id={card.Id} data-name={card.Name}>
+                            Charge
+                        </button>
+                        <button class="sp-remove-link" onclick={confirmDelete} data-id={card.Id} data-name={card.Name}>✕</button>
+                    </div>
+                </template>
+
+                <template if:false={hasCards}>
+                    <div class="sp-no-cards">No saved cards</div>
+                </template>
+            </div>
+
+            <!-- ── Charges / Payment History ── -->
+            <div class="sp-charges-section">
+                <div class="sp-charges-hdr">
+                    <span class="sp-charges-title">Charge History</span>
+                    <span class="sp-charges-count">{chargeCount}</span>
+                </div>
+                <template if:true={hasCharges}>
+                    <div class="sp-charges-list">
+                        <template for:each={charges} for:item="ch">
+                            <div key={ch.id} class="sp-charge-row">
+                                <div class={ch.typeIconClass}>
+                                    <lightning-icon icon-name={ch.typeIcon} size="xx-small"></lightning-icon>
+                                </div>
+                                <div class="sp-charge-info">
+                                    <div class="sp-charge-top">
+                                        <span class="sp-charge-label">{ch.label}</span>
+                                        <template if:true={ch.bookingRef}>
+                                            <span class="sp-charge-ref">{ch.bookingRef}</span>
+                                        </template>
+                                    </div>
+                                    <span class="sp-charge-note">{ch.note}</span>
+                                </div>
+                                <div class="sp-charge-right">
+                                    <span class="sp-charge-amt">${ch.amount}</span>
+                                    <span class="sp-charge-date">{ch.date}</span>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:false={hasCharges}>
+                    <div class="sp-no-charges">No charges recorded yet</div>
+                </template>
+            </div>
+
+            <!-- ── Footer actions ── -->
+            <div class="sp-footer">
+                <button class="sp-link-btn" onclick={openNewCard}>
+                    <lightning-icon icon-name="utility:add" size="xx-small"></lightning-icon>
+                    Add Card
+                </button>
+                <button class="sp-link-btn" onclick={openChargeNew}>
+                    <lightning-icon icon-name="utility:currency" size="xx-small"></lightning-icon>
+                    Charge New Card
+                </button>
+            </div>
+
+        </template>
+
+        <!-- ════ CHARGE MODAL (saved card) ════ -->
+        <template if:true={showChargeModal}>
+            <div class="sp-backdrop" onclick={closeModals}></div>
+            <div class="sp-modal">
+                <div class="sp-modal-hdr">
+                    <span class="sp-modal-title">Charge Card</span>
+                    <button class="sp-modal-x" onclick={closeModals}>✕</button>
+                </div>
+                <div class="sp-modal-body">
+
+                    <!-- Card being charged -->
+                    <div class="sp-charge-card-row">
+                        <div class={chargeCard.brandClass}>{chargeCard.brandShort}</div>
+                        <div class="sp-card-info">
+                            <span class="sp-card-num">•••• {chargeCard.Last_Four__c}</span>
+                            <span class="sp-card-exp">{chargeCard.Cardholder_Name__c} · {chargeCard.expiryDisplay}</span>
+                        </div>
+                    </div>
+
+                    <!-- Booking selector -->
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Booking</label>
+                        <select class="sp-select" onchange={handleBookingSelect}>
+                            <option value="">— Select booking —</option>
+                            <template for:each={bookings} for:item="bk">
+                                <option key={bk.id} value={bk.id}>{bk.label}</option>
+                            </template>
+                        </select>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Amount</label>
+                        <div class="sp-amount-wrap">
+                            <span class="sp-dollar">$</span>
+                            <input type="number" class="sp-amount-inp" min="0.01" step="0.01"
+                                   value={chargeAmount} onchange={handleAmountChange} />
+                            <template if:true={selectedBookingBalance}>
+                                <button class="sp-full-btn" onclick={chargeFullBalance}>Full (${selectedBookingBalance})</button>
+                            </template>
+                        </div>
+                    </div>
+
+                    <template if:true={chargeError}>
+                        <div class="sp-error">{chargeError}</div>
+                    </template>
+
+                    <template if:true={chargeSuccess}>
+                        <div class="sp-success">
+                            <lightning-icon icon-name="utility:success" size="x-small"></lightning-icon>
+                            ${lastChargeAmount} charged · {lastChargeId}
+                        </div>
+                    </template>
+
+                </div>
+                <div class="sp-modal-ftr">
+                    <span class="sp-secure">
+                        <lightning-icon icon-name="utility:lock" size="xx-small"></lightning-icon>
+                        Authorize.net · PCI DSS Level 1
+                    </span>
+                    <div class="sp-modal-actions">
+                        <button class="sp-btn-ghost" onclick={closeModals}>{closeBtnLabel}</button>
+                        <template if:false={chargeSuccess}>
+                            <button class="sp-btn-primary" onclick={processCharge} disabled={isProcessing}>
+                                <template if:false={isProcessing}>Charge ${chargeAmount}</template>
+                                <template if:true={isProcessing}>
+                                    <lightning-spinner size="x-small" variant="inverse" alternative-text="Processing"></lightning-spinner>
+                                </template>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- ════ CHARGE NEW CARD MODAL ════ -->
+        <template if:true={showChargeNew}>
+            <div class="sp-backdrop" onclick={closeModals}></div>
+            <div class="sp-modal">
+                <div class="sp-modal-hdr">
+                    <span class="sp-modal-title">Charge New Card</span>
+                    <button class="sp-modal-x" onclick={closeModals}>✕</button>
+                </div>
+                <div class="sp-modal-body">
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Cardholder Name</label>
+                        <input type="text" class="sp-inp" placeholder="Jane Smith"
+                               value={newCard.cardholderName} onchange={handleCardholderName} />
+                    </div>
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Card Number</label>
+                        <div class="sp-num-wrap">
+                            <input type="text" class="sp-inp sp-num-inp"
+                                   placeholder="1234 5678 9012 3456" maxlength="19"
+                                   value={newCard.cardNumberDisplay}
+                                   onkeyup={handleCardNumber} onchange={handleCardNumber} />
+                            <template if:true={newCard.detectedBrand}>
+                                <span class={newCard.detectedBrandClass}>{newCard.brandShort}</span>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="sp-row-half">
+                        <div class="sp-field-group">
+                            <label class="sp-lbl">Expiry</label>
+                            <input type="text" class="sp-inp" placeholder="MM / YY" maxlength="7"
+                                   value={newCard.expiryDisplay}
+                                   onkeyup={handleExpiry} onchange={handleExpiry} />
+                        </div>
+                        <div class="sp-field-group">
+                            <label class="sp-lbl">CVV</label>
+                            <input type="password" class="sp-inp" placeholder="•••" maxlength="4"
+                                   onchange={handleCvv} />
+                        </div>
+                    </div>
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Booking</label>
+                        <select class="sp-select" onchange={handleBookingSelect}>
+                            <option value="">— Select booking —</option>
+                            <template for:each={bookings} for:item="bk">
+                                <option key={bk.id} value={bk.id}>{bk.label}</option>
+                            </template>
+                        </select>
+                    </div>
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Amount</label>
+                        <div class="sp-amount-wrap">
+                            <span class="sp-dollar">$</span>
+                            <input type="number" class="sp-amount-inp" min="0.01" step="0.01"
+                                   value={chargeAmount} onchange={handleAmountChange} />
+                            <template if:true={selectedBookingBalance}>
+                                <button class="sp-full-btn" onclick={chargeFullBalance}>Full (${selectedBookingBalance})</button>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="sp-save-check">
+                        <input type="checkbox" id="spSaveCard" checked={newCard.saveForLater} onchange={handleSaveToggle} />
+                        <label for="spSaveCard">Save card for future charges</label>
+                    </div>
+
+                    <template if:true={chargeError}>
+                        <div class="sp-error">{chargeError}</div>
+                    </template>
+
+                    <template if:true={chargeSuccess}>
+                        <div class="sp-success">
+                            <lightning-icon icon-name="utility:success" size="x-small"></lightning-icon>
+                            ${lastChargeAmount} charged · {lastChargeId}
+                        </div>
+                    </template>
+
+                </div>
+                <div class="sp-modal-ftr">
+                    <span class="sp-secure">
+                        <lightning-icon icon-name="utility:lock" size="xx-small"></lightning-icon>
+                        Authorize.net · PCI DSS Level 1
+                    </span>
+                    <div class="sp-modal-actions">
+                        <button class="sp-btn-ghost" onclick={closeModals}>{closeBtnLabel}</button>
+                        <template if:false={chargeSuccess}>
+                            <button class="sp-btn-primary" onclick={processChargeNew} disabled={isProcessing}>
+                                <template if:false={isProcessing}>Charge ${chargeAmount}</template>
+                                <template if:true={isProcessing}>
+                                    <lightning-spinner size="x-small" variant="inverse" alternative-text="Processing"></lightning-spinner>
+                                </template>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- ════ ADD CARD (save only) MODAL ════ -->
+        <template if:true={showAddModal}>
+            <div class="sp-backdrop" onclick={closeModals}></div>
+            <div class="sp-modal">
+                <div class="sp-modal-hdr">
+                    <span class="sp-modal-title">Add Card on File</span>
+                    <button class="sp-modal-x" onclick={closeModals}>✕</button>
+                </div>
+                <div class="sp-modal-body">
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Cardholder Name</label>
+                        <input type="text" class="sp-inp" placeholder="Jane Smith"
+                               value={newCard.cardholderName} onchange={handleCardholderName} />
+                    </div>
+
+                    <div class="sp-field-group">
+                        <label class="sp-lbl">Card Number</label>
+                        <div class="sp-num-wrap">
+                            <input type="text" class="sp-inp sp-num-inp"
+                                   placeholder="1234 5678 9012 3456" maxlength="19"
+                                   value={newCard.cardNumberDisplay}
+                                   onkeyup={handleCardNumber} onchange={handleCardNumber} />
+                            <template if:true={newCard.detectedBrand}>
+                                <span class={newCard.detectedBrandClass}>{newCard.brandShort}</span>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="sp-row-half">
+                        <div class="sp-field-group">
+                            <label class="sp-lbl">Expiry</label>
+                            <input type="text" class="sp-inp" placeholder="MM / YY" maxlength="7"
+                                   value={newCard.expiryDisplay}
+                                   onkeyup={handleExpiry} onchange={handleExpiry} />
+                        </div>
+                        <div class="sp-field-group">
+                            <label class="sp-lbl">CVV</label>
+                            <input type="password" class="sp-inp" placeholder="•••" maxlength="4"
+                                   onchange={handleCvv} />
+                        </div>
+                    </div>
+
+                    <template if:true={addError}>
+                        <div class="sp-error">{addError}</div>
+                    </template>
+
+                </div>
+                <div class="sp-modal-ftr">
+                    <span class="sp-secure">
+                        <lightning-icon icon-name="utility:lock" size="xx-small"></lightning-icon>
+                        Authorize.net · PCI DSS Level 1
+                    </span>
+                    <div class="sp-modal-actions">
+                        <button class="sp-btn-ghost" onclick={closeModals}>Cancel</button>
+                        <button class="sp-btn-primary" onclick={saveCard} disabled={isSaving}>
+                            <template if:false={isSaving}>Save Card</template>
+                            <template if:true={isSaving}>
+                                <lightning-spinner size="x-small" variant="inverse" alternative-text="Saving"></lightning-spinner>
+                            </template>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- ════ DELETE CONFIRM ════ -->
+        <template if:true={showDeleteConfirm}>
+            <div class="sp-backdrop" onclick={cancelDelete}></div>
+            <div class="sp-modal sp-modal-sm">
+                <div class="sp-modal-hdr">
+                    <span class="sp-modal-title">Remove Card</span>
+                    <button class="sp-modal-x" onclick={cancelDelete}>✕</button>
+                </div>
+                <div class="sp-modal-body">
+                    <p class="sp-confirm-txt">Remove <strong>{cardToDelete.name}</strong>?</p>
+                </div>
+                <div class="sp-modal-ftr">
+                    <div></div>
+                    <div class="sp-modal-actions">
+                        <button class="sp-btn-ghost" onclick={cancelDelete}>Cancel</button>
+                        <button class="sp-btn-danger" onclick={deleteCard}>Remove</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </div>
+</template>

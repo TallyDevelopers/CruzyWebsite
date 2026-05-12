@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Members</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Cruzy_Plus_MBR_Number__c</columns>
+    <columns>PCC__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Cruzy_Plus_Enrolled__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Active Cruzy+ Members</label>
+    <language>en_US</language>
+</ListView>

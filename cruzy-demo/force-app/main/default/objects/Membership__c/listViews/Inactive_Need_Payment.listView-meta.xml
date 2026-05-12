@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive_Need_Payment</fullName>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Expiration_Date__c</columns>
+    <columns>Next_Billing_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Inactive - Need Payment</value>
+    </filters>
+    <label>Inactive - Need Payment</label>
+    <language>en_US</language>
+</ListView>

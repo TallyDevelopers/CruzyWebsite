@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Contact__c</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Reward_Number__c</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Book_By_Date__c</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Expiration_Date__c</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Partner__c</field>
+    </columns>
+    <columns>
+        <field>Reward__c.Reward_Location__c</field>
+    </columns>
+    <description>Active rewards expiring within 30 days — urgent outreach queue</description>
+    <filter>
+        <criteriaItems>
+            <column>Reward__c.Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Rewards Expiring in 30 Days</name>
+    
+    <reportType>CustomEntity$Reward__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Reward__c.Expiration_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Reward__c.Expiration_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

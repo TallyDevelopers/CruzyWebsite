@@ -1,0 +1,305 @@
+<template>
+    <!-- Loading -->
+    <template if:true={loading}>
+        <div class="bko-loading"><lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner></div>
+    </template>
+
+    <!-- Error -->
+    <template if:true={error}>
+        <div class="bko-error">
+            <span class="bko-error-icon">!</span>
+            <span>Unable to load booking details</span>
+        </div>
+    </template>
+
+    <template if:true={hasBooking}>
+        <div class="bko-root">
+
+            <!-- ═══ HERO HEADER ═══ -->
+            <div class="bko-hero">
+                <div class="bko-hero-top">
+                    <div class="bko-hero-left">
+                        <span class={statusClass}>{booking.status}</span>
+                        <template if:true={booking.quoteType}>
+                            <span class="bko-tag">{booking.quoteType}</span>
+                        </template>
+                        <template if:true={booking.bookingTag}>
+                            <span class="bko-tag bko-tag-accent">{booking.bookingTag}</span>
+                        </template>
+                    </div>
+                    <div class="bko-hero-actions">
+                        <template if:true={booking.contactId}>
+                            <button class="bko-link-btn" onclick={navigateToContact} aria-label="View Contact">
+                                <span class="bko-avatar-sm">{initials}</span>
+                                <span>{booking.contactName}</span>
+                            </button>
+                        </template>
+                        <template if:true={booking.accountId}>
+                            <button class="bko-link-btn" onclick={navigateToAccount} aria-label="View Account">
+                                <lightning-icon icon-name="standard:account" size="xx-small"></lightning-icon>
+                                <span>{booking.accountName}</span>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+                <h1 class="bko-hero-name">{booking.name}</h1>
+                <template if:true={booking.cruiseName}>
+                    <p class="bko-hero-cruise">{booking.cruiseName}</p>
+                </template>
+                <div class="bko-hero-stats">
+                    <div class="bko-stat">
+                        <span class="bko-stat-val">{booking.ship}</span>
+                        <span class="bko-stat-lbl">Ship</span>
+                    </div>
+                    <div class="bko-stat-div"></div>
+                    <div class="bko-stat">
+                        <span class="bko-stat-val">{departureFormatted}</span>
+                        <span class="bko-stat-lbl">Departure</span>
+                    </div>
+                    <div class="bko-stat-div"></div>
+                    <div class="bko-stat">
+                        <span class="bko-stat-val">{durationLabel}</span>
+                        <span class="bko-stat-lbl">Duration</span>
+                    </div>
+                    <div class="bko-stat-div"></div>
+                    <div class="bko-stat">
+                        <span class="bko-stat-val bko-stat-money">{originalTotalFmt}</span>
+                        <span class="bko-stat-lbl">Total</span>
+                    </div>
+                    <template if:true={hasBalance}>
+                        <div class="bko-stat-div"></div>
+                        <div class="bko-stat">
+                            <span class="bko-stat-val bko-stat-balance">{currentBalanceFmt}</span>
+                            <span class="bko-stat-lbl">Balance Due</span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="bko-body">
+                <!-- ═══ VOYAGE DETAILS ═══ -->
+                <section class="bko-section">
+                    <div class="bko-sec-hdr">
+                        <div class="bko-sec-dot bko-dot-blue"></div>
+                        <h2 class="bko-sec-title">Voyage Details</h2>
+                    </div>
+                    <div class="bko-grid bko-grid-3">
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Cruise Line</span>
+                            <span class="bko-cell-val">{booking.cruiseLine}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Itinerary</span>
+                            <span class="bko-cell-val">{booking.itinerary}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Departure Port</span>
+                            <span class="bko-cell-val">{booking.departurePort}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Departure</span>
+                            <span class="bko-cell-val">{departureFormatted}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Return</span>
+                            <span class="bko-cell-val">{returnFormatted}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Duration</span>
+                            <span class="bko-cell-val">{durationLabel}</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══ CABIN & PASSENGERS ═══ -->
+                <section class="bko-section">
+                    <div class="bko-sec-hdr">
+                        <div class="bko-sec-dot bko-dot-purple"></div>
+                        <h2 class="bko-sec-title">Cabin &amp; Passengers</h2>
+                    </div>
+                    <div class="bko-grid bko-grid-4">
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Category</span>
+                            <span class="bko-cell-val">{booking.cabinCategory}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Cabin #</span>
+                            <span class="bko-cell-val">{booking.cabinNumber}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Deck</span>
+                            <span class="bko-cell-val">{booking.deck}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Passengers</span>
+                            <span class="bko-cell-val">{booking.paxCount}</span>
+                        </div>
+                        <template if:true={booking.fareCode}>
+                            <div class="bko-cell">
+                                <span class="bko-cell-lbl">Fare Code</span>
+                                <span class="bko-cell-val">{booking.fareCode}</span>
+                            </div>
+                        </template>
+                        <template if:true={booking.diningTime}>
+                            <div class="bko-cell">
+                                <span class="bko-cell-lbl">Dining Time</span>
+                                <span class="bko-cell-val">{booking.diningTime}</span>
+                            </div>
+                        </template>
+                    </div>
+                    <template if:true={booking.specialConsiderations}>
+                        <div class="bko-note">
+                            <span class="bko-note-lbl">Special Considerations</span>
+                            <span class="bko-note-val">{booking.specialConsiderations}</span>
+                        </div>
+                    </template>
+                </section>
+
+                <!-- ═══ FINANCIALS ═══ -->
+                <section class="bko-section">
+                    <div class="bko-sec-hdr">
+                        <div class="bko-sec-dot bko-dot-green"></div>
+                        <h2 class="bko-sec-title">Financials</h2>
+                    </div>
+                    <div class="bko-grid bko-grid-3">
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Original Total</span>
+                            <span class="bko-cell-val bko-val-money">{originalTotalFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Cruise Total</span>
+                            <span class="bko-cell-val bko-val-money">{cruiseTotalFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Cruise Line Fare</span>
+                            <span class="bko-cell-val">{cruiseLineFareFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Savings</span>
+                            <span class="bko-cell-val bko-val-green">{savingsFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Mark-Up</span>
+                            <span class="bko-cell-val">{markUpFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Mark-Up %</span>
+                            <span class="bko-cell-val">{markUpPercentFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Per Person/Day</span>
+                            <span class="bko-cell-val">{pricePerPersonDayFmt}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Payment Date</span>
+                            <span class="bko-cell-val">{paymentDateFormatted}</span>
+                        </div>
+                        <div class="bko-cell">
+                            <span class="bko-cell-lbl">Balance Due</span>
+                            <span class={balanceCellClass}>{currentBalanceFmt}</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══ REWARD ═══ -->
+                <template if:true={hasReward}>
+                    <section class="bko-section bko-reward-section">
+                        <div class="bko-sec-hdr">
+                            <div class="bko-sec-dot bko-dot-amber"></div>
+                            <h2 class="bko-sec-title">Linked Reward</h2>
+                        </div>
+                        <div class="bko-reward-row">
+                            <button class="bko-reward-link" onclick={navigateToReward} aria-label="View Reward">
+                                {booking.rewardName}
+                            </button>
+                            <template if:true={booking.rewardStatus}>
+                                <span class="bko-reward-pill">{booking.rewardStatus}</span>
+                            </template>
+                        </div>
+                    </section>
+                </template>
+
+                <!-- ═══ ADD-ONS ═══ -->
+                <template if:true={hasAddOns}>
+                    <section class="bko-section">
+                        <div class="bko-sec-hdr bko-sec-hdr-toggle" onclick={toggleAddOns}>
+                            <div class="bko-sec-dot bko-dot-teal"></div>
+                            <h2 class="bko-sec-title">Add-Ons</h2>
+                            <span class="bko-sec-count">{addOnCount}</span>
+                            <span class="bko-sec-total">{addOnTotal}</span>
+                            <span class="bko-chevron">{addOnsChevron}</span>
+                        </div>
+                        <template if:true={addOnsOpen}>
+                            <div class="bko-list">
+                                <template for:each={addOnList} for:item="addon">
+                                    <div class="bko-list-row" key={addon.key}>
+                                        <span class="bko-list-type">{addon.addonType}</span>
+                                        <span class="bko-list-name">{addon.name}</span>
+                                        <span class="bko-list-amt">{addon.amountFmt}</span>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </section>
+                </template>
+
+                <!-- ═══ PAYMENTS ═══ -->
+                <template if:true={hasPayments}>
+                    <section class="bko-section">
+                        <div class="bko-sec-hdr bko-sec-hdr-toggle" onclick={togglePayments}>
+                            <div class="bko-sec-dot bko-dot-indigo"></div>
+                            <h2 class="bko-sec-title">Payments</h2>
+                            <span class="bko-sec-count">{paymentCount}</span>
+                            <span class="bko-sec-total bko-sec-total-green">{paymentTotal}</span>
+                            <span class="bko-chevron">{paymentsChevron}</span>
+                        </div>
+                        <template if:true={paymentsOpen}>
+                            <div class="bko-list">
+                                <template for:each={paymentList} for:item="pmt">
+                                    <div class="bko-list-row" key={pmt.key}>
+                                        <span class="bko-list-date">{pmt.dateFmt}</span>
+                                        <span class="bko-list-name">
+                                            <template if:true={pmt.paymentType}>{pmt.paymentType}</template>
+                                            <template if:true={pmt.note}> — {pmt.note}</template>
+                                        </span>
+                                        <span class="bko-list-amt bko-list-amt-green">{pmt.amountFmt}</span>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </section>
+                </template>
+
+                <!-- ═══ ODYSSEUS INTEGRATION ═══ -->
+                <template if:true={fromOdysseus}>
+                    <section class="bko-section bko-ody-section">
+                        <div class="bko-sec-hdr">
+                            <div class="bko-sec-dot bko-dot-orange"></div>
+                            <h2 class="bko-sec-title">Odysseus</h2>
+                        </div>
+                        <div class="bko-grid bko-grid-4">
+                            <div class="bko-cell">
+                                <span class="bko-cell-lbl">Transaction ID</span>
+                                <span class="bko-cell-val bko-mono">{booking.odysseusTransactionId}</span>
+                            </div>
+                            <div class="bko-cell">
+                                <span class="bko-cell-lbl">Confirmation</span>
+                                <span class="bko-cell-val bko-mono">{booking.odysseusConfirmation}</span>
+                            </div>
+                            <div class="bko-cell">
+                                <span class="bko-cell-lbl">ODY Status</span>
+                                <span class="bko-cell-val">{booking.odysseusStatus}</span>
+                            </div>
+                            <template if:true={booking.odysseusPackageId}>
+                                <div class="bko-cell">
+                                    <span class="bko-cell-lbl">Package ID</span>
+                                    <span class="bko-cell-val bko-mono">{booking.odysseusPackageId}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </section>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,215 @@
+/* ══════════════════════════════════════════════════════
+   CRUZY CUSTOMER INTELLIGENCE BANNER
+══════════════════════════════════════════════════════ */
+
+.cib-root {
+    font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    width: 100%;
+}
+
+/* ── Loading ─────────────────────────────────────────── */
+.cib-loading {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* ── Alert Strip ─────────────────────────────────────── */
+.cib-alert-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 7px 14px;
+    background: #1a1a2e;
+    border-radius: 10px 10px 0 0;
+}
+.cib-alert-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+.alert-bolo    { background: #dc2626; color: #fff; }
+.alert-acct    { background: #d97706; color: #fff; }
+.alert-hold    { background: #7c3aed; color: #fff; }
+.alert-balance { background: #c2410c; color: #fff; }
+
+/* ── Tile Row ─────────────────────────────────────────── */
+.cib-tiles {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+/* when alert strip is present, flatten top corners */
+.cib-alert-strip + .cib-tiles {
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+}
+
+/* ── Single Tile ─────────────────────────────────────── */
+.cib-tile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-right: 1px solid #f0f2f5;
+    position: relative;
+    transition: background 0.12s;
+    min-width: 0;
+}
+.cib-tile:last-child { border-right: none; }
+.cib-tile:hover { background: #f8f9fa; }
+
+/* ── Icon Wrap ───────────────────────────────────────── */
+.cib-tile-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+/* Default colors per tile type */
+.cib-tile-mbr    .cib-tile-icon-wrap { background: #ede9fe; color: #7c3aed; }
+.cib-icon-booking { background: #e0f2fe; color: #0369a1; }
+.cib-icon-spend   { background: #dcfce7; color: #15803d; }
+.cib-icon-balance-ok   { background: #dcfce7; color: #15803d; }
+.cib-icon-balance-due  { background: #fee2e2; color: #dc2626; }
+.cib-icon-addon        { background: #fef9c3; color: #ca8a04; }
+.cib-icon-addon-heavy  { background: #fde68a; color: #92400e; }
+.cib-icon-reward  { background: #fce7f3; color: #be185d; }
+.cib-icon-flags   { background: #f0f9ff; color: #0369a1; }
+
+/* ── Tile Body ───────────────────────────────────────── */
+.cib-tile-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    flex: 1;
+}
+.cib-tile-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #9ca3af;
+    display: block;
+}
+.cib-tile-value {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1a1a2e;
+    display: block;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cib-tile-sub {
+    font-size: 10px;
+    color: #706e6b;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Value Color Variants ─────────────────────────────── */
+.cib-val-spend   { color: #15803d; }
+.cib-val-overdue { color: #dc2626; }
+.cib-val-clear   { color: #15803d; }
+
+/* ── Membership Tile States ──────────────────────────── */
+.mbr-active    { background: #f0fdf4; border-left: 3px solid #22c55e; }
+.mbr-inactive  { background: #fff7ed; border-left: 3px solid #f97316; }
+.mbr-cancelled { background: #fef2f2; border-left: 3px solid #dc2626; }
+.mbr-hold      { background: #faf5ff; border-left: 3px solid #a855f7; }
+.mbr-none      { background: #f9fafb; border-left: 3px solid #d1d5db; }
+
+/* ── Status Dot ──────────────────────────────────────── */
+.cib-status-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.dot-active    { background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+.dot-inactive  { background: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.2); }
+.dot-cancelled { background: #dc2626; box-shadow: 0 0 0 3px rgba(220,38,38,0.2); }
+.dot-hold      { background: #a855f7; box-shadow: 0 0 0 3px rgba(168,85,247,0.2); }
+.dot-none      { background: #d1d5db; }
+
+/* ── Balance Tile States ─────────────────────────────── */
+.balance-due   { background: #fef2f2; border-left: 3px solid #dc2626; }
+.balance-clear { background: #f0fdf4; border-left: 3px solid #22c55e; }
+
+/* ── Add-On Heavy State ──────────────────────────────── */
+.addon-heavy   { background: #fffbeb; border-left: 3px solid #f59e0b; }
+.cib-heavy-tag {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    background: #f59e0b;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+/* ── Flag Pills ──────────────────────────────────────── */
+.cib-flag-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 3px;
+}
+.cib-flag-pill {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.flag-es      { background: #d97706; color: #fff; }
+.flag-plus    { background: #7c3aed; color: #fff; }
+.flag-source  { background: #e0f2fe; color: #0369a1; }
+.flag-vifp-red         { background: #dc2626; color: #fff; }
+.flag-vifp-gold        { background: linear-gradient(90deg, #d97706, #fbbf24); color: #fff; }
+.flag-vifp-plat        { background: linear-gradient(90deg, #64748b, #94a3b8); color: #fff; }
+.flag-vifp-diamond     { background: linear-gradient(90deg, #0369a1, #38bdf8); color: #fff; }
+.flag-vifp-diamondplus { background: linear-gradient(90deg, #6d28d9, #a78bfa); color: #fff; }
+.cib-flag-none { font-size: 12px; color: #9ca3af; }
+
+/* ── Responsive: stack on narrow widths ─────────────── */
+@media (max-width: 700px) {
+    .cib-tiles {
+        flex-wrap: wrap;
+    }
+    .cib-tile {
+        flex: 1 1 calc(50% - 1px);
+        border-bottom: 1px solid #f0f2f5;
+    }
+}

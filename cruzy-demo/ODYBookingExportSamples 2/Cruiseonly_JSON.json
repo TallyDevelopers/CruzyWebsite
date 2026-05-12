@@ -1,0 +1,1440 @@
+{
+    "Transaction": {
+        "TimeStamp": "06-06-2024 13:01:21",
+        "Action": "RecordBooking",
+        "Booking": {
+            "TransactionID": "102040",
+            "ModifyUserID": "",
+            "SiteItemID": "127335",
+            "ReferrerID1": "cdn.odysol.com",
+            "ReferrerID2": "",
+            "SiteItemName": "Odysseus CDN - USD",
+            "SystemTimeZone": "Eastern Standard Time",
+            "DisplayTimeZone": "Eastern Standard Time",
+            "BookingMode": "B",
+            "Online": "true",
+            "ExternalIP": "106.51.77.97",
+            "Application": "B2B",
+            "Affiliate": {
+                "ID": "127335",
+                "ExternalReference1": "",
+                "ExternalReference2": "",
+                "sid1": "cdn.odysol.com",
+                "sid2": "",
+                "sid3": ""
+            },
+            "Customer": {
+                "ID": "78966",
+                "Title": "MR",
+                "FirstName": "Monish",
+                "MiddleName": "",
+                "LastName": "Luthra",
+                "ExternalReference1": "",
+                "ExternalReference2": "",
+                "Sex": "Male",
+                "DateOfBirth": "04-04-1988",
+                "Email": "karthik_nagendran@odysseussolutions.com",
+                "Insurance": {
+                    "Name": "Classic Plan with Cancel Anytime",
+                    "PolicyNumber": null
+                }
+            },
+            "AgencyConfirmation": "C-USD-RQE856X",
+            "Passengers": {
+                "NoOfAdult": "2",
+                "Passenger": [
+                    {
+                        "ID": "78966",
+                        "Title": "MR",
+                        "FirstName": "Monish",
+                        "MiddleName": "",
+                        "LastName": "Luthra",
+                        "ExternalReference1": "",
+                        "ExternalReference2": "",
+                        "Sex": "Male",
+                        "DateOfBirth": "04-04-1988",
+                        "Nationality": "US",
+                        "Email": "karthik_nagendran@odysseussolutions.com",
+                        "Phone": "+11234567890",
+                        "MailingAddress": {
+                            "AddressLineOne": {
+                                "#cdata-section": "Address 231"
+                            },
+                            "City": {
+                                "Name": {
+                                    "#cdata-section": "Miami"
+                                },
+                                "StateID": "FL",
+                                "CountryID": "US"
+                            },
+                            "ZipCode": {
+                                "#cdata-section": "12354"
+                            }
+                        },
+                        "Prices": {
+                            "Type": "Cruise",
+                            "Price": [
+                                {
+                                    "ID": "1",
+                                    "Amount": "564.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "49",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Fare (includes NCCF)"
+                                    }
+                                },
+                                {
+                                    "ID": "2",
+                                    "Amount": "110.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "60",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "NCCF"
+                                    }
+                                },
+                                {
+                                    "ID": "5",
+                                    "Amount": "-147.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "30%Savings",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Discount (30% Savings)"
+                                    }
+                                },
+                                {
+                                    "ID": "5",
+                                    "Amount": "-25.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "ExtraSavings",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Discount (Extra Savings)"
+                                    }
+                                },
+                                {
+                                    "ID": "5",
+                                    "Amount": "-50.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "RFNRDTEST",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Discount (RF NRD TEST)"
+                                    }
+                                },
+                                {
+                                    "ID": "45",
+                                    "Amount": "342.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Fare"
+                                    }
+                                },
+                                {
+                                    "ID": "46",
+                                    "Amount": "342.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cabin Fare (includes NCCF)"
+                                    }
+                                },
+                                {
+                                    "ID": "114",
+                                    "Amount": "232.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Commissionable Fare"
+                                    }
+                                },
+                                {
+                                    "ID": "3",
+                                    "Amount": "96.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "18",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Taxes and Fees"
+                                    }
+                                },
+                                {
+                                    "ID": "6",
+                                    "Amount": "70.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "52",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Travel Insurance"
+                                    }
+                                },
+                                {
+                                    "ID": "17",
+                                    "Amount": "508.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total"
+                                    }
+                                },
+                                {
+                                    "ID": "23",
+                                    "Amount": "508.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total Due"
+                                    }
+                                },
+                                {
+                                    "ID": "47",
+                                    "Amount": "438.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total without travel insurance"
+                                    }
+                                },
+                                {
+                                    "ID": "50",
+                                    "Amount": "438.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "8",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Supplier Gross Total"
+                                    }
+                                },
+                                {
+                                    "ID": "24",
+                                    "Amount": "118.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "6",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Deposit Amount"
+                                    }
+                                },
+                                {
+                                    "ID": "63",
+                                    "Amount": "464.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "3",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Balance Due Check"
+                                    }
+                                },
+                                {
+                                    "ID": "32",
+                                    "Amount": "27.84",
+                                    "IsCommission": "true",
+                                    "Display": "true",
+                                    "Code": "80",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total Commission"
+                                    }
+                                },
+                                {
+                                    "ID": "65",
+                                    "Amount": "410.45",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Supplier Total - NET"
+                                    }
+                                },
+                                {
+                                    "ID": "66",
+                                    "Amount": "410.45",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "42",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Balance Due to Supplier (NET)"
+                                    }
+                                },
+                                {
+                                    "ID": "112",
+                                    "Amount": "438.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Agent Net"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "ID": "78967",
+                        "Title": "MR",
+                        "FirstName": "Passenger",
+                        "MiddleName": "",
+                        "LastName": "One",
+                        "ExternalReference1": "",
+                        "ExternalReference2": "",
+                        "Sex": "Male",
+                        "DateOfBirth": "06-03-1981",
+                        "Nationality": "US",
+                        "Phone": "+14443332232",
+                        "Prices": {
+                            "Type": "Cruise",
+                            "Price": [
+                                {
+                                    "ID": "1",
+                                    "Amount": "564.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "49",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Fare (includes NCCF)"
+                                    }
+                                },
+                                {
+                                    "ID": "2",
+                                    "Amount": "110.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "60",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "NCCF"
+                                    }
+                                },
+                                {
+                                    "ID": "5",
+                                    "Amount": "-170.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "30%Savings",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Discount (30% Savings)"
+                                    }
+                                },
+                                {
+                                    "ID": "45",
+                                    "Amount": "394.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cruise Line Fare"
+                                    }
+                                },
+                                {
+                                    "ID": "46",
+                                    "Amount": "394.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Cabin Fare (includes NCCF)"
+                                    }
+                                },
+                                {
+                                    "ID": "114",
+                                    "Amount": "284.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Commissionable Fare"
+                                    }
+                                },
+                                {
+                                    "ID": "3",
+                                    "Amount": "96.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "18",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Taxes and Fees"
+                                    }
+                                },
+                                {
+                                    "ID": "6",
+                                    "Amount": "71.00",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "Code": "52",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Travel Insurance"
+                                    }
+                                },
+                                {
+                                    "ID": "17",
+                                    "Amount": "561.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total"
+                                    }
+                                },
+                                {
+                                    "ID": "23",
+                                    "Amount": "561.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total Due"
+                                    }
+                                },
+                                {
+                                    "ID": "47",
+                                    "Amount": "490.29",
+                                    "IsCommission": "false",
+                                    "Display": "false",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total without travel insurance"
+                                    }
+                                },
+                                {
+                                    "ID": "50",
+                                    "Amount": "490.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "8",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Supplier Gross Total"
+                                    }
+                                },
+                                {
+                                    "ID": "24",
+                                    "Amount": "132.00",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "6",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Deposit Amount"
+                                    }
+                                },
+                                {
+                                    "ID": "63",
+                                    "Amount": "464.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "3",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Balance Due Check"
+                                    }
+                                },
+                                {
+                                    "ID": "32",
+                                    "Amount": "34.08",
+                                    "IsCommission": "true",
+                                    "Display": "true",
+                                    "Code": "80",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Total Commission"
+                                    }
+                                },
+                                {
+                                    "ID": "65",
+                                    "Amount": "456.21",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Supplier Total - NET"
+                                    }
+                                },
+                                {
+                                    "ID": "66",
+                                    "Amount": "456.21",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "Code": "42",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Balance Due to Supplier (NET)"
+                                    }
+                                },
+                                {
+                                    "ID": "112",
+                                    "Amount": "490.29",
+                                    "IsCommission": "false",
+                                    "Display": "true",
+                                    "ProductType": "Cruise",
+                                    "TransactionPackageDataId": "108672",
+                                    "Name": {
+                                        "#cdata-section": "Agent Net"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "Currency": {
+                "ID": "USD"
+            },
+            "Agent": {
+                "AgentContactId": "KN",
+                "AgentName": "Karthik Nagendran",
+                "AgentEmail": "Karthik_nagendran@odysseussolutions.com",
+                "CreateUserID": "243231"
+            },
+            "BookingCreatedFor": {
+                "ID": "243231",
+                "FirstName": "Karthik",
+                "LastName": "Nagendran",
+                "UserName": "nkartik@odysol.com",
+                "Email": "Karthik_nagendran@odysseussolutions.com",
+                "SupplierContactNumber": "8527419630",
+                "SupplierContactID": "KN"
+            },
+            "User": {
+                "CreatedBy": {
+                    "ID": "243231",
+                    "Name": "Karthik Nagendran",
+                    "Email": "Karthik_nagendran@odysseussolutions.com"
+                },
+                "CreatedFor": {
+                    "ID": "243231",
+                    "FirstName": "Karthik",
+                    "LastName": "Nagendran",
+                    "UserName": "nkartik@odysol.com",
+                    "Email": "Karthik_nagendran@odysseussolutions.com",
+                    "SupplierContactNumber": "8527419630",
+                    "SupplierContactID": "KN"
+                },
+                "ModifiedBy": {
+                    "ID": "243231",
+                    "Name": "Karthik Nagendran",
+                    "Email": "Karthik_nagendran@odysseussolutions.com"
+                }
+            },
+            "CreateDateTime": "2024-06-06T13:00:10",
+            "ModifiedDateTime": "2024-06-06T13:00:14",
+            "Packages": [
+                {
+                    "Package": [
+                        {
+                            "Type": "Cruise",
+                            "PackageID": "1412845",
+                            "CruiseName": "4 Night Western Caribbean Cruise",
+                            "PNR": "",
+                            "ConfirmationNumber": "93317",
+                            "TransactionPackageDataId": "108672",
+                            "FromCurrencyId": "USD",
+                            "ExchangeRate": "1.0000",
+                            "ExchageRateDateTime": "06-06-2024 13:00:10",
+                            "Currency": "USD",
+                            "PackageCode": "MA04W177",
+                            "PackageStartDate": "01-01-0001",
+                            "PackageEndDate": "01-01-0001",
+                            "Duration": "4",
+                            "OfficeID": "",
+                            "ApiID": "RCCL",
+                            "DepartureDate": "02-01-2025 00:00:00",
+                            "ArrivalDate": "06-01-2025 00:00:00",
+                            "CruiseType": "CruiseOnly",
+                            "STNOfferID": "1495449",
+                            "BookingMode": "B",
+                            "Online": "true",
+                            "SelectedRules": {
+                                "Rule": [
+                                    {
+                                        "ID": "2151052",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Promotion"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This is a promotional fare available for a limited time."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151060",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Additional Guest Discount"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes discounted prices for guests traveling with 2+ travelers in the same cabin."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151061",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Free Gratuities"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes gratuities/service charges, options can vary by cruise line and promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151063",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "BOGO"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This is a promotional fare available for a limited time. 2nd guest pricing is discounted."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151066",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Kids Free"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes discounted prices for guests traveling with 2+ travelers. Children traveling with 2 adults in the same cabin have discounted prices."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151068",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Free Upgrades"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This is a promotional fare available for a limited time offering a higher category of service for a lower price."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151073",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Gratuities Included"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes gratuities/service charges. Please note additional purchases onboard may still apply service charges onboard the ship."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151083",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "REDDEP"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes a reduced deposit promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151085",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "PIF"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare has a reduced fare if payment is made in full at time of booking."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151090",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Round Trip Air"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Roundtrip Flights included"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151098",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "MEMSPE"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "this fare is a member special"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151105",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "MEMSPE RCCL"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "this fare is a member special"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151115",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Dining"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes a dining package, options can vary by cruise line and promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151121",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Free Air"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes an airfare promotion options can vary by cruise line and promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151123",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "On Board Credit"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes onboard credit."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151124",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Shore Excursion Credit"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes a shore excursion credit, options can vary by cruise line and promotion"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151125",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "WIFI"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare includes a WiFi package, options can vary by cruise line and promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151126",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "BEV"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "This fare include a beverage package, options can vary by cruise line and promotion."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151128",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Outbound Air"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Outbound flight included"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2151129",
+                                        "Type": "DynamicAmenityRule",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Inbound Air"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Inbound flight included"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "1958366",
+                                        "Type": "ValueAddOffer",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "NO",
+                                        "Name": {
+                                            "#cdata-section": "What's New!"
+                                        },
+                                        "Code": null,
+                                        "AgencyDetails": {
+                                            "#cdata-section": "Whats new inclused \r\n\r\n\r\ntest teste test"
+                                        },
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Whats new inclused \r\n\r\n\r\ntest teste test"
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2040705",
+                                        "Type": "OnBoardCredit",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "$100 Onboard Cash CLONE"
+                                        },
+                                        "Code": "TESTPROMO",
+                                        "AgencyDetails": {
+                                            "#cdata-section": "209114"
+                                        },
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Onboard cash of $100 on every celebrity cruise booked."
+                                        },
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "1749350",
+                                        "Type": "AddOnOptions",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Test Add on Activity 2 Pax"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Test Add on Activity 2 Pax"
+                                        },
+                                        "Amount": "700.00"
+                                    },
+                                    {
+                                        "ID": "1749351",
+                                        "Type": "AddOnOptions",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Test Add on Activity 1 Pax"
+                                        },
+                                        "Code": null,
+                                        "CustomerDetails": {
+                                            "#cdata-section": "Test Add on Activity 1 Pax"
+                                        },
+                                        "Amount": "350.00"
+                                    },
+                                    {
+                                        "ID": "1780614",
+                                        "Type": "AgentCommission",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "Pooja"
+                                        },
+                                        "Code": null,
+                                        "Amount": null
+                                    },
+                                    {
+                                        "ID": "2123233",
+                                        "Type": "FareCodeModify",
+                                        "IsPrivate": "YES",
+                                        "Exclusive": "YES",
+                                        "Name": {
+                                            "#cdata-section": "H2WW91 - block for all except BPC Test"
+                                        },
+                                        "Code": null,
+                                        "Amount": null
+                                    }
+                                ]
+                            },
+                            "Dining": {
+                                "ID": "1",
+                                "Name": "05:30 PM",
+                                "Code": "M",
+                                "DiningTableSize": "0",
+                                "Status": "Available"
+                            },
+                            "Status": {
+                                "ID": "6",
+                                "Name": "Held"
+                            },
+                            "DepartureCity": {
+                                "ID": "GLS",
+                                "Name": "Galveston"
+                            },
+                            "ArrivalCity": {
+                                "ID": "GLS",
+                                "Name": "Galveston"
+                            },
+                            "Destination": {
+                                "ID": "14",
+                                "Name": "Caribbean Western"
+                            },
+                            "CruiseLine": {
+                                "ID": "8",
+                                "Name": "Royal Caribbean",
+                                "ImageSmall": "https://cdn.odysol.com/content/images/Cruise/8/logo_150.jpg",
+                                "ImageLarge": "https://cdn.odysol.com/content/images/Cruise/8/logo_190.png"
+                            },
+                            "Ship": {
+                                "ID": "79",
+                                "Name": "Mariner of the Seas",
+                                "ImageSmall": "https://cdn.odysol.com/content/images/Cruise/8/79/ship_150.jpg",
+                                "ImageLarge": "https://cdn.odysol.com/content/images/Cruise/8/79/ship_520.jpg"
+                            },
+                            "Deck": {
+                                "Code": "11160",
+                                "Name": "DECK TEN"
+                            },
+                            "Category": {
+                                "Code": "2V",
+                                "Type": "1",
+                                "PriceCategoryCode": "2V",
+                                "#cdata-section": "Interior Stateroom"
+                            },
+                            "Cabin": {
+                                "Code": "1605",
+                                "CategoryDescriptionLong": {
+                                    "#cdata-section": "Size approx: 160 sq. ft. Enjoy your vacation in the perfect space. Two twin beds that convert to a Royal King bed. Two Pullman beds in staterooms with up to 4 guests. One bathroom. <u>Accessible Stateroom Size approx</u>: 256 sq. ft."
+                                },
+                                "ImageSmall": "https://cdn.odysol.com/content/images/Cruise/8/79/Cat/Interior_sm_300.jpg",
+                                "ImageLarge": "https://cdn.odysol.com/content/images/Cruise/8/79/Cat/Interior_lg_600.jpg,\r\nCruise/8/79/Cat/Interior_lg1_600.jpg",
+                                "FloorPlan": "https://cdn.odysol.com/content/images/Cruise/8/79/Cat/Interior_flpl_600.jpg"
+                            },
+                            "Itinerary": {
+                                "ItineraryID": "456502",
+                                "MapPath": "https://cdn.odysol.com/content/images/Itineraries/GLS_CZM_GLS.jpg",
+                                "Node": [
+                                    {
+                                        "Day": "1",
+                                        "Description": "Galveston, Texas",
+                                        "DepartureCity": {
+                                            "ID": "GAL"
+                                        },
+                                        "DepartureTime": "02-01-2025 16:00",
+                                        "ArrivalTime": "02-01-2025 00:00",
+                                        "BoardTime": "01-01-0001 00:00"
+                                    },
+                                    {
+                                        "Day": "2",
+                                        "Description": "Cruising",
+                                        "DepartureCity": {
+                                            "ID": "CRU"
+                                        },
+                                        "DepartureTime": "03-01-2025 00:00",
+                                        "ArrivalTime": "03-01-2025 00:00",
+                                        "BoardTime": "01-01-0001 00:00"
+                                    },
+                                    {
+                                        "Day": "3",
+                                        "Description": "Cozumel, Mexico",
+                                        "DepartureCity": {
+                                            "ID": "CZM"
+                                        },
+                                        "DepartureTime": "04-01-2025 18:00",
+                                        "ArrivalTime": "04-01-2025 08:00",
+                                        "BoardTime": "01-01-0001 00:00"
+                                    },
+                                    {
+                                        "Day": "4",
+                                        "Description": "Cruising",
+                                        "DepartureCity": {
+                                            "ID": "CRU"
+                                        },
+                                        "DepartureTime": "05-01-2025 00:00",
+                                        "ArrivalTime": "05-01-2025 00:00",
+                                        "BoardTime": "01-01-0001 00:00"
+                                    },
+                                    {
+                                        "Day": "5",
+                                        "Description": "Galveston, Texas",
+                                        "DepartureCity": {
+                                            "ID": "GAL"
+                                        },
+                                        "DepartureTime": "06-01-2025 00:00",
+                                        "ArrivalTime": "06-01-2025 07:00",
+                                        "BoardTime": "01-01-0001 00:00"
+                                    }
+                                ]
+                            },
+                            "FareCode": {
+                                "ID": "J1226105",
+                                "RefundableType": "1",
+                                "GroupCode": null,
+                                "Description": "30% Savings"
+                            },
+                            "Prices": {
+                                "Type": "Cruise",
+                                "Price": [
+                                    {
+                                        "ID": "1",
+                                        "Amount": "1128.00",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "49",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cruise Fare (includes NCCF)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "2",
+                                        "Amount": "220.00",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "60",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "NCCF"
+                                        }
+                                    },
+                                    {
+                                        "ID": "5",
+                                        "Amount": "-50.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "Code": "RFNRDTEST",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cruise Line Discount (RF NRD TEST)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "5",
+                                        "Amount": "-25.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "Code": "ExtraSavings",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cruise Line Discount (Extra Savings)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "5",
+                                        "Amount": "-317.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "Code": "30%Savings",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cruise Line Discount (30% Savings)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "45",
+                                        "Amount": "736.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cruise Line Fare"
+                                        }
+                                    },
+                                    {
+                                        "ID": "46",
+                                        "Amount": "736.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Cabin Fare (includes NCCF)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "114",
+                                        "Amount": "516.00",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Commissionable Fare"
+                                        }
+                                    },
+                                    {
+                                        "ID": "3",
+                                        "Amount": "192.58",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "Code": "18",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Taxes and Fees"
+                                        }
+                                    },
+                                    {
+                                        "ID": "6",
+                                        "Amount": "141.00",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "Code": "52",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Travel Insurance"
+                                        }
+                                    },
+                                    {
+                                        "ID": "17",
+                                        "Amount": "1069.58",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Total"
+                                        }
+                                    },
+                                    {
+                                        "ID": "23",
+                                        "Amount": "1069.58",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Total Due"
+                                        }
+                                    },
+                                    {
+                                        "ID": "47",
+                                        "Amount": "928.58",
+                                        "IsCommission": "false",
+                                        "Display": "false",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Total without travel insurance"
+                                        }
+                                    },
+                                    {
+                                        "ID": "50",
+                                        "Amount": "928.58",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "8",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Supplier Gross Total"
+                                        }
+                                    },
+                                    {
+                                        "ID": "24",
+                                        "Amount": "250.00",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "6",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Deposit Amount"
+                                        }
+                                    },
+                                    {
+                                        "ID": "63",
+                                        "Amount": "928.58",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "3",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Balance Due Check"
+                                        }
+                                    },
+                                    {
+                                        "ID": "32",
+                                        "Amount": "61.92",
+                                        "IsCommission": "true",
+                                        "Display": "true",
+                                        "Code": "80",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Total Commission"
+                                        }
+                                    },
+                                    {
+                                        "ID": "66",
+                                        "Amount": "866.66",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "Code": "42",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Balance Due to Supplier (NET)"
+                                        }
+                                    },
+                                    {
+                                        "ID": "65",
+                                        "Amount": "866.66",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Supplier Total - NET"
+                                        }
+                                    },
+                                    {
+                                        "ID": "112",
+                                        "Amount": "928.58",
+                                        "IsCommission": "false",
+                                        "Display": "true",
+                                        "ProductType": "Cruise",
+                                        "TransactionPackageDataId": "108672",
+                                        "Name": {
+                                            "#cdata-section": "Agent Net"
+                                        }
+                                    }
+                                ]
+                            },
+                            "CancellationPolicies": {
+                                "#cdata-section": "\r\n              &nbsp;&nbsp;&nbsp;&nbsp;\n\n\t<table border=\"1\" cellpadding=\"3\" cellspacing=\"3\" width=\"100%\">\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<div><strong>FOR 1 TO 4 NIGHT CRUISES<br>(including Holiday sailings)<br>IF CANCELLATION IS MADE</strong></div>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<div><strong>Cancellation Charge</strong></div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr class=\"contentDescription\">\n\t\t\t\t<td>\n\t\t\t\t\t<div>75 days or more prior to the first day of the Cruise</div>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<div>No charge (except for Nonrefundable Deposit amounts)</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<div>74 to 61 days</div>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<div>50% of total price</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<div>60 to 31 days</div>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<div>75% of total price</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<div>30 days or less</div>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<div>100% of total price (No refund)</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n\n\t<table border=\"1\" cellpadding=\"3\" cellspacing=\"3\" width=\"100%\">\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div><strong>FOR 5 NIGHTS OR LONGER CRUISES<br>(including Holiday sailings and Cruisetours)<br>IF CANCELLATION IS MADE</strong>&nbsp;</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div><strong>Cancellation Charge</strong></div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr class=\"contentDescription\">\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>90 days or more prior to the first day of the Cruise</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%; vertical-align: top;\">\n\t\t\t\t\t<div style=\"text-align: justify;\">No charge (except for Nonrefundable Deposit amounts)</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>89 to 75 days</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>25% of total price</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>74 to 61 days</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>50% of total price</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>60 to 31 days</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>75% of total price</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>30 days or less</div>\n\t\t\t\t</td>\n\t\t\t\t<td style=\"width: 50%;\">\n\t\t\t\t\t<div>100% of total price (No refund)</div>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n\t<br>(Last updated: Jan 08, 2024 Click <a href=\"https://www.royalcaribbean.com/faq/questions/booking-cancellation-refund-policy?\" rel=\"noopener noreferrer\" target=\"_blank\">here</a> to view the latest policy provided by the cruise line.)\n<br>\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n\r\n            "
+                            },
+                            "SupplierPaymentSchedules": {
+                                "PaymentSchedule": [
+                                    {
+                                        "ID": "494870",
+                                        "Amount": "141.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "13-06-2024",
+                                        "Type": "Insurance",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Supplier",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494868",
+                                        "Amount": "250.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "13-06-2024",
+                                        "Type": "Deposit",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Supplier",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494869",
+                                        "Amount": "616.66",
+                                        "SupplierDate": "19-10-2024",
+                                        "DueDate": "19-10-2024",
+                                        "Type": "Final",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Supplier",
+                                        "InvoiceDate": "01-01-0001"
+                                    }
+                                ]
+                            },
+                            "AffiliatePaymentSchedules": {
+                                "PaymentSchedule": [
+                                    {
+                                        "ID": "494874",
+                                        "Amount": "250.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "10-06-2024",
+                                        "Type": "Deposit",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Agent",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494876",
+                                        "Amount": "141.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "10-06-2024",
+                                        "Type": "Insurance",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Agent",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494875",
+                                        "Amount": "678.58",
+                                        "SupplierDate": "19-10-2024",
+                                        "DueDate": "14-10-2024",
+                                        "Type": "Final",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Agent",
+                                        "InvoiceDate": "01-01-0001"
+                                    }
+                                ]
+                            },
+                            "CustomerPaymentSchedules": {
+                                "PaymentSchedule": [
+                                    {
+                                        "ID": "494871",
+                                        "Amount": "250.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "10-06-2024",
+                                        "Type": "Deposit",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Customer",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494873",
+                                        "Amount": "141.00",
+                                        "SupplierDate": "13-06-2024",
+                                        "DueDate": "10-06-2024",
+                                        "Type": "Insurance",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Customer",
+                                        "InvoiceDate": "01-01-0001"
+                                    },
+                                    {
+                                        "ID": "494872",
+                                        "Amount": "678.58",
+                                        "SupplierDate": "19-10-2024",
+                                        "DueDate": "14-10-2024",
+                                        "Type": "Final",
+                                        "TransactionPackageDataID": "108672",
+                                        "UserType": "Customer",
+                                        "InvoiceDate": "01-01-0001"
+                                    }
+                                ]
+                            },
+                            "Passengers": null
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

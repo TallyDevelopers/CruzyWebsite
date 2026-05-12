@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Cruzy Portal Welcome</name>
+    <subject>Welcome to Cruzy+, {{{Recipient.FirstName}}}! Set up your account</subject>
+    <textOnly>Welcome to Cruzy+! Click the link below to set your password and access your account.</textOnly>
+    <style>none</style>
+    <uiType>SFX</uiType>
+    <type>html</type>
+</EmailTemplate>

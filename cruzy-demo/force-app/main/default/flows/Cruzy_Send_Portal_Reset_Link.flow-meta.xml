@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>Generates a password reset token and sends the reset email to the Cruzy+ member.</description>
+    <interviewLabel>Cruzy Send Portal Reset Link {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Cruzy: Send Portal Reset Link</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value><stringValue>LightningFlowBuilder</stringValue></value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <status>Active</status>
+
+    <!-- ═══ VARIABLES (all grouped) ═══ -->
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>resetUrl</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ContactRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+
+    <!-- ═══ TEXT TEMPLATES (all grouped) ═══ -->
+    <textTemplates>
+        <name>ResetEmailBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text><![CDATA[<html><body style="font-family:Arial,sans-serif;background:#f5f7fa;margin:0;padding:0;"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fa;padding:40px 0;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;"><tr><td style="background:linear-gradient(135deg,#10559a 0%,#1a2b4a 100%);padding:36px 40px;text-align:center;"><h1 style="margin:0;font-size:32px;font-weight:800;color:#fff;">Cruzy+</h1><p style="margin:4px 0 0;color:#7bb3e8;font-size:13px;">POWERED BY CARNIVAL</p></td></tr><tr><td style="padding:48px 40px;"><h2 style="color:#1a2b4a;margin:0 0 16px;">Password Reset Request</h2><p style="color:#555;font-size:15px;line-height:1.6;margin:0 0 16px;">Hi {!ContactRecord.FirstName}, we received a request to reset your Cruzy+ password.</p><p style="color:#555;font-size:15px;margin:0 0 32px;">This link expires in <strong>1 hour</strong>.</p><table cellpadding="0" cellspacing="0" style="margin:0 auto 32px;"><tr><td style="background:#bd1f34;border-radius:8px;"><a href="{!resetUrl}" style="display:inline-block;padding:16px 40px;color:#fff;font-size:16px;font-weight:700;text-decoration:none;">Reset My Password</a></td></tr></table><p style="color:#999;font-size:12px;text-align:center;word-break:break-all;">Or copy: {!resetUrl}</p><p style="color:#999;font-size:13px;">Questions? Call <a href="tel:8554147823" style="color:#10559a;">855-414-7823</a></p></td></tr><tr><td style="background:#f8fafc;padding:24px 40px;border-top:1px solid #eee;text-align:center;"><p style="color:#aaa;font-size:12px;margin:0;">2026 Cruzy+ - Powered by Carnival</p></td></tr></table></td></tr></table></body></html>]]></text>
+    </textTemplates>
+
+    <!-- ═══ START ═══ -->
+    <start>
+        <locationX>176</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GenerateToken</targetReference>
+        </connector>
+    </start>
+
+    <!-- ═══ ACTION CALLS (all grouped) ═══ -->
+    <actionCalls>
+        <name>GenerateToken</name>
+        <label>Generate Reset Token</label>
+        <locationX>176</locationX>
+        <locationY>120</locationY>
+        <actionName>CruzyPortalHelper</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>GetContact</targetReference>
+        </connector>
+        <inputParameters>
+            <name>contactId</name>
+            <value><elementReference>recordId</elementReference></value>
+        </inputParameters>
+        <inputParameters>
+            <name>mode</name>
+            <value><stringValue>reset</stringValue></value>
+        </inputParameters>
+        <inputParameters>
+            <name>baseUrl</name>
+            <value><stringValue>http://localhost:3000</stringValue></value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>resetUrl</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>SendResetEmail</name>
+        <label>Send Reset Email</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>ConfirmScreen</targetReference>
+        </connector>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value><elementReference>ContactRecord.Email</elementReference></value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value><stringValue>Reset your Cruzy+ password</stringValue></value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value><elementReference>ResetEmailBody</elementReference></value>
+        </inputParameters>
+    </actionCalls>
+
+    <!-- ═══ RECORD LOOKUPS ═══ -->
+    <recordLookups>
+        <name>GetContact</name>
+        <label>Get Contact</label>
+        <locationX>176</locationX>
+        <locationY>240</locationY>
+        <connector>
+            <targetReference>SendResetEmail</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>recordId</elementReference></value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <outputReference>ContactRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>FirstName</queriedFields>
+        <queriedFields>LastName</queriedFields>
+        <queriedFields>Email</queriedFields>
+    </recordLookups>
+
+    <!-- ═══ SCREENS ═══ -->
+    <screens>
+        <name>ConfirmScreen</name>
+        <label>Reset Link Sent</label>
+        <locationX>176</locationX>
+        <locationY>480</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ConfirmMsg</name>
+            <fieldText><![CDATA[<p><strong style="color:#1a8a4a;">Reset link sent!</strong></p><p>An email has been sent to <strong>{!ContactRecord.Email}</strong> with a link that expires in 1 hour.</p>]]></fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+
+</Flow>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Contact__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Enroll_Date__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Next_Billing_Date__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Expiration_Date__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Biennial__c</field>
+    </columns>
+    <columns>
+        <field>Membership__c.Partner__c</field>
+    </columns>
+    <description>Active memberships grouped by auto-renewal status</description>
+    <filter>
+        <criteriaItems>
+            <column>Membership__c.Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Membership__c.Auto_Renewal__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Memberships</name>
+    <reportType>CustomEntity$Membership__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Membership__c.Enroll_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

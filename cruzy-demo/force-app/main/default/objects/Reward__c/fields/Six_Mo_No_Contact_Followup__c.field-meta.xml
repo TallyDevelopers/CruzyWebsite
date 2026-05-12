@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Six_Mo_No_Contact_Followup__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>6 Mo - No Contact Follow-Up</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

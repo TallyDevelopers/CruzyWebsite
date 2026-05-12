@@ -1,0 +1,154 @@
+<template>
+    <div class="cib-root">
+
+        <template if:true={isLoading}>
+            <div class="cib-loading">
+                <lightning-spinner size="small" variant="brand" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:false={isLoading}>
+            <template if:true={hasData}>
+
+                <!-- ── Alert Strip (only shows when flagged) ── -->
+                <template if:true={hasAlerts}>
+                    <div class="cib-alert-strip">
+                        <template if:true={data.isBolo}>
+                            <span class="cib-alert-chip alert-bolo">
+                                <lightning-icon icon-name="utility:warning" size="xx-small"></lightning-icon>
+                                BOLO
+                            </span>
+                        </template>
+                        <template if:true={data.hasAccountAlert}>
+                            <span class="cib-alert-chip alert-acct">
+                                <lightning-icon icon-name="utility:notification" size="xx-small"></lightning-icon>
+                                {data.accountAlertText}
+                            </span>
+                        </template>
+                        <template if:true={data.membershipOnHold}>
+                            <span class="cib-alert-chip alert-hold">
+                                <lightning-icon icon-name="utility:pause" size="xx-small"></lightning-icon>
+                                Membership On Hold
+                            </span>
+                        </template>
+                        <template if:true={hasOverdueBalance}>
+                            <span class="cib-alert-chip alert-balance">
+                                <lightning-icon icon-name="utility:currency" size="xx-small"></lightning-icon>
+                                Outstanding Balance
+                            </span>
+                        </template>
+                    </div>
+                </template>
+
+                <!-- ── Tile Row ── -->
+                <div class="cib-tiles">
+
+                    <!-- Membership -->
+                    <div class={membershipTileClass}>
+                        <div class="cib-tile-icon-wrap">
+                            <lightning-icon icon-name="utility:shield" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Membership</span>
+                            <span class="cib-tile-value">{membershipDisplay}</span>
+                            <span class="cib-tile-sub">{membershipSub}</span>
+                        </div>
+                        <div class={membershipDotClass}></div>
+                    </div>
+
+                    <!-- Bookings -->
+                    <div class="cib-tile">
+                        <div class="cib-tile-icon-wrap cib-icon-booking">
+                            <lightning-icon icon-name="utility:anchor" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Bookings</span>
+                            <span class="cib-tile-value">{data.bookingCount}</span>
+                            <span class="cib-tile-sub">{bookingSubLabel}</span>
+                        </div>
+                    </div>
+
+                    <!-- Total Spend -->
+                    <div class="cib-tile">
+                        <div class="cib-tile-icon-wrap cib-icon-spend">
+                            <lightning-icon icon-name="utility:money" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Total Spend</span>
+                            <span class="cib-tile-value cib-val-spend">${totalSpendDisplay}</span>
+                            <span class="cib-tile-sub">Cruise value ${cruiseValueDisplay}</span>
+                        </div>
+                    </div>
+
+                    <!-- Balance Due -->
+                    <div class={balanceTileClass}>
+                        <div class={balanceIconWrapClass}>
+                            <lightning-icon icon-name={balanceIcon} size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Balance Due</span>
+                            <span class={balanceValueClass}>${balanceDueDisplay}</span>
+                            <span class="cib-tile-sub">{balanceSubLabel}</span>
+                        </div>
+                    </div>
+
+                    <!-- Add-Ons -->
+                    <div class={addonTileClass}>
+                        <div class={addonIconWrapClass}>
+                            <lightning-icon icon-name="utility:add" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Add-Ons</span>
+                            <span class="cib-tile-value">{data.addOnCount}</span>
+                            <span class="cib-tile-sub">${addOnSpendDisplay} total</span>
+                        </div>
+                        <template if:true={isAddOnHeavy}>
+                            <span class="cib-heavy-tag">Heavy User</span>
+                        </template>
+                    </div>
+
+                    <!-- Rewards -->
+                    <div class="cib-tile">
+                        <div class="cib-tile-icon-wrap cib-icon-reward">
+                            <lightning-icon icon-name="utility:gift" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Rewards</span>
+                            <span class="cib-tile-value">{data.rewardCount}</span>
+                            <span class="cib-tile-sub">{rewardSubLabel}</span>
+                        </div>
+                    </div>
+
+                    <!-- Profile Flags -->
+                    <div class="cib-tile cib-tile-flags">
+                        <div class="cib-tile-icon-wrap cib-icon-flags">
+                            <lightning-icon icon-name="utility:user" size="small" class="cib-tile-icon"></lightning-icon>
+                        </div>
+                        <div class="cib-tile-body">
+                            <span class="cib-tile-label">Profile</span>
+                            <div class="cib-flag-pills">
+                                <template if:true={data.spanishSpeaking}>
+                                    <span class="cib-flag-pill flag-es">ES</span>
+                                </template>
+                                <template if:true={data.cruzyPlusEnrolled}>
+                                    <span class="cib-flag-pill flag-plus">Cruzy+</span>
+                                </template>
+                                <template if:true={hasVifp}>
+                                    <span class={vifpPillClass}>{data.vifpLevel}</span>
+                                </template>
+                                <template if:true={data.customerSource}>
+                                    <span class="cib-flag-pill flag-source">{data.customerSource}</span>
+                                </template>
+                                <template if:false={hasAnyFlag}>
+                                    <span class="cib-flag-none">—</span>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </template>
+        </template>
+
+    </div>
+</template>

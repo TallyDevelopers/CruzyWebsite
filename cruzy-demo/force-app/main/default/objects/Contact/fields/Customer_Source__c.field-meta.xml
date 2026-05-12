@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Source__c</fullName>
+    <label>Customer Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B2B Reward</fullName>
+                <default>false</default>
+                <label>B2B Reward</label>
+            </value>
+            <value>
+                <fullName>Cruise Club</fullName>
+                <default>false</default>
+                <label>Cruise Club</label>
+            </value>
+            <value>
+                <fullName>Cruzy.com Direct</fullName>
+                <default>false</default>
+                <label>Cruzy.com Direct</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

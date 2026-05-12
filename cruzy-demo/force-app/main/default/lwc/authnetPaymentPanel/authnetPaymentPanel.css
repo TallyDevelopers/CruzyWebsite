@@ -1,0 +1,463 @@
+/* ══════════════════════════════════════════════════════
+   AUTHORIZE.NET PAYMENT PANEL — Clean & Compact
+══════════════════════════════════════════════════════ */
+.sp-wrap {
+    font-family: 'Salesforce Sans', -apple-system, sans-serif;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sp-loading { display: flex; justify-content: center; padding: 20px; }
+
+/* ── Header ─────────────────────────────────────────── */
+.sp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #0a2540, #635bff);
+    gap: 10px;
+}
+.sp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sp-authnet-s {
+    width: 22px;
+    height: 22px;
+    background: rgba(255,255,255,0.18);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff;
+    flex-shrink: 0;
+}
+.sp-title { font-size: 12px; font-weight: 700; color: #fff; }
+
+/* Balance badge */
+.sp-balance-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #dc2626;
+    border-radius: 7px;
+    padding: 4px 10px;
+}
+.sp-balance-label { font-size: 9px; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 0.5px; }
+.sp-balance-amount { font-size: 14px; font-weight: 800; color: #fff; }
+
+/* ── Cards List ─────────────────────────────────────── */
+.sp-cards {
+    display: flex;
+    flex-direction: column;
+}
+.sp-no-cards {
+    padding: 12px 14px;
+    font-size: 12px;
+    color: #9ca3af;
+    text-align: center;
+}
+.sp-card-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 14px;
+    border-bottom: 1px solid #f0f2f5;
+    transition: background 0.1s;
+}
+.sp-card-row:last-child { border-bottom: none; }
+.sp-card-row:hover { background: #f8f9fa; }
+.sp-card-default { background: #f5f4ff; }
+
+/* Brand badge */
+.sp-brand {
+    width: 36px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+    color: #fff;
+}
+.brand-visa    { background: #1434CB; }
+.brand-mc      { background: linear-gradient(135deg, #eb001b, #f79e1b); }
+.brand-amex    { background: #007BC1; }
+.brand-disc    { background: #e65c00; }
+.brand-generic { background: #546e7a; }
+
+.sp-card-info { flex: 1; display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.sp-card-num  { font-size: 13px; font-weight: 700; color: #1a1a2e; font-family: monospace; letter-spacing: 1px; }
+.sp-card-exp  { font-size: 10px; color: #9ca3af; }
+
+.sp-default-tag {
+    font-size: 9px;
+    font-weight: 700;
+    background: #635bff;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 7px;
+    flex-shrink: 0;
+}
+
+.sp-charge-btn {
+    background: #635bff;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.12s;
+}
+.sp-charge-btn:hover { background: #4f46e5; }
+
+.sp-remove-link {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 2px 4px;
+    flex-shrink: 0;
+}
+.sp-remove-link:hover { color: #dc2626; }
+
+/* ── Charge History ──────────────────────────────────── */
+.sp-charges-section {
+    border-top: 1px solid #f0f2f5;
+}
+.sp-charges-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background: #fafafa;
+    border-bottom: 1px solid #f0f2f5;
+}
+.sp-charges-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3e3e3c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.sp-charges-count {
+    font-size: 10px;
+    color: #9ca3af;
+    background: #f0f2f5;
+    padding: 1px 7px;
+    border-radius: 8px;
+}
+.sp-no-charges {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #9ca3af;
+    text-align: center;
+}
+.sp-charges-list { display: flex; flex-direction: column; }
+.sp-charge-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 14px;
+    border-bottom: 1px solid #f8f9fa;
+    transition: background 0.1s;
+}
+.sp-charge-row:last-child { border-bottom: none; }
+.sp-charge-row:hover { background: #f8f9fa; }
+.sp-charge-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.sp-icon-booking { background: #e0f2fe; color: #0369a1; }
+.sp-icon-mbr     { background: #ede9fe; color: #7c3aed; }
+.sp-charge-info  { flex: 1; min-width: 0; }
+.sp-charge-top   {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1px;
+}
+.sp-charge-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #3e3e3c;
+}
+.sp-charge-ref {
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #635bff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.sp-charge-note  { font-size: 10px; color: #9ca3af; display: block; }
+.sp-charge-right { text-align: right; flex-shrink: 0; }
+.sp-charge-amt   { font-size: 13px; font-weight: 700; color: #15803d; display: block; }
+.sp-charge-date  { font-size: 10px; color: #9ca3af; display: block; }
+
+/* ── Footer ─────────────────────────────────────────── */
+.sp-footer {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid #f0f2f5;
+    background: #fafafa;
+}
+.sp-link-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    border-right: 1px solid #f0f2f5;
+    color: #635bff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 9px 12px;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+.sp-link-btn:last-child { border-right: none; }
+.sp-link-btn:hover { background: #f0efff; }
+
+/* ══ MODALS ══════════════════════════════════════════ */
+.sp-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,37,64,0.5);
+    z-index: 9000;
+}
+.sp-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 94vw;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(10,37,64,0.28);
+    z-index: 9001;
+    overflow: hidden;
+}
+.sp-modal-sm { width: 320px; }
+
+.sp-modal-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 16px;
+    background: linear-gradient(135deg, #0a2540, #635bff);
+}
+.sp-modal-title { font-size: 13px; font-weight: 700; color: #fff; }
+.sp-modal-x {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.65);
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 2px;
+}
+.sp-modal-x:hover { color: #fff; }
+
+.sp-modal-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.sp-confirm-txt { font-size: 13px; color: #3e3e3c; margin: 0; }
+
+/* Charge card preview */
+.sp-charge-card-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+/* ── Form Fields ─────────────────────────────────────── */
+.sp-field-group { display: flex; flex-direction: column; gap: 4px; }
+.sp-row-half    { display: flex; gap: 10px; }
+.sp-row-half .sp-field-group { flex: 1; }
+.sp-lbl { font-size: 11px; font-weight: 600; color: #3e3e3c; }
+
+.sp-inp, .sp-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid #d0d5dd;
+    border-radius: 7px;
+    font-size: 13px;
+    color: #1a1a2e;
+    background: #fff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+}
+.sp-inp:focus, .sp-select:focus { border-color: #635bff; box-shadow: 0 0 0 3px rgba(99,91,255,0.1); }
+
+/* Amount input */
+.sp-amount-wrap {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #635bff;
+    border-radius: 7px;
+    overflow: hidden;
+    background: #fff;
+}
+.sp-dollar {
+    padding: 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #635bff;
+    background: #f5f4ff;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+.sp-amount-inp {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a2540;
+    width: 90px;
+    padding: 0 8px;
+    height: 38px;
+}
+.sp-full-btn {
+    background: #635bff;
+    color: #fff;
+    border: none;
+    padding: 0 10px;
+    height: 38px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.sp-full-btn:hover { background: #4f46e5; }
+
+/* card number field */
+.sp-num-wrap   { position: relative; }
+.sp-num-inp    { padding-right: 48px; }
+.sp-inline-brand {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6px;
+    width: 32px;
+    height: 20px;
+}
+
+.sp-save-check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: #3e3e3c;
+}
+
+/* ── Feedback ─────────────────────────────────────────── */
+.sp-error {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+    color: #dc2626;
+}
+.sp-success {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+    color: #15803d;
+    font-weight: 600;
+}
+
+/* ── Modal Footer ─────────────────────────────────────── */
+.sp-modal-ftr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-top: 1px solid #e4e7ec;
+    background: #f8f9fa;
+}
+.sp-secure {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    color: #9ca3af;
+}
+.sp-modal-actions { display: flex; gap: 7px; }
+.sp-btn-ghost {
+    background: #fff;
+    border: 1.5px solid #d0d5dd;
+    color: #3e3e3c;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.sp-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #635bff;
+    border: none;
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    min-width: 90px;
+    transition: background 0.12s;
+}
+.sp-btn-primary:hover    { background: #4f46e5; }
+.sp-btn-primary:disabled { background: #a5a0ff; cursor: not-allowed; }
+.sp-btn-danger {
+    background: #dc2626;
+    border: none;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}

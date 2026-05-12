@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>Enrolls a Contact as a Cruzy+ portal member. Creates Membership, generates set-password link, sends welcome email.</description>
+    <interviewLabel>Cruzy Enroll Portal Member {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Cruzy: Enroll as Portal Member</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value><stringValue>LightningFlowBuilder</stringValue></value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <status>Active</status>
+
+    <!-- ═══ VARIABLES ═══ -->
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>setPasswordUrl</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ContactRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+
+    <!-- ═══ FORMULAS ═══ -->
+    <formulas>
+        <name>MemberIdFormula</name>
+        <dataType>String</dataType>
+        <expression>"CRUZY-" &amp; TEXT(YEAR(TODAY())) &amp; IF(MONTH(TODAY()) &lt; 10, "0" &amp; TEXT(MONTH(TODAY())), TEXT(MONTH(TODAY()))) &amp; IF(DAY(TODAY()) &lt; 10, "0" &amp; TEXT(DAY(TODAY())), TEXT(DAY(TODAY()))) &amp; "-" &amp; RIGHT({!recordId}, 6)</expression>
+    </formulas>
+    <formulas>
+        <name>ExpirationDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>DATE(YEAR(TODAY()) + 1, MONTH(TODAY()), DAY(TODAY()))</expression>
+    </formulas>
+    <formulas>
+        <name>TodayFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+
+    <!-- ═══ TEXT TEMPLATES ═══ -->
+    <textTemplates>
+        <name>WelcomeEmailBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text><![CDATA[<html><body style="font-family:Arial,sans-serif;background:#f5f7fa;margin:0;padding:0;"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fa;padding:40px 0;"><tr><td align="center"><table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:12px;overflow:hidden;"><tr><td style="background:linear-gradient(135deg,#10559a 0%,#1a2b4a 100%);padding:36px 40px;text-align:center;"><h1 style="margin:0;font-size:32px;font-weight:800;color:#fff;">Cruzy+</h1><p style="margin:4px 0 0;color:#7bb3e8;font-size:13px;">POWERED BY CARNIVAL</p></td></tr><tr><td style="padding:48px 40px;"><h2 style="color:#1a2b4a;margin:0 0 16px;">Welcome aboard, {!ContactRecord.FirstName}!</h2><p style="color:#555;font-size:15px;line-height:1.6;margin:0 0 12px;">Your Cruzy+ membership has been activated. You now have access to exclusive member pricing, rewards, and your personal cruise dashboard.</p><p style="color:#555;font-size:15px;margin:0 0 8px;"><strong>Member ID:</strong> <span style="font-family:monospace;">{!MemberIdFormula}</span></p><p style="color:#555;font-size:15px;margin:0 0 32px;">Click below to set your password. This link expires in <strong>24 hours</strong>.</p><table cellpadding="0" cellspacing="0" style="margin:0 auto 32px;"><tr><td style="background:#10559a;border-radius:8px;"><a href="{!setPasswordUrl}" style="display:inline-block;padding:16px 40px;color:#fff;font-size:16px;font-weight:700;text-decoration:none;">Set My Password</a></td></tr></table><p style="color:#999;font-size:12px;text-align:center;word-break:break-all;">Or copy: {!setPasswordUrl}</p><p style="color:#999;font-size:13px;">Questions? Call <a href="tel:8554147823" style="color:#10559a;">855-414-7823</a></p></td></tr><tr><td style="background:#f8fafc;padding:24px 40px;border-top:1px solid #eee;text-align:center;"><p style="color:#aaa;font-size:12px;margin:0;">2026 Cruzy+ - Powered by Carnival</p></td></tr></table></td></tr></table></body></html>]]></text>
+    </textTemplates>
+
+    <!-- ═══ START ═══ -->
+    <start>
+        <locationX>176</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetContact</targetReference>
+        </connector>
+    </start>
+
+    <!-- ═══ RECORD LOOKUPS ═══ -->
+    <recordLookups>
+        <name>GetContact</name>
+        <label>Get Contact</label>
+        <locationX>176</locationX>
+        <locationY>120</locationY>
+        <connector>
+            <targetReference>CheckAlreadyEnrolled</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>recordId</elementReference></value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <outputReference>ContactRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>FirstName</queriedFields>
+        <queriedFields>LastName</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>Cruzy_Plus_Enrolled__c</queriedFields>
+        <queriedFields>Cruzy_Plus_MBR_Number__c</queriedFields>
+    </recordLookups>
+
+    <!-- ═══ DECISIONS ═══ -->
+    <decisions>
+        <name>CheckAlreadyEnrolled</name>
+        <label>Already Enrolled?</label>
+        <locationX>176</locationX>
+        <locationY>240</locationY>
+        <defaultConnector>
+            <targetReference>CreateMembership</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Enrolled</defaultConnectorLabel>
+        <rules>
+            <name>AlreadyEnrolled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ContactRecord.Cruzy_Plus_Enrolled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue><booleanValue>true</booleanValue></rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AlreadyEnrolledScreen</targetReference>
+            </connector>
+            <label>Already Enrolled</label>
+        </rules>
+    </decisions>
+
+    <!-- ═══ RECORD CREATES ═══ -->
+    <recordCreates>
+        <name>CreateMembership</name>
+        <label>Create Membership</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <connector>
+            <targetReference>UpdateContact</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value><elementReference>recordId</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value><elementReference>MemberIdFormula</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value><stringValue>Active</stringValue></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Enroll_Date__c</field>
+            <value><elementReference>TodayFormula</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Expiration_Date__c</field>
+            <value><elementReference>ExpirationDateFormula</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Billing_Date__c</field>
+            <value><elementReference>ExpirationDateFormula</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Auto_Renewal__c</field>
+            <value><booleanValue>true</booleanValue></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Partner__c</field>
+            <value><stringValue>Cruzy+</stringValue></value>
+        </inputAssignments>
+        <object>Membership__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+
+    <!-- ═══ RECORD UPDATES ═══ -->
+    <recordUpdates>
+        <name>UpdateContact</name>
+        <label>Update Contact</label>
+        <locationX>176</locationX>
+        <locationY>480</locationY>
+        <connector>
+            <targetReference>GenerateToken</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value><elementReference>recordId</elementReference></value>
+        </filters>
+        <inputAssignments>
+            <field>Cruzy_Plus_Enrolled__c</field>
+            <value><booleanValue>true</booleanValue></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cruzy_Plus_MBR_Number__c</field>
+            <value><elementReference>MemberIdFormula</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Portal_Status__c</field>
+            <value><stringValue>Pending</stringValue></value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+
+    <!-- ═══ ACTION CALLS ═══ -->
+    <actionCalls>
+        <name>GenerateToken</name>
+        <label>Generate Welcome Token</label>
+        <locationX>176</locationX>
+        <locationY>600</locationY>
+        <actionName>CruzyPortalHelper</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>SendWelcomeEmail</targetReference>
+        </connector>
+        <inputParameters>
+            <name>contactId</name>
+            <value><elementReference>recordId</elementReference></value>
+        </inputParameters>
+        <inputParameters>
+            <name>mode</name>
+            <value><stringValue>welcome</stringValue></value>
+        </inputParameters>
+        <inputParameters>
+            <name>baseUrl</name>
+            <value><stringValue>http://localhost:3000</stringValue></value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>setPasswordUrl</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>SendWelcomeEmail</name>
+        <label>Send Welcome Email</label>
+        <locationX>176</locationX>
+        <locationY>720</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>SuccessScreen</targetReference>
+        </connector>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value><elementReference>ContactRecord.Email</elementReference></value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value><stringValue>Welcome to Cruzy+! Set up your account</stringValue></value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value><elementReference>WelcomeEmailBody</elementReference></value>
+        </inputParameters>
+    </actionCalls>
+
+    <!-- ═══ SCREENS ═══ -->
+    <screens>
+        <name>AlreadyEnrolledScreen</name>
+        <label>Already Enrolled</label>
+        <locationX>440</locationX>
+        <locationY>240</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>AlreadyEnrolledMsg</name>
+            <fieldText><![CDATA[<p><strong style="color:#b36b00;">Already Enrolled</strong></p><p>{!ContactRecord.FirstName} {!ContactRecord.LastName} is already a Cruzy+ member ({!ContactRecord.Cruzy_Plus_MBR_Number__c}).</p><p>Use <strong>Send Portal Reset Link</strong> if they need a new password.</p>]]></fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>SuccessScreen</name>
+        <label>Member Enrolled</label>
+        <locationX>176</locationX>
+        <locationY>840</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessMsg</name>
+            <fieldText><![CDATA[<p><strong style="color:#1a8a4a;">Done! {!ContactRecord.FirstName} {!ContactRecord.LastName} is now enrolled.</strong></p><p><strong>Member ID:</strong> <span style="font-family:monospace;">{!MemberIdFormula}</span></p><p>A welcome email with a set-password link has been sent to <strong>{!ContactRecord.Email}</strong>. Link expires in 24 hours.</p>]]></fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+
+</Flow>

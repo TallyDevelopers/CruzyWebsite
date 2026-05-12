@@ -1,0 +1,1376 @@
+<Transaction>
+  <RequestorID>Odysseus</RequestorID>
+  <Password>66f7dcfd715c3a87c24353c8292da5fe</Password>
+  <TimeStamp>17-06-2021 05:07:51</TimeStamp>
+  <Action>RecordBooking</Action>
+  <Booking TransactionID="194984" ModifyUserID="" SiteItemID="231414" ReferrerID1="localhost" ReferrerID2="IA1M3S" SiteItemName="Seven Oceans Cruising" ExternalIP="127.0.0.1" Application="B2B">
+    <Affiliate ID="231414" ExternalReference1="" ExternalReference2="" sid1="localhost" sid2="IA1M3S" sid3="" />
+    <Customer ID="373170" Title="MR" FirstName="Donald" MiddleName="" LastName="Duck" Sex="Male" DateOfBirth="05-05-1980" />
+    <AgencyConfirmation>7OC-1GTH2MA</AgencyConfirmation>
+    <Passengers NoOfAdult="2">
+      <Passenger ID="373170" Title="MR" FirstName="Donald" MiddleName="" LastName="Duck" Sex="Male" DateOfBirth="05-05-1980" Email="DonaldDuck@gmail.COM" Phone="+61208450067">
+        <Phone CountryCode="61" Number="208450067" />
+        <Document PassportNumber="4444555566" IssueDate="01-01-2014" ExpirationDate="01-01-2024" />
+        <Prices Type="Cruise">
+          <Price Display="false" ID="1" Amount="1861.30" Code="5">
+            <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="2" Amount="280.00" Code="POC">
+            <Name><![CDATA[Port Charges]]></Name>
+          </Price>
+          <Price Display="true" ID="45" Amount="1861.30">
+            <Name><![CDATA[Cruise Line Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="46" Amount="1561.30">
+            <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="1281.30">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="3" Amount="241.54" Code="18">
+            <Name><![CDATA[Taxes and Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="75" Amount="15.80" Code="191">
+            <Name><![CDATA[Dining Service Charge]]></Name>
+          </Price>
+          <Price Display="true" ID="86" Amount="5.00">
+            <Name><![CDATA[Cruise Service Fee]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="1823.64">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="1823.64">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="false" ID="47" Amount="1823.64">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="2118.64" Code="8">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="24" Amount="125.00" Code="6">
+            <Name><![CDATA[Deposit Amount]]></Name>
+          </Price>
+          <Price Display="false" ID="62" Amount="2118.64">
+            <Name><![CDATA[Balance Due]]></Name>
+          </Price>
+          <Price Display="false" ID="32" Amount="189.76" Code="66">
+            <Name><![CDATA[Total Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="1928.88">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="1823.64">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Prices Type="Air">
+          <Price Display="true" ID="7" Amount="204.00">
+            <Name><![CDATA[Airfare]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="55.20" Code="UB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="8" Amount="583.15" Code="TotalTax">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.60" Code="AY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="38.20" Code="US">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="3.96" Code="XA">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="4.50" Code="XF">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="7.00" Code="XY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.99" Code="YC">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="112.70" Code="GB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="350.00" Code="YR">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="204.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="787.15">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="787.15">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="787.15">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="787.15">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="787.15">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="61" Amount="25.00">
+            <Name><![CDATA[Agent Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="762.15">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Prices Type="Activity">
+          <Price Display="true" ID="122" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Other Add-on]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="500.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="500.00">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="500.00">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+      </Passenger>
+      <Passenger ID="373171" Title="MR" FirstName="Mickey" MiddleName="" LastName="Mouse" Sex="Male" DateOfBirth="01-07-1980" Email="MickeyMouse@gmail.com" Phone="+449512323456">
+        <Phone CountryCode="44" Number="9512323456" />
+        <Document PassportNumber="515502433" IssueDate="01-04-2017" ExpirationDate="01-04-2027" />
+        <Prices Type="Cruise">
+          <Price Display="false" ID="1" Amount="1861.30" Code="5">
+            <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="2" Amount="280.00" Code="POC">
+            <Name><![CDATA[Port Charges]]></Name>
+          </Price>
+          <Price Display="true" ID="45" Amount="1861.30">
+            <Name><![CDATA[Cruise Line Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="46" Amount="1561.30">
+            <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="1281.30">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="3" Amount="241.54" Code="18">
+            <Name><![CDATA[Taxes and Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="75" Amount="15.80" Code="191">
+            <Name><![CDATA[Dining Service Charge]]></Name>
+          </Price>
+          <Price Display="true" ID="86" Amount="5.00">
+            <Name><![CDATA[Cruise Service Fee]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="1823.64">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="1823.64">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="false" ID="47" Amount="1823.64">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="2118.64" Code="8">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="24" Amount="125.00" Code="6">
+            <Name><![CDATA[Deposit Amount]]></Name>
+          </Price>
+          <Price Display="false" ID="62" Amount="2118.64">
+            <Name><![CDATA[Balance Due]]></Name>
+          </Price>
+          <Price Display="false" ID="32" Amount="189.76" Code="66">
+            <Name><![CDATA[Total Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="1928.88">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="1823.64">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Prices Type="Air">
+          <Price Display="true" ID="7" Amount="204.00">
+            <Name><![CDATA[Airfare]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="55.20" Code="UB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="8" Amount="583.15" Code="TotalTax">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.60" Code="AY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="38.20" Code="US">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="3.96" Code="XA">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="4.50" Code="XF">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="7.00" Code="XY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.99" Code="YC">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="112.70" Code="GB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="350.00" Code="YR">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="204.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="787.15">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="787.15">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="787.15">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="787.15">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="787.15">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="61" Amount="25.00">
+            <Name><![CDATA[Agent Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="762.15">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Prices Type="Activity">
+          <Price Display="true" ID="122" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Other Add-on]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="500.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="500.00">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="500.00">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="500.00" CurrencyID="AUD">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+      </Passenger>
+    </Passengers>
+    <Currency ID="AUD" />
+    <Agent AgentContactId="ODYSOL_BP" AgentName="Bhargav Patel" AgentEmail="bhargav_patel@odysseussolutions.com" CreateUserID="234032" />
+    <BookingCreatedFor ID="234129" FirstName="Bhaggu" LastName="Pandya" UserName="bpatel" Email="bhaggupandya@gmail.com" SupplierContactNumber="8866662611" SupplierContactID="BP242" />
+    <CreateDateTime>2021-06-03T09:34:43</CreateDateTime>
+    <ModifiedDateTime>2021-06-17T05:06:32</ModifiedDateTime>
+    <Packages>
+      <Package Type="Cruise" PackageID="1024852" PNR="" ConfirmationNumber="46175111" FromCurrencyId="USD" ExchangeRate="1.4186" ExchageRateDateTime="17-06-2021 05:06:34" Currency="AUD" PackageCode="16583625" PackageStartDate="" PackageEndDate="" Duration="7" OfficeID="" ApiID="NCL" DepartureDate="26-12-2021 00:00:00" ArrivalDate="02-01-2022 00:00:00" CruiseType="CruiseOnly">
+        <SelectedRules>
+          <Rule ID="856027" Type="ValueAddOfferConsolidator" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[VAO Consolidator 1 (&lt;&lt;PromotionAmount&gt;&gt; Value)]]></Name>
+            <AgencyDetails><![CDATA[Agency
+&lt;img alt="Premium Bev" src="https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1" style="width: 100%;" /&gt;&lt;br /&gt;]]></AgencyDetails>
+            <CustomerDetails><![CDATA[Customer
+&lt;img alt="Premium Bev" src="https://travel.justcruises.com.au/site/new/po-drinks-vODY-637213567409843956.png?ver=1" style="width: 100%;" /&gt;&lt;br /&gt;]]></CustomerDetails>
+            <Amount />
+          </Rule>
+          <Rule ID="857429" Type="Discount" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[More Discount]]></Name>
+            <Amount />
+          </Rule>
+          <Rule ID="859012" Type="Discount" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[testRue2405 CLONE]]></Name>
+            <Amount />
+          </Rule>
+          <Rule ID="859013" Type="Discount" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[testRue2405 CLONE]]></Name>
+            <Amount />
+          </Rule>
+          <Rule ID="857992" Type="Markup" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[Domestic Cruise $2.50 Markup A]]></Name>
+            <Amount />
+          </Rule>
+          <Rule ID="859015" Type="ValueAddOffer" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[Test Cruise Package Identifier]]></Name>
+            <Amount />
+          </Rule>
+          <Rule ID="857859" Type="ServiceFee" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[Cruise Service Fee]]></Name>
+            <Amount />
+          </Rule>
+        </SelectedRules>
+        <Dining Name="Freestyle" Code="FREESTYLE" DiningTableSize="0" Status="" />
+        <Status>
+          <ID>7</ID>
+          <Name>Confirmed</Name>
+        </Status>
+        <DepartureCity ID="MIA">
+          <Name>Miami</Name>
+        </DepartureCity>
+        <ArrivalCity ID="MIA">
+          <Name>Miami</Name>
+        </ArrivalCity>
+        <Destination ID="10" />
+        <CruiseLine ID="6">
+          <Name>Norwegian</Name>
+          <ImageSmall>https://localhost/content/images/Cruise/6/logo_150.jpg</ImageSmall>
+          <ImageLarge>https://localhost/content/images/Cruise/6/logo_190.png</ImageLarge>
+        </CruiseLine>
+        <Ship ID="16974">
+          <Name>ENCORE</Name>
+          <ImageSmall>https://localhost/content/images/</ImageSmall>
+          <ImageLarge>https://localhost/content/images/</ImageLarge>
+        </Ship>
+        <Deck Code="0" Name="DECK 5" />
+        <Category Code="IF" Type="1" PriceCategoryCode="IF" />
+        <Cabin Code="5409">
+          <Location>Middle</Location>
+        </Cabin>
+        <Itinerary ItineraryID="213520">
+          <Node Day="1">
+            <Description>Miami, Fl</Description>
+            <DepartureCity>
+              <ID>MIA</ID>
+            </DepartureCity>
+            <ArrivalCity>
+              <ID>MIA</ID>
+            </ArrivalCity>
+            <DepartureTime>26-12-2021 16:00</DepartureTime>
+          </Node>
+          <Node Day="2">
+            <Description>Day at Sea</Description>
+            <DepartureTime>27-12-2021 00:00</DepartureTime>
+            <ArrivalTime>27-12-2021 00:00</ArrivalTime>
+          </Node>
+          <Node Day="3">
+            <Description>Puerto Plata, Dominican Republic</Description>
+            <DepartureCity>
+              <ID>POP</ID>
+            </DepartureCity>
+            <ArrivalCity>
+              <ID>POP</ID>
+            </ArrivalCity>
+            <DepartureTime>28-12-2021 16:00</DepartureTime>
+            <ArrivalTime>28-12-2021 07:00</ArrivalTime>
+          </Node>
+          <Node Day="4">
+            <Description>St.Thomas, Vi</Description>
+            <DepartureCity>
+              <ID>STT</ID>
+            </DepartureCity>
+            <ArrivalCity>
+              <ID>STT</ID>
+            </ArrivalCity>
+            <DepartureTime>29-12-2021 19:00</DepartureTime>
+            <ArrivalTime>29-12-2021 11:00</ArrivalTime>
+          </Node>
+          <Node Day="5">
+            <Description>Tortola, British Virgin Islands</Description>
+            <DepartureCity>
+              <ID>TOV</ID>
+            </DepartureCity>
+            <ArrivalCity>
+              <ID>TOV</ID>
+            </ArrivalCity>
+            <DepartureTime>30-12-2021 13:00</DepartureTime>
+            <ArrivalTime>30-12-2021 08:00</ArrivalTime>
+          </Node>
+          <Node Day="6">
+            <Description>Day at Sea</Description>
+            <DepartureTime>31-12-2021 00:00</DepartureTime>
+            <ArrivalTime>31-12-2021 00:00</ArrivalTime>
+          </Node>
+          <Node Day="7">
+            <Description>Great Stirrup Cay, Bahamas</Description>
+            <DepartureTime>01-01-2022 18:00</DepartureTime>
+            <ArrivalTime>01-01-2022 09:00</ArrivalTime>
+          </Node>
+          <Node Day="8">
+            <Description>Miami, Fl</Description>
+            <DepartureCity>
+              <ID>MIA</ID>
+            </DepartureCity>
+            <ArrivalCity>
+              <ID>MIA</ID>
+            </ArrivalCity>
+            <DepartureTime>01-02-2022 00:00</DepartureTime>
+            <ArrivalTime>02-01-2022 07:00</ArrivalTime>
+          </Node>
+        </Itinerary>
+        <FareCode ID="DISXIN">
+          <Description />
+        </FareCode>
+        <Prices Type="Cruise">
+          <Price Display="false" ID="1" Amount="3722.60" Code="5">
+            <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="2" Amount="560.00" Code="POC">
+            <Name><![CDATA[Port Charges]]></Name>
+          </Price>
+          <Price Display="true" ID="45" Amount="3722.60">
+            <Name><![CDATA[Cruise Line Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="46" Amount="3122.60">
+            <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="2562.60">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="3" Amount="483.08" Code="18">
+            <Name><![CDATA[Taxes and Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="75" Amount="31.60" Code="191">
+            <Name><![CDATA[Dining Service Charge]]></Name>
+          </Price>
+          <Price Display="true" ID="86" Amount="10.00">
+            <Name><![CDATA[Cruise Service Fee]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="3647.28">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="3647.28">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="false" ID="47" Amount="3647.28">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="4237.28" Code="8">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="24" Amount="250.00" Code="6">
+            <Name><![CDATA[Deposit Amount]]></Name>
+          </Price>
+          <Price Display="false" ID="62" Amount="4237.28">
+            <Name><![CDATA[Balance Due]]></Name>
+          </Price>
+          <Price Display="false" ID="32" Amount="379.52" Code="66">
+            <Name><![CDATA[Total Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="3857.76">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="3647.28">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <CancellationPolicies><![CDATA[
+              <div class="contentHeader">Cancellation Policies:</div><div class="contentDescription"><br><p><span class="contentDescription">Cancellation fees for cruise, air, land and other charges will follow the schedule below and apply to all guests on the reservation. Cancellation fees for air, land and other add-on charges will apply even if the reservation is not canceled in full. Gateway changes for air and name changes for cruise, air, land and other add-ons are considered cancellations. Cancellations must be telephoned to our Reservations Department by your travel agent. Depending on when the cruise is canceled, cancellation charges will be assessed as stated on the Cancellation Fee Schedule. Cabin category downgrade / changes may result in fees being assessed.&nbsp;</span></p><p class="contentDescription"><span class="contentDescription">No refunds will be made in the event of interruption or cancellation by any passenger after commencement of the cruise. Requests for refunds must be in writing to NCL. Cruise tickets, air tickets, transfer coupons and/or vacation package vouchers must be returned before a refund can be made. Refund processing time is about 3-4 weeks. Air tickets issued by our Air/Sea Department for passengers on our Air/Sea programs are refundable only to Norwegian Cruise Line. Group passenger policies may differ. NCL&#39;s Payment and Cancellation Policy is subject to change without notice.</span></p><p class="contentDescription"><span class="contentDescription">Reservations that are not paid in full by the final payment due date are subject to cancellation and in the event a reservation is canceled, a cancellation fee will apply</span></p><p class="contentDescription"><span class="contentDescription">No refunds will be given on any cruise for no-shows</span></p><p class="contentDescription"><span class="contentDescription">No refunds will be made in the event of interruption or cancellation by any passenger after commencement of the cruise.</span></p><p class="contentDescription"><span class="contentDescription">Name changes and departure date changes are considered reservation cancellations and are subject to the above cancellation fees.</span></p><p class="contentDescription"><span class="contentDescription">Requests for refunds must be in writing to NCL. Cruise tickets, air tickets, transfer coupons and/or vacation package vouchers must be returned before a refund can be made. Refund processing time is about 3 to 4 weeks. Air tickets issued by our Air/Sea Department for passengers on our Air/Sea programs are refundable only to Norwegian Cruise Line. Group passenger policies may differ. NCL&#39;s Payment and Cancellation Policy is subject to change without notice.</span></p><p class="contentDescription"><span class="contentDescription">No refunds will be given for any missed days of a Land Package.</span></p><p class="contentDescription"><span class="contentDescription">Cancellation fees for air, land and other add-on charges will apply even if the reservation is not cancelled in full.</span></p><p class="contentDescription"><span class="contentDescription">Gateway changes, flight date changes and name substitutions are considered cancellations, and air cancellation fees will apply. Additionally, spelling corrections may be considered cancellations.</span></p><p class="contentDescription"><span class="contentDescription">Name substitutions and departure date changes for cruise, land and other add-ons are considered cancellations and are subject to cancellation fees.</span></p><p class="contentDescription"><span class="contentDescription">Cancellation fees will begin immediately once money has been applied to the reservation.</span></p><p class="contentDescription"><span class="contentDescription">Once payment is applied, the reservation is subject to cancellation fees according to the below schedule.</span></p><br><table border="1" cellpadding="3" cellspacing="3"><tbody><tr class="contentHeader"><td colspan="6">Cancellation Fee Schedule</td></tr><tr class="contentDescriptionBold"><td>Cruise Length<br>(days)</td><td>Days Prior to<br>Departure Date</td><td>Cruise Cancellation<br>Fee</td><td>Air Cancellation<br>Fee</td><td>Land Cancellation<br>Fee</td><td>Air Add-on Cancellation<br>Fee *</td></tr><tr class="contentDescription"><td rowspan="5" valign="top">1-5 days<br></td><td>75-61 days<br>(Holiday only)</td><td>Deposit</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>60 to 45</td><td>Deposit</td><td>$100</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>44&nbsp;to 30</td><td>50%*</td><td>50%</td><td>50%</td><td>50%</td></tr><tr class="contentDescription"><td>29 to 15</td><td>75%</td><td>75%</td><td>75%</td><td>75%</td></tr><tr><td style="font-size: 8pt;">14 days or less</td><td style="font-size: 8pt;">100%</td><td style="font-size: 8pt;">100%</td><td style="font-size: 8pt;">100%</td><td style="font-size: 8pt;">100%</td></tr><tr class="contentDescription"><td rowspan="5" valign="top">6 days or more<br></td><td>90-76 days<br>(Holiday only)</td><td>Deposit</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>75 to 56</td><td>Deposit</td><td>$100</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>55 to 30&nbsp;</td><td>50%*</td><td>50%</td><td>50%</td><td>50%</td></tr><tr class="contentDescription"><td>29 to 15</td><td>75%</td><td>75%</td><td>75%</td><td>75%</td></tr><tr class="contentDescription"><td>14 days or less</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr><tr class="contentDescription"><td rowspan="4" valign="top">All cruise lengths:<br>Garden Villas Category,<br>Courtyard villas and<br>Specialty Suites: Categories (S1, S2, S3, S4, S5, S6 and S9)</td><td>120 or more days</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>119 - 90 days</td><td>25%*</td><td>$0</td><td>$0</td><td>$0</td></tr><tr class="contentDescription"><td>89 to 56</td><td>50%*</td><td>$100</td><td>$0</td><td>10%</td></tr><tr class="contentDescription"><td>55&nbsp;days or less</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table><br>     <h4 style="font-size: 8pt;">*or deposit, whichever is higher</h4></div>
+            ]]></CancellationPolicies>
+        <SupplierPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556569</ID>
+            <Amount>250.00</Amount>
+            <SupplierDate>06-06-2021</SupplierDate>
+            <DueDate>06-06-2021</DueDate>
+            <Type>Deposit</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+          <PaymentSchedule>
+            <ID>556570</ID>
+            <Amount>3607.76</Amount>
+            <SupplierDate>27-10-2021</SupplierDate>
+            <DueDate>27-10-2021</DueDate>
+            <Type>Final</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </SupplierPaymentSchedules>
+        <AffiliatePaymentSchedules>
+          <PaymentSchedule>
+            <ID>556571</ID>
+            <Amount>260.00</Amount>
+            <SupplierDate>06-06-2021</SupplierDate>
+            <DueDate>03-06-2021</DueDate>
+            <Type>Deposit</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>273.00</Amount>
+                <ProcessingFeeAmount>13.00</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>11-26</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>Bank of UK</CardIssuer>
+                  <Validation>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <UniqueToken>960028</UniqueToken>
+                    <Date>03-06-2021 09:34</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>Sector</AddressLineOne>
+                  <City>
+                    <Name>London</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>52048</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+19998877788</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Affiliate</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>03-06-2021 09:35:37</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+          <PaymentSchedule>
+            <ID>556572</ID>
+            <Amount>3387.28</Amount>
+            <SupplierDate>27-10-2021</SupplierDate>
+            <DueDate>06-10-2021</DueDate>
+            <Type>Final</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </AffiliatePaymentSchedules>
+        <CustomerPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556573</ID>
+            <Amount>260.00</Amount>
+            <SupplierDate>06-06-2021</SupplierDate>
+            <DueDate>03-06-2021</DueDate>
+            <Type>Deposit</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>273.00</Amount>
+                <ProcessingFeeAmount>13.00</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>11-26</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>Bank of UK</CardIssuer>
+                  <Validation>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <UniqueToken>960028</UniqueToken>
+                    <Date>03-06-2021 09:34</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>Sector</AddressLineOne>
+                  <City>
+                    <Name>London</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>52048</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+19998877788</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Customer</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>03-06-2021 09:35:37</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+          <PaymentSchedule>
+            <ID>556574</ID>
+            <Amount>3387.28</Amount>
+            <SupplierDate>27-10-2021</SupplierDate>
+            <DueDate>01-10-2021</DueDate>
+            <Type>Final</Type>
+            <TransactionPackageDataID>169512</TransactionPackageDataID>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </CustomerPaymentSchedules>
+        <Passengers />
+      </Package>
+      <Package Type="Air" PNR="N/A" Currency="USD" ApiID="TravelPort" FareType="Published" JourneyType="Circle" PricingSource="Published" OfficeID="" ValidatingCarrier="AY" FeesContainer="taxes" QuotedAmount="1574.30" AdultCode="ADT" FromCity="MIA" ToCity="LHR" FromCountry="USPaymentInfo" ToCountry="GB">
+        <SelectedRules>
+          <Rule ID="855897" Type="OnBoardCredit" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[Air OBC]]></Name>
+            <AgencyDetails><![CDATA[OBC Agency Details]]></AgencyDetails>
+            <CustomerDetails><![CDATA[OBC Customer Details]]></CustomerDetails>
+            <Amount>100.0</Amount>
+          </Rule>
+          <Rule ID="856003" Type="AgentCommission" Exclusive="" IsPrivate="YES">
+            <Name><![CDATA[&lt;&lt;PromotionAmount&gt;&gt; Agent Comm One]]></Name>
+            <Amount>50.0</Amount>
+          </Rule>
+        </SelectedRules>
+        <Status>
+          <ID>12</ID>
+          <Name>Pending Confirmation</Name>
+        </Status>
+        <AirJourneyType Code="Circle" />
+        <Ticket TicketType="eTicket" IsRefundable="false" />
+        <Prices Type="Air">
+          <Price Display="true" ID="7" Amount="408.00">
+            <Name><![CDATA[Airfare]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="110.40" Code="UB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="8" Amount="1166.30" Code="TotalTax">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="11.20" Code="AY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="76.40" Code="US">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="7.92" Code="XA">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="9.00" Code="XF">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="14.00" Code="XY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="11.98" Code="YC">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="225.40" Code="GB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="700.00" Code="YR">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="408.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="1574.30">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="1574.30">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="1574.30">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="1574.30">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="1574.30">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="61" Amount="50.00">
+            <Name><![CDATA[Agent Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="1524.30">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Prices Type="Adult">
+          <Price Display="true" ID="7" Amount="204.00">
+            <Name><![CDATA[Airfare]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="55.20" Code="UB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="true" ID="8" Amount="583.15" Code="TotalTax">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.60" Code="AY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="38.20" Code="US">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="3.96" Code="XA">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="4.50" Code="XF">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="7.00" Code="XY">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="5.99" Code="YC">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="112.70" Code="GB">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="8" Amount="350.00" Code="YR">
+            <Name><![CDATA[Taxes &amp; Airline Fees]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="204.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="17" Amount="787.15">
+            <Name><![CDATA[Total]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="787.15">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="787.15">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="787.15">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="787.15">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="61" Amount="25.00">
+            <Name><![CDATA[Agent Commission]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="762.15">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Flights>
+          <Flight Stops="0" Direction="UD">
+            <FlightSegments>
+              <FlightSegment Stops="0" FlightSegmentNumber="5506" ETicketAvailable="true" DepartureDateTime="25-12-2021 17:15:00" ArrivalDateTime="26-12-2021 06:35:00" DepartureTerminal="" FareTypeCode="" FareTypeName="">
+                <SelectedBookingClass ID="O" ClassType="Economy" PriceTypeCode="">
+                  <AdultRateCode ID="OLW8F7M5" PriceCode="ADT" />
+                </SelectedBookingClass>
+                <ArrivalAirport ID="LHR">
+                  <Name>London</Name>
+                </ArrivalAirport>
+                <DepartureAirport ID="MIA">
+                  <Name>Miami</Name>
+                </DepartureAirport>
+                <Baggages>
+                  <Baggage PaxType="Adult" Quantity="1" Weight="0" Type="Number" />
+                </Baggages>
+                <MarketingAirline PseudoCode="AY">
+                  <Name>Finnair</Name>
+                </MarketingAirline>
+                <DisplayAirline PseudoCode="AY">
+                  <Name>Finnair</Name>
+                </DisplayAirline>
+                <Airplane PseudoCode="777">
+                  <Name>BOEING 777-200/300 JET</Name>
+                </Airplane>
+              </FlightSegment>
+            </FlightSegments>
+            <TotalDuration Days="0" Hours="8" Minutes="20" Seconds="0" PO="POs" />
+          </Flight>
+          <Flight Stops="0" Direction="UD">
+            <FlightSegments>
+              <FlightSegment Stops="0" FlightSegmentNumber="4029" ETicketAvailable="true" DepartureDateTime="04-01-2022 10:35:00" ArrivalDateTime="04-01-2022 15:35:00" DepartureTerminal="" FareTypeCode="" FareTypeName="">
+                <SelectedBookingClass ID="O" ClassType="Economy" PriceTypeCode="">
+                  <AdultRateCode ID="OKX8F7M5" PriceCode="ADT" />
+                </SelectedBookingClass>
+                <ArrivalAirport ID="MIA">
+                  <Name>Miami</Name>
+                </ArrivalAirport>
+                <DepartureAirport ID="LHR">
+                  <Name>London</Name>
+                </DepartureAirport>
+                <Baggages>
+                  <Baggage PaxType="Adult" Quantity="1" Weight="0" Type="Number" />
+                </Baggages>
+                <MarketingAirline PseudoCode="AY">
+                  <Name>Finnair</Name>
+                </MarketingAirline>
+                <DisplayAirline PseudoCode="AY">
+                  <Name>Finnair</Name>
+                </DisplayAirline>
+                <Airplane PseudoCode="772">
+                  <Name>BOEING 777-200 JET</Name>
+                </Airplane>
+              </FlightSegment>
+            </FlightSegments>
+            <TotalDuration Days="0" Hours="10" Minutes="0" Seconds="0" PO="POs" />
+          </Flight>
+        </Flights>
+        <SupplierPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556965</ID>
+            <Amount>1574.30</Amount>
+            <SupplierDate>07-06-2021</SupplierDate>
+            <DueDate>07-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169586</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </SupplierPaymentSchedules>
+        <AffiliatePaymentSchedules>
+          <PaymentSchedule>
+            <ID>556966</ID>
+            <Amount>1524.30</Amount>
+            <SupplierDate>07-06-2021</SupplierDate>
+            <DueDate>07-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169586</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>1653.01</Amount>
+                <ProcessingFeeAmount>78.71</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>08-27</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>SBI</CardIssuer>
+                  <Validation>
+                    <AuthCode>28834940</AuthCode>
+                    <TransactionID>28834940,28834941</TransactionID>
+                    <UniqueToken>357972</UniqueToken>
+                    <Date>04-06-2021 06:57</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>17 APSLEY HOUSE</AddressLineOne>
+                  <City>
+                    <Name>LONDON</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>SW15 5EY</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+610208000011</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28834940</AuthCode>
+                    <TransactionID>28834940,28834941</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Affiliate</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>04-06-2021 06:57:59</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </AffiliatePaymentSchedules>
+        <CustomerPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556967</ID>
+            <Amount>1574.30</Amount>
+            <SupplierDate>07-06-2021</SupplierDate>
+            <DueDate>07-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169586</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>1653.01</Amount>
+                <ProcessingFeeAmount>78.71</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>08-27</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>SBI</CardIssuer>
+                  <Validation>
+                    <AuthCode>28834940</AuthCode>
+                    <TransactionID>28834940,28834941</TransactionID>
+                    <UniqueToken>357972</UniqueToken>
+                    <Date>04-06-2021 06:57</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>17 APSLEY HOUSE</AddressLineOne>
+                  <City>
+                    <Name>LONDON</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>SW15 5EY</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+610208000011</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28834940</AuthCode>
+                    <TransactionID>28834940,28834941</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Customer</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>04-06-2021 06:57:59</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </CustomerPaymentSchedules>
+        <Passengers>
+          <PassengerID>373170</PassengerID>
+          <PassengerID>373171</PassengerID>
+        </Passengers>
+      </Package>
+      <Package Type="ActivityAddOn" OfficeID="" ApiID="" PNR="GHNBX" FromCurrency="AUD" Rate="1.0000" Markup="0.00">
+        <Name><![CDATA[MIami city tour]]></Name>
+        <Status>
+          <ID>7</ID>
+          <Name>Confirmed</Name>
+        </Status>
+        <DepartureDateTime>24-12-2021 09:15:00</DepartureDateTime>
+        <ArrivalDateTime>24-12-2021 18:45:00</ArrivalDateTime>
+        <DepartureCity ID="MIA" />
+        <ArrivalCity ID="MIA" />
+        <Seller SupplierID="882" />
+        <Prices Type="ActivityAddOn">
+          <Price Display="true" ID="122" Amount="1000.00" CurrencyID="AUD">
+            <Name><![CDATA[Other Add-on]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="1000.00">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="1000.00" CurrencyID="AUD">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="1000.00">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="1000.00">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="1000.00" CurrencyID="AUD">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="1000.00" CurrencyID="AUD">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <Supplier SupplierID="882" />
+        <DescriptionSmall><![CDATA[MIami city tour]]></DescriptionSmall>
+        <SupplierPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556977</ID>
+            <Amount>1000.00</Amount>
+            <SupplierDate>04-06-2021</SupplierDate>
+            <DueDate>04-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169589</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </SupplierPaymentSchedules>
+        <AffiliatePaymentSchedules>
+          <PaymentSchedule>
+            <ID>556978</ID>
+            <Amount>1000.00</Amount>
+            <SupplierDate>04-06-2021</SupplierDate>
+            <DueDate>04-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169589</TransactionPackageDataID>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </AffiliatePaymentSchedules>
+        <CustomerPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556979</ID>
+            <Amount>1000.00</Amount>
+            <SupplierDate>04-06-2021</SupplierDate>
+            <DueDate>04-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169589</TransactionPackageDataID>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </CustomerPaymentSchedules>
+        <Passengers>
+          <PassengerID>373170</PassengerID>
+          <PassengerID>373171</PassengerID>
+        </Passengers>
+      </Package>
+      <Package Type="Transfer" OfficeID="HOPPAGOODYSSEUS" ApiID="HoppaGo" FromCurrency="USD" Rate="1.4186" Markup="0.00">
+        <Name><![CDATA[Executive Car]]></Name>
+        <Status>
+          <ID>12</ID>
+          <Name>Pending Confirmation</Name>
+        </Status>
+        <DepartureDateTime>02-01-2022 07:00:00</DepartureDateTime>
+        <ArrivalDateTime>02-01-2022 07:00:00</ArrivalDateTime>
+        <DepartureCity ID="" />
+        <ArrivalCity ID="" />
+        <Prices Type="Transfer" />
+        <DescriptionSmall><![CDATA[Executive Car]]></DescriptionSmall>
+        <DescriptionLong><![CDATA[WOW Transportation]]></DescriptionLong>
+        <SupplierPaymentSchedules>
+          <PaymentSchedule>
+            <ID>560368</ID>
+            <Amount>0.00</Amount>
+            <SupplierDate>17-06-2021</SupplierDate>
+            <DueDate>17-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>170363</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </SupplierPaymentSchedules>
+        <AffiliatePaymentSchedules>
+          <PaymentSchedule>
+            <ID>560369</ID>
+            <Amount>0.00</Amount>
+            <SupplierDate>17-06-2021</SupplierDate>
+            <DueDate>17-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>170363</TransactionPackageDataID>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </AffiliatePaymentSchedules>
+        <CustomerPaymentSchedules>
+          <PaymentSchedule>
+            <ID>560370</ID>
+            <Amount>0.00</Amount>
+            <SupplierDate>17-06-2021</SupplierDate>
+            <DueDate>17-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>170363</TransactionPackageDataID>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </CustomerPaymentSchedules>
+        <Passengers>
+          <PassengerID>373170</PassengerID>
+          <PassengerID>373171</PassengerID>
+        </Passengers>
+      </Package>
+      <Package Type="Hotel" OfficeID="HOTELBEDSODYSSEUS" ApiID="HotelBeds" FromCurrency="" Rate="" Markup="" CheckIn="2022-01-02T11:30:00" CheckOut="2022-01-03T23:55:00" HotelID="54834" Currency="USD" Duration="1">
+        <SelectedRules />
+        <Status>
+          <ID>12</ID>
+          <Name>Pending Confirmation</Name>
+        </Status>
+        <CancellationPolicies>
+          <CancelPenalty Amount="0.00" NoOfNights="0" IsPercentSpecified="false" AmountPercentTypeBasisType="Fixed" DeadlineTypeOffsetDropTime="BeforeArrival" TimeUnitType="Year" Percent="0" StartDate="03-06-2021" EndDate="24-12-2021" IsNoShow="false">
+            <Description><![CDATA[Free Cancellation from 03-06-2021 to 24-12-2021]]></Description>
+          </CancelPenalty>
+          <CancelPenalty Amount="55.56" NoOfNights="0" IsPercentSpecified="false" AmountPercentTypeBasisType="Fixed" DeadlineTypeOffsetDropTime="BeforeArrival" TimeUnitType="Year" Percent="55.56" StartDate="25-12-2021" EndDate="29-12-2021" IsNoShow="false">
+            <Description />
+          </CancelPenalty>
+          <CancelPenalty Amount="111.11" NoOfNights="0" IsPercentSpecified="false" AmountPercentTypeBasisType="Fixed" DeadlineTypeOffsetDropTime="BeforeArrival" TimeUnitType="Year" Percent="111.11" StartDate="30-12-2021" EndDate="02-01-2022" IsNoShow="false">
+            <Description />
+          </CancelPenalty>
+        </CancellationPolicies>
+        <CheckInCheckOut>
+          <Is24HourCheckOut>false</Is24HourCheckOut>
+        </CheckInCheckOut>
+        <Address>
+          <AddressLineOne>1109 Brickell Avenue</AddressLineOne>
+          <City>
+            <Name>Miami Area - FL</Name>
+          </City>
+          <State ID="" />
+          <Country ID="-" />
+        </Address>
+        <Prices Type="Hotel">
+          <Price Display="true" ID="68" Amount="111.11">
+            <Name><![CDATA[Hotel Fare]]></Name>
+          </Price>
+          <Price Display="false" ID="114" Amount="111.11">
+            <Name><![CDATA[Commissionable Fare]]></Name>
+          </Price>
+          <Price Display="true" ID="23" Amount="111.11">
+            <Name><![CDATA[Total Due]]></Name>
+          </Price>
+          <Price Display="true" ID="47" Amount="111.11">
+            <Name><![CDATA[Total without travel insurance]]></Name>
+          </Price>
+          <Price Display="false" ID="50" Amount="111.11">
+            <Name><![CDATA[Supplier Gross Total]]></Name>
+          </Price>
+          <Price Display="false" ID="65" Amount="111.11">
+            <Name><![CDATA[Supplier Total - NET]]></Name>
+          </Price>
+          <Price Display="false" ID="112" Amount="111.11">
+            <Name><![CDATA[Agent Net]]></Name>
+          </Price>
+        </Prices>
+        <SelectedCategories>
+          <HotelCategory Code="DBL.DX" Name="DOUBLE DELUXE" AccomodationCount="1" SmokingPreference="NotAllowed" RateType="PayNow">
+            <Accomodations>
+              <Accommodation HandicapAccessible="false">
+                <GuestReferences>
+                  <int>0</int>
+                  <int>1</int>
+                </GuestReferences>
+                <Prices>
+                  <PricingRate>
+                    <DailyPrices>
+                      <double>111.11</double>
+                    </DailyPrices>
+                    <RateCode ID="20220102#20220103#W#235#54834#DBL.DX#ID_B2B_19#RO#RATE11#1~2~0##N@06~~20b6f~-772750891~N~~~NOR~8860132EEFCB485162272587898100NWAU1080001000100030520b6f|0|2,1">
+                      <SupplierPromotions />
+                      <Description><![CDATA[ROOM ONLY]]></Description>
+                      <Status>
+                        <ID>1</ID>
+                        <Name>Available</Name>
+                      </Status>
+                    </RateCode>
+                    <RepriceRequired>false</RepriceRequired>
+                  </PricingRate>
+                </Prices>
+                <AdditionalServices />
+              </Accommodation>
+            </Accomodations>
+          </HotelCategory>
+        </SelectedCategories>
+        <SupplierPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556581</ID>
+            <Amount>111.11</Amount>
+            <SupplierDate>03-06-2021</SupplierDate>
+            <DueDate>03-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169514</TransactionPackageDataID>
+            <UserType>Supplier</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </SupplierPaymentSchedules>
+        <AffiliatePaymentSchedules>
+          <PaymentSchedule>
+            <ID>556582</ID>
+            <Amount>111.11</Amount>
+            <SupplierDate>03-06-2021</SupplierDate>
+            <DueDate>03-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169514</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>116.66</Amount>
+                <ProcessingFeeAmount>5.55</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>11-26</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>Bank of UK</CardIssuer>
+                  <Validation>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <UniqueToken>960028</UniqueToken>
+                    <Date>03-06-2021 09:34</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>Sector</AddressLineOne>
+                  <City>
+                    <Name>London</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>52048</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+19998877788</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Affiliate</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>03-06-2021 09:35:37</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Agent</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </AffiliatePaymentSchedules>
+        <CustomerPaymentSchedules>
+          <PaymentSchedule>
+            <ID>556583</ID>
+            <Amount>111.11</Amount>
+            <SupplierDate>03-06-2021</SupplierDate>
+            <DueDate>03-06-2021</DueDate>
+            <Type>Full</Type>
+            <TransactionPackageDataID>169514</TransactionPackageDataID>
+            <Payments>
+              <PaymentInfo>
+                <GuestReferences />
+                <PaymentStatus>PaymentSuccessful</PaymentStatus>
+                <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+                <Amount>116.66</Amount>
+                <ProcessingFeeAmount>5.55</ProcessingFeeAmount>
+                <CurrencyID>USD</CurrencyID>
+                <CreditCard>
+                  <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                  <ID>VI</ID>
+                  <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                  <ExpiryDate>11-26</ExpiryDate>
+                  <CardHolder>Monish Luthra</CardHolder>
+                  <CardIssuer>Bank of UK</CardIssuer>
+                  <Validation>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <UniqueToken>960028</UniqueToken>
+                    <Date>03-06-2021 09:34</Date>
+                    <TransactionStatus>Success</TransactionStatus>
+                  </Validation>
+                </CreditCard>
+                <BillingAddress>
+                  <AddressLineOne>Sector</AddressLineOne>
+                  <City>
+                    <Name>London</Name>
+                    <StateID>LO</StateID>
+                    <CountryID>GB</CountryID>
+                    <CountryISOCode>GBR</CountryISOCode>
+                  </City>
+                  <ZipCode>52048</ZipCode>
+                </BillingAddress>
+                <PaymentForm>
+                  <ID>CARD</ID>
+                </PaymentForm>
+                <PhoneNumber>+19998877788</PhoneNumber>
+                <AuthorizationData>
+                  <PaymentAuthorizationInfo>
+                    <AuthCode>28825789</AuthCode>
+                    <TransactionID>28825789,28825797</TransactionID>
+                    <Date />
+                    <Success>true</Success>
+                    <Mode>Supplier</Mode>
+                  </PaymentAuthorizationInfo>
+                </AuthorizationData>
+                <PaymentAPI>EWay</PaymentAPI>
+                <PaymentSuccessful>true</PaymentSuccessful>
+                <PaidFrom>Customer</PaidFrom>
+                <PaidTo>Supplier</PaidTo>
+                <ToCurrencyID>AUD</ToCurrencyID>
+                <CurrencyExchangeRate>1.4186</CurrencyExchangeRate>
+                <PaidDate>03-06-2021 09:35:37</PaidDate>
+              </PaymentInfo>
+            </Payments>
+            <UserType>Customer</UserType>
+            <InvoiceDate />
+          </PaymentSchedule>
+        </CustomerPaymentSchedules>
+        <Passengers>
+          <PassengerID>373170</PassengerID>
+          <PassengerID>373171</PassengerID>
+        </Passengers>
+      </Package>
+    </Packages>
+  </Booking>
+</Transaction>

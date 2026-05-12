@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Cruzy_Portal_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cruzy Portal URL</shortDescription>
+        <value>https://cruzy-portal.vercel.app</value>
+    </labels>
+    <labels>
+        <fullName>Cruzy_Admin_API_Secret</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cruzy Admin API Secret</shortDescription>
+        <value>51e34ee23d4366c054270a052d62d3f7b69a488ff15d96c3282d2c71055a934c</value>
+    </labels>
+    <labels>
+        <fullName>Odysseus_Webhook_Secret</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Odysseus Webhook Bearer Token Secret</shortDescription>
+        <value>eef53c2f85b26214b92cae9b775ff31cb5588fb1bc0d817f2ca36b2fa7469999</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,203 @@
+<template>
+    <div class="merge-wrapper">
+
+        <!-- Loading State -->
+        <template if:true={isLoading}>
+            <div class="loading-overlay">
+                <lightning-spinner alternative-text="Scanning for duplicates..." size="medium" variant="brand"></lightning-spinner>
+                <p class="loading-text">Scanning for duplicate contacts...</p>
+            </div>
+        </template>
+
+        <!-- No Duplicates State -->
+        <template if:false={hasDuplicates}>
+            <template if:false={isLoading}>
+                <div class="no-duplicates">
+                    <div class="check-icon">
+                        <lightning-icon icon-name="utility:check" size="medium" variant="success"></lightning-icon>
+                    </div>
+                    <h3>No Duplicates Found</h3>
+                    <p>This contact record appears to be unique in the system.</p>
+                </div>
+            </template>
+        </template>
+
+        <!-- Duplicates Found -->
+        <template if:true={hasDuplicates}>
+            <div class="alert-banner">
+                <lightning-icon icon-name="utility:warning" size="small" variant="warning"></lightning-icon>
+                <span class="alert-text">
+                    <strong>{duplicateCount} potential duplicate{duplicatePlural} detected</strong> — Review and merge below
+                </span>
+            </div>
+
+            <div class="duplicate-list-scroll">
+            <template for:each={duplicates} for:item="dup">
+                <div key={dup.duplicateId} class="duplicate-card" data-id={dup.duplicateId}>
+
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <lightning-icon icon-name="standard:contact" size="small"></lightning-icon>
+                            <span class="dup-name">{dup.duplicateName}</span>
+                            <template if:true={dup.winnerIsCurrentContact}>
+                                <span class="badge badge-current">This record wins</span>
+                            </template>
+                            <template if:false={dup.winnerIsCurrentContact}>
+                                <span class="badge badge-duplicate">Duplicate has more data</span>
+                            </template>
+                        </div>
+                        <div class="card-header-right">
+                            <button class="btn-dismiss" data-id={dup.duplicateId} onclick={handleDismiss}>
+                                <lightning-icon icon-name="utility:close" size="xx-small"></lightning-icon>
+                                Dismiss
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Match Reasons -->
+                    <div class="match-reasons">
+                        <span class="match-label">Matched on: </span>
+                        <template for:each={dup.matchReasons} for:item="reason">
+                            <span key={reason} class="reason-pill">{reason}</span>
+                        </template>
+                    </div>
+
+                    <!-- Score Bars -->
+                    <div class="score-section">
+                        <div class="score-col">
+                            <div class="score-header">
+                                <span class="score-label">This Record</span>
+                                <span class="score-count">{dup.currentContactScore} / {dup.totalFields} fields</span>
+                            </div>
+                            <div class="score-bar-track">
+                                <div class="score-bar-fill current-fill" style={dup.currentBarStyle}></div>
+                            </div>
+                            <div class="score-pct">{dup.currentPct}% complete</div>
+                        </div>
+                        <div class="score-vs">VS</div>
+                        <div class="score-col">
+                            <div class="score-header">
+                                <span class="score-label">{dup.duplicateName}</span>
+                                <span class="score-count">{dup.duplicateContactScore} / {dup.totalFields} fields</span>
+                            </div>
+                            <div class="score-bar-track">
+                                <div class="score-bar-fill duplicate-fill" style={dup.duplicateBarStyle}></div>
+                            </div>
+                            <div class="score-pct">{dup.duplicatePct}% complete</div>
+                        </div>
+                    </div>
+
+                    <!-- Field Diff Table -->
+                    <div class="diff-section">
+                        <button class="toggle-diff" data-id={dup.duplicateId} onclick={handleToggleDiff}>
+                            <lightning-icon icon-name="utility:table" size="xx-small"></lightning-icon>
+                            <span data-id={dup.duplicateId}>{dup.diffToggleLabel}</span>
+                        </button>
+
+                        <template if:true={dup.showDiff}>
+                            <div class="diff-table-wrapper">
+                                <table class="diff-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="field-col">Field</th>
+                                            <th class="value-col">This Record</th>
+                                            <th class="status-col"></th>
+                                            <th class="value-col">{dup.duplicateName}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template for:each={dup.fieldDiffs} for:item="diff">
+                                            <tr key={diff.fieldName} class={diff.rowClass}>
+                                                <td class="field-col">{diff.fieldLabel}</td>
+                                                <td class="value-col">
+                                                    <span class={diff.currentClass}>{diff.currentValueDisplay}</span>
+                                                </td>
+                                                <td class="status-col">
+                                                    <span class={diff.statusIconClass} title={diff.statusTitle}>
+                                                        {diff.statusIcon}
+                                                    </span>
+                                                </td>
+                                                <td class="value-col">
+                                                    <span class={diff.duplicateClass}>{diff.duplicateValueDisplay}</span>
+                                                </td>
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Merge Actions -->
+                    <div class="merge-actions">
+                        <template if:true={dup.winnerIsCurrentContact}>
+                            <button class="btn-merge btn-merge-primary" data-master={recordId} data-duplicate={dup.duplicateId} onclick={handleMerge}>
+                                <lightning-icon icon-name="utility:merge" size="xx-small"></lightning-icon>
+                                Merge — Keep This Record
+                            </button>
+                            <button class="btn-merge btn-merge-secondary" data-master={dup.duplicateId} data-duplicate={recordId} onclick={handleMerge}>
+                                <lightning-icon icon-name="utility:merge" size="xx-small"></lightning-icon>
+                                Merge — Keep {dup.duplicateName}
+                            </button>
+                        </template>
+                        <template if:false={dup.winnerIsCurrentContact}>
+                            <button class="btn-merge btn-merge-primary" data-master={dup.duplicateId} data-duplicate={recordId} onclick={handleMerge}>
+                                <lightning-icon icon-name="utility:merge" size="xx-small"></lightning-icon>
+                                Merge — Keep {dup.duplicateName} (More Complete)
+                            </button>
+                            <button class="btn-merge btn-merge-secondary" data-master={recordId} data-duplicate={dup.duplicateId} onclick={handleMerge}>
+                                <lightning-icon icon-name="utility:merge" size="xx-small"></lightning-icon>
+                                Merge — Keep This Record
+                            </button>
+                        </template>
+                    </div>
+
+                </div>
+            </template>
+            </div>
+        </template>
+
+        <!-- Merge Confirmation Modal -->
+        <template if:true={showMergeModal}>
+            <div class="modal-backdrop">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <lightning-icon icon-name="utility:merge" size="small" variant="inverse"></lightning-icon>
+                        <h2>Confirm Merge</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>You are about to merge these two contact records. This action:</p>
+                        <ul>
+                            <li>Permanently deletes the losing contact record</li>
+                            <li>Transfers ALL related records (Bookings, Rewards, Memberships) to the winner</li>
+                            <li>Cannot be undone</li>
+                        </ul>
+                        <div class="modal-confirm-box">
+                            <div class="modal-winner">
+                                <lightning-icon icon-name="utility:check" size="xx-small" variant="success"></lightning-icon>
+                                <span><strong>Surviving Record:</strong> {pendingMergeMasterName}</span>
+                            </div>
+                            <div class="modal-loser">
+                                <lightning-icon icon-name="utility:delete" size="xx-small" variant="error"></lightning-icon>
+                                <span><strong>Will Be Deleted:</strong> {pendingMergeDuplicateName}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-cancel" onclick={handleCancelMerge}>Cancel</button>
+                        <button class="btn-confirm-merge" onclick={handleConfirmMerge}>
+                            <template if:true={isMerging}>
+                                <lightning-spinner size="small" variant="inverse" alternative-text="Merging..."></lightning-spinner>
+                            </template>
+                            <template if:false={isMerging}>
+                                Confirm Merge
+                            </template>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </div>
+</template>

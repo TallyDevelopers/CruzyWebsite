@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Add_On__c.Amount__c</field>
+    </columns>
+    <columns>
+        <field>Add_On__c.Booking__c</field>
+    </columns>
+    <description>Add-on revenue grouped by type to show upsell performance</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Add_On__c.Add_On_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Add-On Revenue by Type</name>
+    <reportType>CustomEntity$Add_On__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+</Report>

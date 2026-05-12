@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timezone__c</fullName>
+    <label>Timezone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Eastern - Add 1 Hr</fullName>
+                <default>false</default>
+                <label>Eastern - Add 1 Hr</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>Mountain - Subtract 1 Hr</fullName>
+                <default>false</default>
+                <label>Mountain - Subtract 1 Hr</label>
+            </value>
+            <value>
+                <fullName>Pacific - Subtract 2 Hrs</fullName>
+                <default>false</default>
+                <label>Pacific - Subtract 2 Hrs</label>
+            </value>
+            <value>
+                <fullName>Alaska - Subtract 3 Hrs</fullName>
+                <default>false</default>
+                <label>Alaska - Subtract 3 Hrs</label>
+            </value>
+            <value>
+                <fullName>Hawaii - Subtract 4 Hrs</fullName>
+                <default>false</default>
+                <label>Hawaii - Subtract 4 Hrs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

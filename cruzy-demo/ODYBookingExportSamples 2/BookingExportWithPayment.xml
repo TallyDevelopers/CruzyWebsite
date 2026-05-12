@@ -1,0 +1,641 @@
+<Booking TransactionID="181228" ModifyUserID="" SiteItemID="101452" ReferrerID1="171617" SiteItemName="Odysseus Test" ExternalIP="127.0.0.1">
+  <Affiliate ID="101452" ExternalReference1="" ExternalReference2="" sid1="171617" sid2="" sid3="" />
+  <Customer ID="359153" Title="MR" FirstName="Monish" MiddleName="S" LastName="Luthra" Sex="Male" DateOfBirth="22-11-1970" />
+  <AgencyConfirmation>CF-TMES3ML</AgencyConfirmation>
+  <Passengers NoOfAdult="2">
+    <Passenger ID="359153" Title="MR" FirstName="Monish" MiddleName="S" LastName="Luthra" Sex="Male" DateOfBirth="22-11-1970" Email="parth_bhatt@odysseussolutions.com" Phone="+11234567890">
+      <Prices Type="Cruise">
+        <Price Display="false" ID="1" Amount="2892.00" Code="49">
+          <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="2" Amount="350.00" Code="60">
+          <Name><![CDATA[Port Charges]]></Name>
+        </Price>
+        <Price Display="false" ID="45" Amount="1746.00">
+          <Name><![CDATA[Cruise Line Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="46" Amount="1746.00">
+          <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="114" Amount="1396.00">
+          <Name><![CDATA[Commissionable Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="3" Amount="87.15" Code="18">
+          <Name><![CDATA[Taxes and Fees]]></Name>
+        </Price>
+        <Price Display="true" ID="17" Amount="1833.15">
+          <Name><![CDATA[Total]]></Name>
+        </Price>
+        <Price Display="false" ID="112" Amount="1833.15">
+          <Name><![CDATA[Agent Net]]></Name>
+        </Price>
+        <Price Display="true" ID="23" Amount="1833.15">
+          <Name><![CDATA[Total Due]]></Name>
+        </Price>
+        <Price Display="false" ID="47" Amount="1833.15">
+          <Name><![CDATA[Total without travel insurance]]></Name>
+        </Price>
+        <Price Display="false" ID="50" Amount="1833.15" Code="8">
+          <Name><![CDATA[Supplier Gross Total]]></Name>
+        </Price>
+        <Price Display="false" ID="24" Amount="200.00" Code="6">
+          <Name><![CDATA[Deposit Amount]]></Name>
+        </Price>
+        <Price Display="false" ID="63" Amount="1833.15" Code="3">
+          <Name><![CDATA[Balance Due Check]]></Name>
+        </Price>
+        <Price Display="false" ID="32" Amount="293.16" Code="80">
+          <Name><![CDATA[Total Commission]]></Name>
+        </Price>
+        <Price Display="false" ID="66" Amount="1539.99" Code="42">
+          <Name><![CDATA[Balance Due to Supplier (NET)]]></Name>
+        </Price>
+        <Price Display="false" ID="65" Amount="1539.99">
+          <Name><![CDATA[Supplier Total - NET]]></Name>
+        </Price>
+        <Price Display="false" ID="83" Amount="293.16">
+          <Name><![CDATA[Agency - Profit / (Loss)]]></Name>
+        </Price>
+      </Prices>
+    </Passenger>
+    <Passenger ID="359154" Title="MRS" FirstName="Anna" MiddleName="" LastName="Luthra" Sex="Female" DateOfBirth="13-07-1966">
+      <Prices Type="Cruise">
+        <Price Display="false" ID="1" Amount="2892.00" Code="49">
+          <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="2" Amount="350.00" Code="60">
+          <Name><![CDATA[Port Charges]]></Name>
+        </Price>
+        <Price Display="false" ID="45" Amount="1746.00">
+          <Name><![CDATA[Cruise Line Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="46" Amount="1746.00">
+          <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="114" Amount="1396.00">
+          <Name><![CDATA[Commissionable Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="3" Amount="87.15" Code="18">
+          <Name><![CDATA[Taxes and Fees]]></Name>
+        </Price>
+        <Price Display="true" ID="17" Amount="1833.15">
+          <Name><![CDATA[Total]]></Name>
+        </Price>
+        <Price Display="false" ID="112" Amount="1833.15">
+          <Name><![CDATA[Agent Net]]></Name>
+        </Price>
+        <Price Display="true" ID="23" Amount="1833.15">
+          <Name><![CDATA[Total Due]]></Name>
+        </Price>
+        <Price Display="false" ID="47" Amount="1833.15">
+          <Name><![CDATA[Total without travel insurance]]></Name>
+        </Price>
+        <Price Display="false" ID="50" Amount="1833.15" Code="8">
+          <Name><![CDATA[Supplier Gross Total]]></Name>
+        </Price>
+        <Price Display="false" ID="24" Amount="200.00" Code="6">
+          <Name><![CDATA[Deposit Amount]]></Name>
+        </Price>
+        <Price Display="false" ID="63" Amount="1833.15" Code="3">
+          <Name><![CDATA[Balance Due Check]]></Name>
+        </Price>
+        <Price Display="false" ID="32" Amount="293.16" Code="80">
+          <Name><![CDATA[Total Commission]]></Name>
+        </Price>
+        <Price Display="false" ID="66" Amount="1539.99" Code="42">
+          <Name><![CDATA[Balance Due to Supplier (NET)]]></Name>
+        </Price>
+        <Price Display="false" ID="65" Amount="1539.99">
+          <Name><![CDATA[Supplier Total - NET]]></Name>
+        </Price>
+        <Price Display="false" ID="83" Amount="293.16">
+          <Name><![CDATA[Agency - Profit / (Loss)]]></Name>
+        </Price>
+      </Prices>
+    </Passenger>
+  </Passengers>
+  <Currency ID="AUD" />
+  <Agent AgentContactId="AG" AgentName="Akash G" AgentEmail="akash_gandhi@odysseussolutions.com" CreateUserID="171617" />
+  <BookingCreatedFor ID="172158" FirstName="Akash" LastName="Gandhi" UserName="AkashAgentSup" Email="akash_gandhi@odysseussolutions.com" SupplierContactNumber="" SupplierContactID="DS" />
+  <CreateDateTime>2020-12-04T05:39:52</CreateDateTime>
+  <ModifiedDateTime>2020-12-04T05:54:29</ModifiedDateTime>
+  <Packages>
+    <Package Index="0" Type="Cruise" PackageID="1003731" PNR="145784" FromCurrencyId="AUD" ExchangeRate="1.0000" ExchageRateDateTime="04-12-2020 05:53:49" Currency="AUD" PackageCode="OY07M505" PackageStartDate="" PackageEndDate="" Duration="7" OfficeID="242030" ApiID="RCCL" DepartureDate="08-08-2021 00:00:00" ArrivalDate="15-08-2021 00:00:00" CruiseType="CruiseOnly">
+      <SelectedRules>
+        <Rule ID="856043" Type="RewardPoints" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[RP - Consolidator]]></Name>
+          <Amount />
+        </Rule>
+        <Rule ID="856028" Type="ValueAddOfferConsolidator" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[VAO Consolidator 2]]></Name>
+          <Amount />
+        </Rule>
+        <Rule ID="856031" Type="ValueAddOfferConsolidator" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[VAO Consolidator 4]]></Name>
+          <Amount />
+        </Rule>
+        <Rule ID="856089" Type="ValueAddOffer" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[Value Add Offer Test-1]]></Name>
+          <AgencyDetails><![CDATA[Agency Details]]></AgencyDetails>
+          <CustomerDetails><![CDATA[Customer Details]]></CustomerDetails>
+          <Amount />
+        </Rule>
+        <Rule ID="856137" Type="RewardPoints" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[Rewards Test1 CLONE]]></Name>
+          <AgencyDetails><![CDATA[Rewards Test2]]></AgencyDetails>
+          <CustomerDetails><![CDATA[Rewards Test2]]></CustomerDetails>
+          <Amount />
+        </Rule>
+        <Rule ID="857151" Type="RewardPoints" Exclusive="" IsPrivate="YES">
+          <Name><![CDATA[Rewards Test &lt;&lt;PromotionAmount&gt;&gt;]]></Name>
+          <AgencyDetails><![CDATA[Agency Details]]></AgencyDetails>
+          <CustomerDetails><![CDATA[Customer Details]]></CustomerDetails>
+          <Amount />
+        </Rule>
+      </SelectedRules>
+      <Dining Name="06:00 PM" Code="M" DiningTableSize="0" Status="Confirmed" />
+      <Status>
+        <ID>7</ID>
+        <Name>Confirmed</Name>
+      </Status>
+      <DepartureCity ID="CIV">
+        <Name>Civitavecchia (Rome)</Name>
+      </DepartureCity>
+      <ArrivalCity ID="CIV">
+        <Name>Civitavecchia (Rome)</Name>
+      </ArrivalCity>
+      <Destination ID="15" />
+      <CruiseLine ID="8">
+        <Name>Royal Caribbean</Name>
+        <ImageSmall>https://localhost/content/images/Cruise/8/logo_150.jpg</ImageSmall>
+        <ImageLarge>https://localhost/content/images/Cruise/8/logo_190.png</ImageLarge>
+      </CruiseLine>
+      <Ship ID="17216">
+        <Name>Odyssey of the Seas </Name>
+        <ImageSmall>https://localhost/content/images/</ImageSmall>
+        <ImageLarge>https://localhost/content/images/</ImageLarge>
+      </Ship>
+      <Deck Code="0" Name="" />
+      <Category Code="4V" Type="1" PriceCategoryCode="4V" />
+      <Cabin Code="9141" />
+      <Itinerary ItineraryID="205894">
+        <Node Day="1">
+          <Description>Rome (Civitavecchia) -  Italy</Description>
+          <DepartureCity>
+            <ID>CIV</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>CIV</ID>
+          </ArrivalCity>
+          <DepartureTime>08-08-2021 17:00</DepartureTime>
+          <ArrivalTime>08-08-2021 00:00</ArrivalTime>
+        </Node>
+        <Node Day="2">
+          <Description>Cruising</Description>
+          <DepartureCity>
+            <ID>SEAD</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>SEAD</ID>
+          </ArrivalCity>
+          <DepartureTime>09-08-2021 00:00</DepartureTime>
+          <ArrivalTime>09-08-2021 00:00</ArrivalTime>
+        </Node>
+        <Node Day="3">
+          <Description>Santorini -  Greece</Description>
+          <DepartureCity>
+            <ID>JTR</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>JTR</ID>
+          </ArrivalCity>
+          <DepartureTime>10-08-2021 23:00</DepartureTime>
+          <ArrivalTime>10-08-2021 12:00</ArrivalTime>
+        </Node>
+        <Node Day="4">
+          <Description>Mykonos -  Greece</Description>
+          <DepartureCity>
+            <ID>JMK</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>JMK</ID>
+          </ArrivalCity>
+          <DepartureTime>11-08-2021 22:00</DepartureTime>
+          <ArrivalTime>11-08-2021 07:00</ArrivalTime>
+        </Node>
+        <Node Day="5">
+          <Description>Athens (Piraeus) -  Greece</Description>
+          <DepartureCity>
+            <ID>ATH</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>ATH</ID>
+          </ArrivalCity>
+          <DepartureTime>12-08-2021 20:00</DepartureTime>
+          <ArrivalTime>12-08-2021 06:00</ArrivalTime>
+        </Node>
+        <Node Day="6">
+          <Description>Cruising</Description>
+          <DepartureCity>
+            <ID>SEAD</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>SEAD</ID>
+          </ArrivalCity>
+          <DepartureTime>13-08-2021 00:00</DepartureTime>
+          <ArrivalTime>13-08-2021 00:00</ArrivalTime>
+        </Node>
+        <Node Day="7">
+          <Description>Naples -  Italy</Description>
+          <DepartureCity>
+            <ID>NAP</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>NAP</ID>
+          </ArrivalCity>
+          <DepartureTime>14-08-2021 18:00</DepartureTime>
+          <ArrivalTime>14-08-2021 08:00</ArrivalTime>
+        </Node>
+        <Node Day="8">
+          <Description>Rome (Civitavecchia) -  Italy</Description>
+          <DepartureCity>
+            <ID>CIV</ID>
+          </DepartureCity>
+          <ArrivalCity>
+            <ID>CIV</ID>
+          </ArrivalCity>
+          <DepartureTime>15-08-2021 00:00</DepartureTime>
+          <ArrivalTime>15-08-2021 05:00</ArrivalTime>
+        </Node>
+      </Itinerary>
+      <FareCode ID="G8491248">
+        <Description>SAVINGS NRD</Description>
+      </FareCode>
+      <Prices Type="Cruise">
+        <Price Display="false" ID="1" Amount="5784.00" Code="49">
+          <Name><![CDATA[Cruise Fare (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="2" Amount="700.00" Code="60">
+          <Name><![CDATA[Port Charges]]></Name>
+        </Price>
+        <Price Display="false" ID="45" Amount="3492.00">
+          <Name><![CDATA[Cruise Line Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="46" Amount="3492.00">
+          <Name><![CDATA[Cruise (includes NCCF)]]></Name>
+        </Price>
+        <Price Display="false" ID="114" Amount="2792.00">
+          <Name><![CDATA[Commissionable Fare]]></Name>
+        </Price>
+        <Price Display="true" ID="3" Amount="174.30" Code="18">
+          <Name><![CDATA[Taxes and Fees]]></Name>
+        </Price>
+        <Price Display="true" ID="17" Amount="3666.30">
+          <Name><![CDATA[Total]]></Name>
+        </Price>
+        <Price Display="false" ID="112" Amount="3666.30">
+          <Name><![CDATA[Agent Net]]></Name>
+        </Price>
+        <Price Display="true" ID="23" Amount="3666.30">
+          <Name><![CDATA[Total Due]]></Name>
+        </Price>
+        <Price Display="false" ID="47" Amount="3666.30">
+          <Name><![CDATA[Total without travel insurance]]></Name>
+        </Price>
+        <Price Display="false" ID="50" Amount="3666.30" Code="8">
+          <Name><![CDATA[Supplier Gross Total]]></Name>
+        </Price>
+        <Price Display="false" ID="24" Amount="400.00" Code="6">
+          <Name><![CDATA[Deposit Amount]]></Name>
+        </Price>
+        <Price Display="false" ID="63" Amount="3666.30" Code="3">
+          <Name><![CDATA[Balance Due Check]]></Name>
+        </Price>
+        <Price Display="false" ID="32" Amount="586.32" Code="80">
+          <Name><![CDATA[Total Commission]]></Name>
+        </Price>
+        <Price Display="false" ID="66" Amount="3079.98" Code="42">
+          <Name><![CDATA[Balance Due to Supplier (NET)]]></Name>
+        </Price>
+        <Price Display="false" ID="65" Amount="3079.98">
+          <Name><![CDATA[Supplier Total - NET]]></Name>
+        </Price>
+        <Price Display="false" ID="83" Amount="586.32">
+          <Name><![CDATA[Agency - Profit / (Loss)]]></Name>
+        </Price>
+      </Prices>
+      <CancellationPolicies><![CDATA[
+              {{CruiselineCancellationPolicy_8}}
+            ]]></CancellationPolicies>
+      <SupplierPaymentSchedules>
+        <PaymentSchedule>
+          <ID>489040</ID>
+          <Amount>400.00</Amount>
+          <SupplierDate>11-12-2020</SupplierDate>
+          <DueDate>11-12-2020</DueDate>
+          <Type>Deposit</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <UserType>Supplier</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+        <PaymentSchedule>
+          <ID>489041</ID>
+          <Amount>2679.98</Amount>
+          <SupplierDate>30-05-2021</SupplierDate>
+          <DueDate>30-05-2021</DueDate>
+          <Type>Final</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <UserType>Supplier</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+      </SupplierPaymentSchedules>
+      <AffiliatePaymentSchedules>
+        <PaymentSchedule>
+          <ID>489042</ID>
+          <Amount>400.00</Amount>
+          <SupplierDate>11-12-2020</SupplierDate>
+          <DueDate>09-12-2020</DueDate>
+          <Type>Deposit</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <Payments>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>400.00</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <CreditCard>
+                <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                <ID>VI</ID>
+                <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                <ExpiryDate>03-23</ExpiryDate>
+                <CardHolder>Monish Luthra</CardHolder>
+                <CardIssuer>VI</CardIssuer>
+                <Validation>
+                  <AuthCode>26925787</AuthCode>
+                  <TransactionID>26925787,26925790</TransactionID>
+                  <UniqueToken>853850</UniqueToken>
+                  <Date>04-12-2020 05:38</Date>
+                  <TransactionStatus>Success</TransactionStatus>
+                </Validation>
+              </CreditCard>
+              <BillingAddress>
+                <AddressLineOne>iscon Atria-2 </AddressLineOne>
+                <City>
+                  <Name>Miami</Name>
+                  <StateID>ACT</StateID>
+                  <CountryID>AU</CountryID>
+                  <CountryISOCode>AUS</CountryISOCode>
+                </City>
+                <ZipCode>67898</ZipCode>
+              </BillingAddress>
+              <PaymentForm>
+                <ID>CARD</ID>
+              </PaymentForm>
+              <PhoneNumber>+618734563489</PhoneNumber>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode>26925787</AuthCode>
+                  <TransactionID>26925787,26925790</TransactionID>
+                  <Date />
+                  <Success>true</Success>
+                  <Mode>Supplier</Mode>
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>EWay</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Affiliate</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>04-12-2020 05:48:50</PaidDate>
+            </PaymentInfo>
+          </Payments>
+          <UserType>Agent</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+        <PaymentSchedule>
+          <ID>489043</ID>
+          <Amount>3266.30</Amount>
+          <SupplierDate>30-05-2021</SupplierDate>
+          <DueDate>09-05-2021</DueDate>
+          <Type>Final</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <Payments>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>3266.30</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <PaymentForm>
+                <ID>ENETT</ID>
+              </PaymentForm>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode>5643777</AuthCode>
+                  <TransactionID>5643777</TransactionID>
+                  <Date>04-12-2020 05:54</Date>
+                  <Success>false</Success>
+                  <Mode>Direct</Mode>
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>eNett</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Affiliate</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>04-12-2020 05:53:45</PaidDate>
+            </PaymentInfo>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>-3266.30</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <BillingAddress>
+                <AddressLineOne />
+                <City>
+                  <Name />
+                  <StateID />
+                  <CountryID />
+                  <CountryISOCode />
+                </City>
+                <ZipCode />
+              </BillingAddress>
+              <PaymentForm>
+                <ID>REFUND</ID>
+              </PaymentForm>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode />
+                  <TransactionID />
+                  <Date />
+                  <Success />
+                  <Mode />
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>None</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Supplier</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>03-12-2020 14:45:00</PaidDate>
+            </PaymentInfo>
+          </Payments>
+          <UserType>Agent</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+      </AffiliatePaymentSchedules>
+      <CustomerPaymentSchedules>
+        <PaymentSchedule>
+          <ID>489044</ID>
+          <Amount>400.00</Amount>
+          <SupplierDate>11-12-2020</SupplierDate>
+          <DueDate>07-12-2020</DueDate>
+          <Type>Deposit</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <Payments>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>400.00</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <CreditCard>
+                <MaxProcessingFeeAmount>0</MaxProcessingFeeAmount>
+                <ID>VI</ID>
+                <CardNumber>41xxxxxxxxxx1111</CardNumber>
+                <ExpiryDate>03-23</ExpiryDate>
+                <CardHolder>Monish Luthra</CardHolder>
+                <CardIssuer>VI</CardIssuer>
+                <Validation>
+                  <AuthCode>26925787</AuthCode>
+                  <TransactionID>26925787,26925790</TransactionID>
+                  <UniqueToken>853850</UniqueToken>
+                  <Date>04-12-2020 05:38</Date>
+                  <TransactionStatus>Success</TransactionStatus>
+                </Validation>
+              </CreditCard>
+              <BillingAddress>
+                <AddressLineOne>iscon Atria-2 </AddressLineOne>
+                <City>
+                  <Name>Miami</Name>
+                  <StateID>ACT</StateID>
+                  <CountryID>AU</CountryID>
+                  <CountryISOCode>AUS</CountryISOCode>
+                </City>
+                <ZipCode>67898</ZipCode>
+              </BillingAddress>
+              <PaymentForm>
+                <ID>CARD</ID>
+              </PaymentForm>
+              <PhoneNumber>+618734563489</PhoneNumber>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode>26925787</AuthCode>
+                  <TransactionID>26925787,26925790</TransactionID>
+                  <Date />
+                  <Success>true</Success>
+                  <Mode>Supplier</Mode>
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>EWay</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Customer</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>04-12-2020 05:48:50</PaidDate>
+            </PaymentInfo>
+          </Payments>
+          <UserType>Customer</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+        <PaymentSchedule>
+          <ID>489045</ID>
+          <Amount>3266.30</Amount>
+          <SupplierDate>30-05-2021</SupplierDate>
+          <DueDate>04-05-2021</DueDate>
+          <Type>Final</Type>
+          <TransactionPackageDataID>153963</TransactionPackageDataID>
+          <Payments>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>3266.30</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <PaymentForm>
+                <ID>ENETT</ID>
+              </PaymentForm>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode>5643777</AuthCode>
+                  <TransactionID>5643777</TransactionID>
+                  <Date>04-12-2020 05:54</Date>
+                  <Success>false</Success>
+                  <Mode>Direct</Mode>
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>eNett</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Customer</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>04-12-2020 05:53:45</PaidDate>
+            </PaymentInfo>
+            <PaymentInfo>
+              <GuestReferences />
+              <PaymentStatus>PaymentSuccessful</PaymentStatus>
+              <CustomerPaymentIP>127.0.0.1</CustomerPaymentIP>
+              <Amount>-3266.30</Amount>
+              <ProcessingFeeAmount>0.00</ProcessingFeeAmount>
+              <CurrencyID>AUD</CurrencyID>
+              <BillingAddress>
+                <AddressLineOne />
+                <City>
+                  <Name />
+                  <StateID />
+                  <CountryID />
+                  <CountryISOCode />
+                </City>
+                <ZipCode />
+              </BillingAddress>
+              <PaymentForm>
+                <ID>REFUND</ID>
+              </PaymentForm>
+              <AuthorizationData>
+                <PaymentAuthorizationInfo>
+                  <AuthCode />
+                  <TransactionID />
+                  <Date />
+                  <Success />
+                  <Mode />
+                </PaymentAuthorizationInfo>
+              </AuthorizationData>
+              <PaymentAPI>None</PaymentAPI>
+              <PaymentSuccessful>true</PaymentSuccessful>
+              <PaidFrom>Supplier</PaidFrom>
+              <PaidTo>Supplier</PaidTo>
+              <ToCurrencyID>AUD</ToCurrencyID>
+              <CurrencyExchangeRate>1.0000</CurrencyExchangeRate>
+              <PaidDate>03-12-2020 14:45:00</PaidDate>
+            </PaymentInfo>
+          </Payments>
+          <UserType>Customer</UserType>
+          <InvoiceDate />
+        </PaymentSchedule>
+      </CustomerPaymentSchedules>
+      <Passengers />
+    </Package>
+  </Packages>
+</Booking>
