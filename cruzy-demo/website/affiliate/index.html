@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access your exclusive travel member benefits and partner rates.">
+  <title>Member Login | Partner Travel Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo-link">
+        <img id="affiliate-logo-header" src="../../Affiliate Login Page Graphics/Ascendant Holidays White Logo.png" alt="Partner Logo" class="header-logo">
+      </a>
+      <nav class="header-nav">
+        <a href="tel:18554642300" class="nav-support"><i class="fa fa-phone"></i>&nbsp; Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- Login Card — LEFT -->
+      <div class="login-card">
+        <h2>Member Login</h2>
+        <p class="card-sub">Questions? <a href="tel:18554642300" class="phone-link">1-855-464-2300</a></p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw-row">
+              <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+              <button type="button" class="pw-eye" onclick="togglePw()" aria-label="Show/hide password">
+                Show
+              </button>
+            </div>
+          </div>
+          <div id="login-error" class="login-error" hidden></div>
+          <button type="submit" class="btn-sign-in" id="signin-btn">SIGN IN</button>
+          <a href="#" class="forgot">Forgot username/password?</a>
+        </form>
+      </div>
+
+      <!-- Copy — RIGHT -->
+      <div class="hero-copy">
+        <h1>Access Your Travel Rewards &amp;<br>Exclusive Member Pricing</h1>
+        <div class="trust-badges">
+          <div class="badge"><img src="../../Affiliate Login Page Graphics/Private Member Portal Icon.png" alt=""><span>Private Member Portal</span></div>
+          <div class="badge"><img src="../../Affiliate Login Page Graphics/Exclusive Partner Rates Icon.png" alt=""><span>Exclusive Partner Rates</span></div>
+          <div class="badge"><img src="../../Affiliate Login Page Graphics/Specialized Travel Support_Personalized Travel Assistance Icon.png" alt=""><span>Specialized Travel Support</span></div>
+          <div class="badge"><img src="../../Affiliate Login Page Graphics/Seamless Benefit Integration Icon.png" alt=""><span>Secure Booking Access</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-wrap">
+      <h2 class="section-heading">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-circle">1</div>
+          <img src="../../Affiliate Login Page Graphics/Log In Icon.png" alt="Log In">
+          <h3>Log In</h3>
+          <p>Access your private booking engine.</p>
+        </div>
+        <div class="step-chevron"><i class="fa fa-chevron-right"></i></div>
+        <div class="step">
+          <div class="step-circle">2</div>
+          <img src="../../Affiliate Login Page Graphics/View Rewards Icon.png" alt="View Rewards">
+          <h3>View Rewards</h3>
+          <p>See available upgrades and exclusive offers.</p>
+        </div>
+        <div class="step-chevron"><i class="fa fa-chevron-right"></i></div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <img src="../../Affiliate Login Page Graphics/Book Your Trip Icon.png" alt="Book Your Trip">
+          <h3>Book Your Trip</h3>
+          <p>Confirm your vacation with enhanced benefits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars-section">
+    <div class="section-wrap pillars">
+      <div class="pillar">
+        <img src="../../Affiliate Login Page Graphics/Private Member Portal Icon.png" alt="">
+        <span>Private<br>Member Portal</span>
+      </div>
+      <div class="pillar">
+        <img src="../../Affiliate Login Page Graphics/Seamless Benefit Integration Icon.png" alt="">
+        <span>Secure<br>Booking Access</span>
+      </div>
+      <div class="pillar">
+        <img src="../../Affiliate Login Page Graphics/Exclusive Partner Rates Icon.png" alt="">
+        <span>Exclusive<br>Partner Rates</span>
+      </div>
+      <div class="pillar">
+        <img src="../../Affiliate Login Page Graphics/Specialized Travel Support_Personalized Travel Assistance Icon.png" alt="">
+        <span>Specialized<br>Travel Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <div class="section-wrap">
+      <h2 class="section-heading dark">Your Member Benefits</h2>
+      <div class="benefits-grid">
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Member-Only Pricing Icon.png" alt=""><span>Member-Only Pricing</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Curated Travel Options Icon.png" alt=""><span>Curated Travel Options</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/No Points or Tracking System Icon.png" alt=""><span>No Points Or Tracking System</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Priority Booking Access Icon.png" alt=""><span>Priority Booking Access</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Powered by trusted travel network Icon.png" alt=""><span>Powered by Trusted Travel Network</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Enhanced Travel Upgrades Icon.png" alt=""><span>Enhanced Travel Upgrades</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Seamless Benefit Integration Icon.png" alt=""><span>Seamless Benefit Integration</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Dedicated Travel Concierge Icon.png" alt=""><span>Dedicated Travel Concierge</span></div>
+        <div class="benefit"><img src="../../Affiliate Login Page Graphics/Specialized Travel Support_Personalized Travel Assistance Icon.png" alt=""><span>Personalized Travel Assistance</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-section" style="background-image:url('../../Affiliate Login Page Graphics/Ready to Access Benefits Background.png')">
+    <div class="cta-overlay">
+      <div class="section-wrap cta-inner">
+        <h2>Ready to Access Your Travel Benefits?</h2>
+        <a href="#top" class="btn-cta">Member Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img id="affiliate-logo-footer" src="../../Affiliate Login Page Graphics/Ascendant Holidays White Logo.png" alt="Partner Logo" class="footer-logo">
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <span>|</span>
+        <a href="terms.html#privacy">Privacy Policy</a>
+        <span>|</span>
+        <a href="tel:18554642300">1-855-464-2300</a>
+      </div>
+      <p class="footer-note">This portal is provided as a member benefit through a partnered travel service.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Affiliate logo swap */
+    const AFFILIATES = {
+      ascendant: { color: 'Ascendant Holidays Color Logo.png', white: 'Ascendant Holidays White Logo.png' },
+      travalia:  { color: 'Club Travalia Color Logo.png',       white: 'Club Travalia White Logo.png'       },
+      lounge:    { color: 'Holidays Lounge Color Logo.png',     white: 'Holidays Lounge White Logo.png'     },
+    };
+    const BASE = '../../Affiliate Login Page Graphics/';
+    (function () {
+      const key = (new URLSearchParams(location.search).get('affiliate') || 'ascendant').toLowerCase();
+      const a = AFFILIATES[key] || AFFILIATES.ascendant;
+      document.getElementById('affiliate-logo-header').src = BASE + a.white;
+      document.getElementById('affiliate-logo-footer').src  = BASE + a.white;
+    })();
+
+    /* Password toggle */
+    function togglePw() {
+      const inp = document.getElementById('password');
+      const btn = document.querySelector('.pw-eye');
+      if (inp.type === 'password') { inp.type = 'text';     btn.textContent = 'Hide'; }
+      else                         { inp.type = 'password'; btn.textContent = 'Show'; }
+    }
+
+    /* Member Login buttons → scroll to top */
+    document.querySelectorAll('a[href="#top"], .btn-cta').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => document.getElementById('username').focus(), 500);
+      });
+    });
+
+    /* Login form */
+    document.getElementById('login-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn    = document.getElementById('signin-btn');
+      const errEl  = document.getElementById('login-error');
+      const user   = document.getElementById('username').value.trim();
+      const pass   = document.getElementById('password').value;
+      errEl.hidden = true;
+      btn.textContent = 'Signing in…';
+      btn.disabled = true;
+      try {
+        const res  = await fetch('/api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: user, password: pass, portalType: 'Partner' }) });
+        const data = await res.json();
+        if (res.ok && data.redirectUrl) { window.location.href = data.redirectUrl; return; }
+        errEl.textContent = data.message || 'Invalid username or password.';
+        errEl.hidden = false;
+      } catch (_) {
+        errEl.textContent = 'Unable to connect. Please try again.';
+        errEl.hidden = false;
+      }
+      btn.textContent = 'SIGN IN';
+      btn.disabled = false;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions | Partner Travel Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .terms-page { max-width: 820px; margin: 0 auto; padding: 60px 24px 80px; }
+    .terms-page h1 { font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+    .terms-page .updated { font-size: .85rem; color: var(--gray); margin-bottom: 48px; }
+    .terms-page h2 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin: 36px 0 12px; }
+    .terms-page p, .terms-page li { font-size: .95rem; color: #374151; line-height: 1.8; }
+    .terms-page ul { padding-left: 20px; margin-top: 8px; }
+    .terms-page ul li { margin-bottom: 6px; }
+    .terms-placeholder {
+      background: #f0f4ff;
+      border: 2px dashed var(--blue);
+      border-radius: 10px;
+      padding: 32px;
+      text-align: center;
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="affiliate-logo-link">
+        <img id="affiliate-logo-header" src="../../Affiliate Login Page Graphics/Ascendant Holidays Color Logo.png" alt="Affiliate Logo" class="affiliate-logo">
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-btn-login">&larr; Back to Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="terms-page">
+
+    <h1>Terms &amp; Conditions</h1>
+    <p class="updated">Last updated: <span id="last-updated">Coming soon</span></p>
+
+    <div class="terms-placeholder">
+      Terms &amp; Conditions content will be provided and inserted here.
+    </div>
+
+    <!-- ── PRIVACY POLICY ── -->
+    <h1 id="privacy" style="margin-top: 72px;">Privacy Policy</h1>
+    <p class="updated">Last updated: <span>Coming soon</span></p>
+
+    <div class="terms-placeholder">
+      Privacy Policy content will be provided and inserted here.
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img id="affiliate-logo-footer" src="../../Affiliate Login Page Graphics/Ascendant Holidays White Logo.png" alt="Affiliate Logo" class="affiliate-logo-footer">
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <span class="footer-divider">|</span>
+        <a href="terms.html#privacy">Privacy Policy</a>
+        <span class="footer-divider">|</span>
+        <a href="tel:18554642300">1-855-464-2300</a>
+      </div>
+      <p class="footer-disclaimer">This portal is provided as a member benefit through a partnered travel service.</p>
+    </div>
+  </footer>
+
+  <script>
+    const AFFILIATES = {
+      'ascendant': { color: 'Ascendant Holidays Color Logo.png', white: 'Ascendant Holidays White Logo.png' },
+      'travalia':  { color: 'Club Travalia Color Logo.png',       white: 'Club Travalia White Logo.png'       },
+      'lounge':    { color: 'Holidays Lounge Color Logo.png',     white: 'Holidays Lounge White Logo.png'     },
+    };
+    const BASE = '../../Affiliate Login Page Graphics/';
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const key = (params.get('affiliate') || 'ascendant').toLowerCase();
+      const aff = AFFILIATES[key] || AFFILIATES['ascendant'];
+      document.getElementById('affiliate-logo-header').src = BASE + aff.color;
+      document.getElementById('affiliate-logo-footer').src = BASE + aff.white;
+    })();
+  </script>
+</body>
+</html>
